@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ChapeauModel
 {
-    internal class OrderDetail
+    public class OrderDetail
     {
+        public int OrderDetailID { get; set; }
+        public int ItemQuantity { get; set; }
+        public TimeOnly OrderTime { get; set; }
+        public string OrderStatus { get; set; }
+        public string Comment { get; set; }
+        
     }
 }
