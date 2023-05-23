@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChapeauModel
 {
-    internal class Order
+    public class Order
     {
+        public int OrderID { get; set; }
+
+        public int Table_Num { get; set; }
+
+        public float Total_Price { get; set;}
     }
 }
