@@ -28,17 +28,25 @@ namespace ChapeauDAL
             {
                 OrderDetail orderDetail = new OrderDetail()
                 {
-                    OrderDetailID = (int)dr["Order_DetailID"],
-                    ItemQuantity = (int)dr["Item_Quantity"],
-                    OrderTime = (TimeOnly)dr["Order_Time"],
+                    OrderId = (int)dr["OrderId"],
+                    ItemQuantity = (int)dr["Count"],
+                   OrderTime = (TimeOnly)dr["Order_Time"],
                     OrderStatus = dr["Order_Status"].ToString(),
-                    Comment = dr["Comment"].ToString(),
+                    Comment = dr["Description"].ToString(),
                 };
                 orderDetails.Add(orderDetail);
             }
             return orderDetails;
         }
 
+        public List<OrderDetail> GetOrder()
+        {
+            string query = @"SELECT , OrderDetail_ID , Item_Quantity, Comment 
+                     FROM dbo.Order_Details o";
+                     
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
         private void SetOrderStatus()
         {
             //Use this to change the status of the order

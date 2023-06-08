@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ChapeauService
 {
-    internal class OrderService
+    public class OrderService
     {
         private OrderDao orderdb;
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChapeauService
 {
-    internal class InvoiceService
+    public class InvoiceService
     {
         private InvoiceDao invoicedb;
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChapeauService
 {
-    internal class TableService
+    public class TableService
     {
         private TableDao tabledb;
 
