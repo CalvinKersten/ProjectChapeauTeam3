@@ -33,19 +33,9 @@ namespace ChapeauUI
             return orders;
         }
 
-        private void DisplayOrder(List<OrderDetail> orders)
-        {
-            listViewOrder.Clear();
-            listViewOrder.View = View.Details;
-            listViewOrder.Columns.AddRange(new[] {
-        new ColumnHeader { Text = "Student ID" },
-        new ColumnHeader { Text = "First Name" },
-        new ColumnHeader { Text = "Last Name" },
-       // new ColumnHeader { Text = "Phone Number" },
-    });
-
+       
             
-        }
+        
     }
 }
 

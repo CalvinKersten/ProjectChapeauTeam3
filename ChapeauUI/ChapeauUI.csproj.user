@@ -4,8 +4,5 @@
     <Compile Update="KitchenBar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Ordering.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
