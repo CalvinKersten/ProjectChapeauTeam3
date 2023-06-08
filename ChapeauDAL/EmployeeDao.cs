@@ -6,7 +6,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Reflection.Metadata.Ecma335;
 
 namespace ChapeauDAL
 {
@@ -22,13 +21,13 @@ namespace ChapeauDAL
         private List<Employee> ReadTables(DataTable dataTable)
         {
             List<Employee> employees = new List<Employee>();
-            *
+            
             foreach (DataRow dr in dataTable.Rows)
             {
                 Employee employee = new Employee()
                 {
                     EmployeeID = (int)dr["EmployeeID"],
-                    EmployeeNumber = (string)dr["EmployeeNr"],
+                    EmployeeNum = (string)dr["EmployeeNr"],
                     FirstName = dr["First_Name"].ToString(),
                     LastName = dr["Last_Name"].ToString(),
                     Password = dr["Password"].ToString(),
@@ -42,3 +41,5 @@ namespace ChapeauDAL
 
     }
 }
+
+
