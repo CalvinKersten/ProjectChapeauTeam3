@@ -10,8 +10,8 @@ namespace ChapeauModel
     {
         public int OrderID { get; set; }
 
-        public int Table_Num { get; set; }
+        public int TableNum { get; set; }
 
-        public float Total_Price { get; set;}
+        public float TotalPrice { get; set;}
     }
 }
