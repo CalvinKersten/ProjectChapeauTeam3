@@ -27,8 +27,8 @@ namespace ChapeauDAL
                     OrderID = (int)dr["OrderID"],
                     TableNumber = (int)dr["Table_Num"],
                     TotalPrice = (float)dr["Total_Price"],
-                    EmployeeID = (float)dr["EmployeeID"],
-                    InvoiceID = (float)dr["InvoiceID"],
+                    EmployeeID = (int)dr["EmployeeID"],
+                    InvoiceID = (int)dr["InvoiceID"],
                 };
                 orders.Add(order);
             }

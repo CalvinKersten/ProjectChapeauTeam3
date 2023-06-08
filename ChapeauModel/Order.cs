@@ -13,5 +13,13 @@ namespace ChapeauModel
         public int Table_Num { get; set; }
 
         public float Total_Price { get; set;}
+
+        public int TableNumber { get; set; }
+
+        public float TotalPrice { get; set; }
+
+        public int EmployeeID { get; set; }
+
+        public int InvoiceID { get; set; }
     }
 }
