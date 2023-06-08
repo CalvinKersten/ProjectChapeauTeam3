@@ -1,8 +1,8 @@
 namespace ChapeauUI
 {
-    public partial class Form1 : Form
+    public partial class Ordering : Form
     {
-        public Form1()
+        public Ordering()
         {
             InitializeComponent();
         }

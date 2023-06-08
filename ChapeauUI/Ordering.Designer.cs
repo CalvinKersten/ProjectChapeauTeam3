@@ -1,6 +1,6 @@
 ﻿namespace ChapeauUI
 {
-    partial class Form1
+    partial class Ordering
     {
         /// <summary>
         ///  Required designer variable.
