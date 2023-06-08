@@ -40,5 +40,23 @@ namespace ChapeauDAL
             }
             return invoices;
         }
+
+        private void CalculateVAT()
+        {
+            //percentage of VAT over every individual product
+        }
+        private void SubTotal()
+        {
+            //Price of all ordered items 
+        }
+        private void Total()
+        {
+            //Price of all ordered items together + tip
+        }
+
+        private void CalculateTip()
+        {
+            //total - subtotal?
+        }
     }
 }

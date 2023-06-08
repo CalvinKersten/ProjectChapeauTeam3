@@ -804,11 +804,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+      "projectUniqueName": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj",
       "projectName": "ChapeauDAL",
-      "projectPath": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+      "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj",
       "packagesPath": "C:\\Users\\kerst\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauDAL\\obj\\",
+      "outputPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauDAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kerst\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -825,8 +825,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-              "projectPath": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+            "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
+              "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj"
             }
           }
         }

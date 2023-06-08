@@ -823,11 +823,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauService\\ChapeauService.csproj",
+      "projectUniqueName": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj",
       "projectName": "ChapeauService",
-      "projectPath": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauService\\ChapeauService.csproj",
+      "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj",
       "packagesPath": "C:\\Users\\kerst\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauService\\obj\\",
+      "outputPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kerst\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -844,11 +844,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-              "projectPath": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
+            "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj": {
+              "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj"
             },
-            "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-              "projectPath": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+            "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
+              "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj"
             }
           }
         }

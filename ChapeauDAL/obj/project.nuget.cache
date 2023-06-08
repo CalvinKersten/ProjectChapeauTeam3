@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+j4Kzx4CRFY3sQG3WOBBHfKacOahiCpuCNwJYUabMSJHI765rMJsYM1IT9BpjL+q/1Vl35DldQJ+OrZYNiA9Dw==",
+  "dgSpecHash": "kBEJ74UW365K20JV8xYIkzluyMcth0YNrhT4x/f2SxXgMSuMrpHcdVcdRTC3oXR/AFvs7pKWyMXIYvtSDC5nMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kerst\\Desktop\\School\\T4\\Project Chapeau\\Program\\Project Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+  "projectFilePath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kerst\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\kerst\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
