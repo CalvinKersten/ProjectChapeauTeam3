@@ -28,7 +28,7 @@ namespace ChapeauDAL
                 Table table = new Table()
                 {
                     TableID = (int)dr["TableID"],
-                    Table_Num = (int)dr["Table_Num"],
+                    Table_Number = (int)dr["Table_Num"],
                     Capacity = (int)dr["Capacity"],
                 };
                 tables.Add(table);

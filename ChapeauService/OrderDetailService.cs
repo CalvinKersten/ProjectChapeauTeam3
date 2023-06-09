@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChapeauService
 {
-    public class OrderDetailService
+    internal class OrderDetailService
     {
         private OrderDetailDao orderDetaildb;
 
@@ -17,7 +17,7 @@ namespace ChapeauService
             orderDetaildb = new OrderDetailDao();
         }
 
-        public List<OrderDetail> GetAllOrderDetails()
+        public List<OrderDetail> GetOrderDetails()
         {
             List<OrderDetail> orderDetails = orderDetaildb.GetAllOrderDetails();
             return orderDetails;

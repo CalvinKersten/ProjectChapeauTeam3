@@ -14,7 +14,7 @@ namespace ChapeauModel
         public float Tip { get; set; }
         public float Total { get; set; }
         public float PaymentAmount { get; set; }
-        public string PaymentMethod { get; set; }
+        public string PaymentMethod { get; set; } // enum
         public string Feedback { get; set; }
         public int OrderID { get; set; }
 

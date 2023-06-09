@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj": {}
+    "C:\\Users\\Me\\Downloads\\zip\\ChapeauService\\ChapeauService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj": {
+    "C:\\Users\\Me\\Downloads\\zip\\ChapeauDAL\\ChapeauDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj",
+        "projectUniqueName": "C:\\Users\\Me\\Downloads\\zip\\ChapeauDAL\\ChapeauDAL.csproj",
         "projectName": "ChapeauDAL",
-        "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj",
-        "packagesPath": "C:\\Users\\dipika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\obj\\",
+        "projectPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauDAL\\ChapeauDAL.csproj",
+        "packagesPath": "C:\\Users\\Me\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauDAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dipika\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Me\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,15 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\Me\\Downloads\\zip\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -74,25 +70,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
+    "C:\\Users\\Me\\Downloads\\zip\\ChapeauModel\\ChapeauModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj",
+        "projectUniqueName": "C:\\Users\\Me\\Downloads\\zip\\ChapeauModel\\ChapeauModel.csproj",
         "projectName": "ChapeauModel",
-        "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj",
-        "packagesPath": "C:\\Users\\dipika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\obj\\",
+        "projectPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauModel\\ChapeauModel.csproj",
+        "packagesPath": "C:\\Users\\Me\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauModel\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dipika\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Me\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,8 +92,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2": {}
         },
         "frameworks": {
           "net6.0": {
@@ -134,25 +126,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj": {
+    "C:\\Users\\Me\\Downloads\\zip\\ChapeauService\\ChapeauService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj",
+        "projectUniqueName": "C:\\Users\\Me\\Downloads\\zip\\ChapeauService\\ChapeauService.csproj",
         "projectName": "ChapeauService",
-        "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj",
-        "packagesPath": "C:\\Users\\dipika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\obj\\",
+        "projectPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauService\\ChapeauService.csproj",
+        "packagesPath": "C:\\Users\\Me\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauService\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\dipika\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Me\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,18 +148,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.nuget.org/api/v2": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj"
+              "C:\\Users\\Me\\Downloads\\zip\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauDAL\\ChapeauDAL.csproj"
               },
-              "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\Me\\Downloads\\zip\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -201,7 +189,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

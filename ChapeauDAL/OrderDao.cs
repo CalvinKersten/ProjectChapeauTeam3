@@ -11,7 +11,7 @@ namespace ChapeauDAL
     {
         public List<Order> GetAllOrders()
         {
-            string query = "SELECT OrderID, Table_Num, Total_Price, EmployeeID, InvoiceID FROM Order";
+            string query = "SELECT OrderID, Table_Num, Total_Price FROM Order";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -25,17 +25,13 @@ namespace ChapeauDAL
                 Order order = new Order()
                 {
                     OrderID = (int)dr["OrderID"],
-                    TableNumber = (int)dr["Table_Num"],
-                    TotalPrice = (float)dr["Total_Price"],
-                    EmployeeID = (int)dr["EmployeeID"],
-                    InvoiceID = (int)dr["InvoiceID"],
+                    Table_Number = (int)dr["Table_Num"],
+                    Total_Price = (float)dr["Total_Price"],
                 };
                 orders.Add(order);
             }
             return orders;
         }
-
-
 
     }
 }

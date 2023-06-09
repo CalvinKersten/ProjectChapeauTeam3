@@ -38,18 +38,5 @@ namespace ChapeauDAL
             }
             return orderDetails;
         }
-
-        private void SetOrderStatus()
-        {
-            //Use this to change the status of the order
-        }
-        private void AddComment()
-        {
-            //Used to add added comments to the database
-        }
-        private void SetOrderTime()
-        {
-            //Used to determine the time of which an order was CONFIRMED
-        }
     }
 }

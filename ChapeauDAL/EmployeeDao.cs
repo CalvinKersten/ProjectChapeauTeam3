@@ -14,7 +14,7 @@ namespace ChapeauDAL
     {
         public List<Employee> GetAllEmployees()
         {
-            string query = "SELECT EmployeeID, EmployeeNr, First_Name, Last_Name, Password, [Function] FROM Employee";
+            string query = "SELECT EmployeeID, Employee_Num, First_Name, Last_Name, Password, [Function] FROM Employee";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -28,7 +28,7 @@ namespace ChapeauDAL
                 Employee employee = new Employee()
                 {
                     EmployeeID = (int)dr["EmployeeID"],
-                    EmployeeNumber = (string)dr["EmployeeNr"],
+                    EmployeeNum = (string)dr["Employee_Num"],
                     FirstName = dr["First_Name"].ToString(),
                     LastName = dr["Last_Name"].ToString(),
                     Password = dr["Password"].ToString(),
@@ -38,7 +38,5 @@ namespace ChapeauDAL
             }
             return employees;
         }
-
-        //hi there
     }
 }

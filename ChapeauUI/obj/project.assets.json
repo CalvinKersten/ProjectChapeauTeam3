@@ -8,24 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\dipika\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Me\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauUI\\ChapeauUI.csproj",
+      "projectUniqueName": "C:\\Users\\Me\\Downloads\\zip\\ChapeauUI\\ChapeauUI.csproj",
       "projectName": "ChapeauUI",
-      "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauUI\\ChapeauUI.csproj",
-      "packagesPath": "C:\\Users\\dipika\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauUI\\obj\\",
+      "projectPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauUI\\ChapeauUI.csproj",
+      "packagesPath": "C:\\Users\\Me\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Me\\Downloads\\zip\\ChapeauUI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\dipika\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Me\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -33,8 +28,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.nuget.org/api/v2": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -70,7 +65,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
