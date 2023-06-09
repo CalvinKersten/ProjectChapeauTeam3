@@ -8,7 +8,7 @@ namespace ChapeauModel
 {
     public class OrderDetail
     {
-        public int OrderDetailID { get; set; }
+        public int OrderId { get; set; }
         public int ItemQuantity { get; set; }
         public TimeOnly OrderTime { get; set; }
         public string OrderStatus { get; set; } //enum

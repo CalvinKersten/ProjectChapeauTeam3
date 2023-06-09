@@ -1,0 +1,5 @@
+C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.csproj.AssemblyReference.cache
+C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.AssemblyInfoInputs.cache
+C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.AssemblyInfo.cs
+C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.csproj.CoreCompileInputs.cache
