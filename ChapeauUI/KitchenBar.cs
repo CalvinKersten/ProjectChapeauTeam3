@@ -7,9 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ChapeauDAL;
-using ChapeauModel;
-using ChapeauService;
 
 namespace ChapeauUI
 {
@@ -19,23 +16,5 @@ namespace ChapeauUI
         {
             InitializeComponent();
         }
-
-        private void ShowDashboardPanel()
-        {
-            KitchenPanel.Show();
-        }
-
-        private List<OrderDetail> GetOrder()
-        {
-            OrderDetailService orderDetaildb = new OrderDetailService();
-            List<OrderDetail> orders = orderDetaildb.GetOrder();
-
-            return orders;
-        }
-
-       
-            
-        
     }
 }
-

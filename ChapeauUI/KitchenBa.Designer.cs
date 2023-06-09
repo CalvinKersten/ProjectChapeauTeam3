@@ -1,6 +1,6 @@
 ﻿namespace ChapeauUI
 {
-    partial class KitchenBar
+    partial class KitchenBa
     {
         /// <summary>
         /// Required designer variable.
@@ -74,7 +74,7 @@
             this.listViewOrder.TabIndex = 13;
             this.listViewOrder.UseCompatibleStateImageBehavior = false;
             this.listViewOrder.View = System.Windows.Forms.View.Details;
-
+           
             // 
             // ServedBtn
             // 
