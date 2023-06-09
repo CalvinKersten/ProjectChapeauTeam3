@@ -17,3 +17,5 @@ C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debu
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.pdb
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.genruntimeconfig.cache
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ref\ChapeauUI.dll
+C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.Form1.resources
+C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.Properties.Resources.resources
