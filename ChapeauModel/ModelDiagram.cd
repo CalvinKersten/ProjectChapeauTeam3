@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ChapeauModel.Employee">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAMAAAAAAAAAAAAAAAAIAAAAAAAACAAAAAAAAAAg=</HashCode>
+      <FileName>Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauModel.Invoice">
+    <Position X="4.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABIBAAAAAEAACAACACAAAAAAAAQAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Invoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauModel.MenuItem">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAAAAAAAAABAAIAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MenuItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauModel.Order">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauModel.OrderDetail">
+    <Position X="10.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEIAACAAAAAEAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>OrderDetail.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChapeauModel.Table">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <Members>
+      <Event Name="Event" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAABAAAAAAAAAAAACAgAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Enum Name="ChapeauModel.OrderStatus">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>OrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ChapeauModel.TableStatus">
+    <Position X="6" Y="5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAIAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TableStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
