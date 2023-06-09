@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauService\\ChapeauService.csproj": {}
+    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauDAL\\ChapeauDAL.csproj": {
+    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauDAL\\ChapeauDAL.csproj",
+        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj",
         "projectName": "ChapeauDAL",
-        "projectPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauDAL\\ChapeauDAL.csproj",
+        "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj",
         "packagesPath": "C:\\Users\\dipika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauDAL\\obj\\",
+        "outputPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -78,14 +78,14 @@
         }
       }
     },
-    "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauModel\\ChapeauModel.csproj": {
+    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauModel\\ChapeauModel.csproj",
+        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj",
         "projectName": "ChapeauModel",
-        "projectPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauModel\\ChapeauModel.csproj",
+        "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj",
         "packagesPath": "C:\\Users\\dipika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauModel\\obj\\",
+        "outputPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -138,14 +138,14 @@
         }
       }
     },
-    "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauService\\ChapeauService.csproj": {
+    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauService\\ChapeauService.csproj",
+        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj",
         "projectName": "ChapeauService",
-        "projectPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauService\\ChapeauService.csproj",
+        "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj",
         "packagesPath": "C:\\Users\\dipika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauService\\obj\\",
+        "outputPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -167,11 +167,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauDAL\\ChapeauDAL.csproj"
+              "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj"
               },
-              "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauModel\\ChapeauModel.csproj"
+              "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }

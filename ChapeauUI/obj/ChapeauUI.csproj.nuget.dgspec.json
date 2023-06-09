@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauUI\\ChapeauUI.csproj": {}
+    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauUI\\ChapeauUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauUI\\ChapeauUI.csproj": {
+    "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauUI\\ChapeauUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauUI\\ChapeauUI.csproj",
+        "projectUniqueName": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauUI\\ChapeauUI.csproj",
         "projectName": "ChapeauUI",
-        "projectPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauUI\\ChapeauUI.csproj",
+        "projectPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauUI\\ChapeauUI.csproj",
         "packagesPath": "C:\\Users\\dipika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dipika\\OneDrive\\Bureaublad\\Project\\ChapeauUI\\obj\\",
+        "outputPath": "C:\\Users\\dipika\\OneDrive\\Documents\\GitHub\\ProjectChapeauTeam3\\ChapeauUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
