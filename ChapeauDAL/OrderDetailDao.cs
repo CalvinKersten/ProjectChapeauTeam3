@@ -15,7 +15,7 @@ namespace ChapeauDAL
     {
         public List<OrderDetail> GetAllOrderDetails()
         {
-            string query = "SELECT Order_DetailID, Item_Quantity, Order_Time, Order_Status, Comment FROM Table";
+            string query = "SELECT Order_DetailID, Item_Quantity, Order_Status, Comment FROM dbo.Order_Detail";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -28,10 +28,10 @@ namespace ChapeauDAL
             {
                 OrderDetail orderDetail = new OrderDetail()
                 {
-                    OrderDetailID = (int)dr["Order_DetailID"],
-                    ItemQuantity = (int)dr["Item_Quantity"],
-                    OrderTime = (TimeOnly)dr["Order_Time"],
-                    OrderStatus = dr["Order_Status"].ToString(),
+                    Order_DetailID = (int)dr["Order_DetailID"],
+                    Item_Quantity = (int)dr["Item_Quantity"],
+                  //  Order_Time = (TimeOnly)dr["Order_Time"],
+                    Order_Status = dr["Order_Status"].ToString(),
                     Comment = dr["Comment"].ToString(),
                 };
                 orderDetails.Add(orderDetail);

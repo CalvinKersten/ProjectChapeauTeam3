@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChapeauService
 {
-    internal class EmployeeService
+    public class EmployeeService
     {
         private EmployeeDao employeedb;
 

@@ -29,16 +29,13 @@
         private void InitializeComponent()
         {
             KitchenPanel = new Panel();
-            listViewOrder = new ListView();
+            label1 = new Label();
+            listViewKitchen = new ListView();
             ServedBtn = new Button();
             PreaparedBtn = new Button();
             PreparationBtn = new Button();
             label = new Label();
             label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            OrderIdlabel = new Label();
             Blanklabel = new Label();
             KitchenLabel = new Label();
             MaraLabel = new Label();
@@ -47,16 +44,13 @@
             // 
             // KitchenPanel
             // 
-            KitchenPanel.Controls.Add(listViewOrder);
+            KitchenPanel.Controls.Add(label1);
+            KitchenPanel.Controls.Add(listViewKitchen);
             KitchenPanel.Controls.Add(ServedBtn);
             KitchenPanel.Controls.Add(PreaparedBtn);
             KitchenPanel.Controls.Add(PreparationBtn);
             KitchenPanel.Controls.Add(label);
             KitchenPanel.Controls.Add(label4);
-            KitchenPanel.Controls.Add(label3);
-            KitchenPanel.Controls.Add(label2);
-            KitchenPanel.Controls.Add(label1);
-            KitchenPanel.Controls.Add(OrderIdlabel);
             KitchenPanel.Controls.Add(Blanklabel);
             KitchenPanel.Controls.Add(KitchenLabel);
             KitchenPanel.Controls.Add(MaraLabel);
@@ -65,20 +59,40 @@
             KitchenPanel.Size = new Size(1182, 670);
             KitchenPanel.TabIndex = 0;
             // 
-            // listViewOrder
+            // label1
             // 
-            listViewOrder.Location = new Point(83, 297);
-            listViewOrder.Name = "listViewOrder";
-            listViewOrder.Size = new Size(531, 217);
-            listViewOrder.TabIndex = 13;
-            listViewOrder.UseCompatibleStateImageBehavior = false;
-            listViewOrder.View = View.Details;
+            label1.BackColor = Color.Orange;
+            label1.BorderStyle = BorderStyle.FixedSingle;
+            label1.ImageAlign = ContentAlignment.BottomCenter;
+            label1.Location = new Point(623, 335);
+            label1.Name = "label1";
+            label1.Size = new Size(472, 34);
+            label1.TabIndex = 16;
+            label1.Text = "      Change Order Status";
+            label1.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // listViewKitchen
+            // 
+            listViewKitchen.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            listViewKitchen.FullRowSelect = true;
+            listViewKitchen.GridLines = true;
+            listViewKitchen.LabelEdit = true;
+            listViewKitchen.Location = new Point(63, 246);
+            listViewKitchen.Margin = new Padding(6);
+            listViewKitchen.Name = "listViewKitchen";
+            listViewKitchen.OwnerDraw = true;
+            listViewKitchen.Size = new Size(560, 316);
+            listViewKitchen.TabIndex = 15;
+            listViewKitchen.TileSize = new Size(2, 2);
+            listViewKitchen.UseCompatibleStateImageBehavior = false;
+            listViewKitchen.View = View.Details;
+            listViewKitchen.DrawColumnHeader += listView_DrawColumnHeader;
             // 
             // ServedBtn
             // 
             ServedBtn.BackColor = Color.LimeGreen;
             ServedBtn.FlatStyle = FlatStyle.Popup;
-            ServedBtn.Location = new Point(953, 301);
+            ServedBtn.Location = new Point(953, 284);
             ServedBtn.Name = "ServedBtn";
             ServedBtn.Size = new Size(112, 34);
             ServedBtn.TabIndex = 12;
@@ -87,9 +101,9 @@
             // 
             // PreaparedBtn
             // 
-            PreaparedBtn.BackColor = Color.SandyBrown;
+            PreaparedBtn.BackColor = Color.Orange;
             PreaparedBtn.FlatStyle = FlatStyle.Popup;
-            PreaparedBtn.Location = new Point(816, 301);
+            PreaparedBtn.Location = new Point(804, 284);
             PreaparedBtn.Name = "PreaparedBtn";
             PreaparedBtn.Size = new Size(112, 34);
             PreaparedBtn.TabIndex = 11;
@@ -100,7 +114,7 @@
             // 
             PreparationBtn.BackColor = SystemColors.ButtonHighlight;
             PreparationBtn.FlatStyle = FlatStyle.Popup;
-            PreparationBtn.Location = new Point(633, 300);
+            PreparationBtn.Location = new Point(632, 284);
             PreparationBtn.Name = "PreparationBtn";
             PreparationBtn.Size = new Size(141, 35);
             PreparationBtn.TabIndex = 10;
@@ -111,84 +125,40 @@
             // 
             label.BackColor = SystemColors.ButtonHighlight;
             label.BorderStyle = BorderStyle.FixedSingle;
-            label.Location = new Point(613, 297);
+            label.Location = new Point(613, 280);
             label.Name = "label";
-            label.Size = new Size(482, 51);
+            label.Size = new Size(482, 55);
             label.TabIndex = 8;
             // 
             // label4
             // 
-            label4.BackColor = Color.SandyBrown;
+            label4.BackColor = Color.Orange;
             label4.BorderStyle = BorderStyle.FixedSingle;
             label4.ImageAlign = ContentAlignment.BottomCenter;
             label4.Location = new Point(613, 246);
             label4.Name = "label4";
-            label4.Size = new Size(482, 51);
+            label4.Size = new Size(482, 34);
             label4.TabIndex = 7;
             label4.Text = "      Change Order Status";
             label4.TextAlign = ContentAlignment.TopCenter;
-            // 
-            // label3
-            // 
-            label3.BackColor = Color.SandyBrown;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.ImageAlign = ContentAlignment.TopLeft;
-            label3.Location = new Point(464, 246);
-            label3.Name = "label3";
-            label3.Size = new Size(150, 51);
-            label3.TabIndex = 6;
-            label3.Text = "      Description";
-            // 
-            // label2
-            // 
-            label2.BackColor = Color.SandyBrown;
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.ImageAlign = ContentAlignment.TopLeft;
-            label2.Location = new Point(346, 246);
-            label2.Name = "label2";
-            label2.Size = new Size(125, 51);
-            label2.TabIndex = 5;
-            label2.Text = "      Count";
-            // 
-            // label1
-            // 
-            label1.BackColor = Color.SandyBrown;
-            label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.ImageAlign = ContentAlignment.TopLeft;
-            label1.Location = new Point(193, 246);
-            label1.Name = "label1";
-            label1.Size = new Size(156, 51);
-            label1.TabIndex = 4;
-            label1.Text = "    Order number";
-            // 
-            // OrderIdlabel
-            // 
-            OrderIdlabel.BackColor = Color.SandyBrown;
-            OrderIdlabel.BorderStyle = BorderStyle.FixedSingle;
-            OrderIdlabel.ImageAlign = ContentAlignment.TopLeft;
-            OrderIdlabel.Location = new Point(83, 246);
-            OrderIdlabel.Name = "OrderIdlabel";
-            OrderIdlabel.Size = new Size(113, 51);
-            OrderIdlabel.TabIndex = 3;
-            OrderIdlabel.Text = "    Order Id";
             // 
             // Blanklabel
             // 
             Blanklabel.BackColor = SystemColors.ButtonHighlight;
             Blanklabel.BorderStyle = BorderStyle.FixedSingle;
-            Blanklabel.Location = new Point(83, 176);
+            Blanklabel.Location = new Point(63, 176);
             Blanklabel.Name = "Blanklabel";
-            Blanklabel.Size = new Size(1012, 70);
+            Blanklabel.Size = new Size(1032, 70);
             Blanklabel.TabIndex = 2;
             // 
             // KitchenLabel
             // 
-            KitchenLabel.BackColor = Color.SandyBrown;
+            KitchenLabel.BackColor = Color.Orange;
             KitchenLabel.BorderStyle = BorderStyle.FixedSingle;
             KitchenLabel.Font = new Font("Cambria", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            KitchenLabel.Location = new Point(83, 113);
+            KitchenLabel.Location = new Point(63, 113);
             KitchenLabel.Name = "KitchenLabel";
-            KitchenLabel.Size = new Size(1012, 63);
+            KitchenLabel.Size = new Size(1032, 63);
             KitchenLabel.TabIndex = 1;
             KitchenLabel.Text = "Kitchen Orders";
             KitchenLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -196,7 +166,7 @@
             // MaraLabel
             // 
             MaraLabel.AutoSize = true;
-            MaraLabel.BackColor = Color.SandyBrown;
+            MaraLabel.BackColor = Color.Orange;
             MaraLabel.Location = new Point(1043, 68);
             MaraLabel.Name = "MaraLabel";
             MaraLabel.Size = new Size(52, 25);
@@ -219,18 +189,15 @@
         #endregion
 
         private Panel KitchenPanel;
-        private Label OrderIdlabel;
         private Label Blanklabel;
         private Label KitchenLabel;
         private Label MaraLabel;
         private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
         private Button ServedBtn;
         private Button PreaparedBtn;
         private Button PreparationBtn;
         private Label label;
-        private ListView listViewOrder;
+        private ListView listViewKitchen;
+        private Label label1;
     }
 }

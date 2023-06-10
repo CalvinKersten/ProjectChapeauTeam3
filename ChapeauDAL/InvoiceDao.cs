@@ -13,7 +13,7 @@ namespace ChapeauDAL
     {
         public List<Invoice> GetAllInvoices()
         {
-            string query = "SELECT InvoiceID, Subtotal, Tax_Rate, Tip, Total, Payment_Amount, Payment_Method, Feedback, OrderID FROM Employee";
+            string query = "SELECT InvoiceID, Subtotal, Tax_Rate, Tip, Total, Payment_Amount, Payment_Method, Feedback, OrderID FROM Invoice";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }

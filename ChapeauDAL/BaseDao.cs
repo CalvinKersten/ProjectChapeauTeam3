@@ -4,19 +4,16 @@ using System.Configuration;
 using System.Data;
 
 namespace ChapeauDAL
-{   
+{
+    
     public abstract class BaseDao
     {
         private SqlDataAdapter adapter;
         private SqlConnection conn;
-
         public BaseDao()
         {
-            // DO NOT FORGET TO INSERT YOUR CONNECTION STRING NAMED 'SOMEREN DATABASE' IN YOUR APP.CONFIG!!
-            
             conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SomerenDatabase"].ConnectionString);
             adapter = new SqlDataAdapter();
-             
         }
 
         protected SqlConnection OpenConnection()
@@ -27,11 +24,14 @@ namespace ChapeauDAL
                 {
                     conn.Open();
                 }
+                else
+                {
+                    throw new Exception("No connection to Database");
+                }
             }
             catch (Exception e)
             {
-                Console.WriteLine("Oops, there was trouble with establishing a connection with the database.");
-                throw;
+                Console.WriteLine(e.Message);
             }
             return conn;
         }
@@ -45,7 +45,6 @@ namespace ChapeauDAL
         protected void ExecuteEditTranQuery(string query, SqlParameter[] sqlParameters, SqlTransaction sqlTransaction)
         {
             SqlCommand command = new SqlCommand(query, conn, sqlTransaction);
-
             try
             {
                 command.Parameters.AddRange(sqlParameters);
@@ -54,11 +53,8 @@ namespace ChapeauDAL
             }
             catch (Exception e)
             {
-                throw;
-            }
-            finally
-            {
-                CloseConnection();
+                //Print.ErrorLog(e);
+                throw e;
             }
         }
 
@@ -77,7 +73,6 @@ namespace ChapeauDAL
             }
             catch (SqlException e)
             {
-                // Print.ErrorLog(e);
                 throw;
             }
             finally
@@ -105,15 +100,41 @@ namespace ChapeauDAL
             }
             catch (SqlException e)
             {
-                // Print.ErrorLog(e);
-                throw;
+                Console.WriteLine(e.Message);
+                return null;
             }
             finally
             {
                 CloseConnection();
             }
-
             return dataTable;
         }
+
+        protected DataTable ExecuteSelectQuery(string query)
+        {
+            SqlCommand command = new SqlCommand();
+            DataTable dataTable;
+            DataSet dataSet = new DataSet();
+
+            try
+            {
+                command.Connection = OpenConnection();
+                command.CommandText = query;
+                command.ExecuteNonQuery();
+                adapter.SelectCommand = command;
+                adapter.Fill(dataSet);
+                dataTable = dataSet.Tables[0];
+            }
+            catch (SqlException e)
+            {
+                return null;
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return dataTable;
+        }
+
     }
 }

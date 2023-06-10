@@ -28,15 +28,17 @@ namespace ChapeauDAL
                 Employee employee = new Employee()
                 {
                     EmployeeID = (int)dr["EmployeeID"],
-                    EmployeeNum = (string)dr["Employee_Num"],
+                    //EmployeeNum = (int)dr["EmployeeNr"],
                     FirstName = dr["First_Name"].ToString(),
                     LastName = dr["Last_Name"].ToString(),
-                    Password = dr["Password"].ToString(),
+                   // Password = dr["Password"].ToString(),
                     Function = dr["[Function]"].ToString(),
                 };
                 employees.Add(employee);
             }
             return employees;
         }
+
+       
     }
 }

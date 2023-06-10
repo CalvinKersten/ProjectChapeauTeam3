@@ -8,11 +8,12 @@ namespace ChapeauModel
 {
     public class OrderDetail
     {
-        public int OrderDetailID { get; set; }
-        public int ItemQuantity { get; set; }
-        public TimeOnly OrderTime { get; set; }
-        public string OrderStatus { get; set; }
+        public int Order_DetailID { get; set; }
+        public int Item_Quantity { get; set; }
+       // public TimeOnly Order_Time { get; set; }
+        public string Order_Status { get; set; }
         public string Comment { get; set; }
+
         
     }
 }
