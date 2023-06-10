@@ -29,15 +29,19 @@
         private void InitializeComponent()
         {
             this.pnlOrderOverview = new System.Windows.Forms.Panel();
-            this.LunchNavButton = new ChapeauUI.ButtonStyle();
             this.pnlOrderHome = new System.Windows.Forms.Panel();
             this.pnlOrderNav = new System.Windows.Forms.Panel();
             this.DrinksNavButton = new ChapeauUI.ButtonStyle();
             this.DinnerNavButton = new ChapeauUI.ButtonStyle();
+            this.LunchNavButton = new ChapeauUI.ButtonStyle();
             this.labelStyle1 = new ChapeauUI.LabelStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.buttonStyle1 = new ChapeauUI.ButtonStyle();
+            this.LVOrderOverview = new System.Windows.Forms.ListView();
             this.ColumnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
@@ -49,24 +53,17 @@
             // 
             // pnlOrderOverview
             // 
-            this.pnlOrderOverview.Controls.Add(this.listView1);
-            this.pnlOrderOverview.Location = new System.Drawing.Point(-3, 1);
+            this.pnlOrderOverview.Controls.Add(this.pnlOrderHome);
+            this.pnlOrderOverview.Controls.Add(this.label4);
+            this.pnlOrderOverview.Controls.Add(this.label3);
+            this.pnlOrderOverview.Controls.Add(this.label2);
+            this.pnlOrderOverview.Controls.Add(this.buttonStyle1);
+            this.pnlOrderOverview.Controls.Add(this.LVOrderOverview);
+            this.pnlOrderOverview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlOrderOverview.Location = new System.Drawing.Point(0, 0);
             this.pnlOrderOverview.Name = "pnlOrderOverview";
-            this.pnlOrderOverview.Size = new System.Drawing.Size(401, 695);
+            this.pnlOrderOverview.Size = new System.Drawing.Size(398, 697);
             this.pnlOrderOverview.TabIndex = 0;
-            // 
-            // LunchNavButton
-            // 
-            this.LunchNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.LunchNavButton.FlatAppearance.BorderSize = 0;
-            this.LunchNavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LunchNavButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LunchNavButton.Location = new System.Drawing.Point(11, 7);
-            this.LunchNavButton.Name = "LunchNavButton";
-            this.LunchNavButton.Size = new System.Drawing.Size(98, 56);
-            this.LunchNavButton.TabIndex = 0;
-            this.LunchNavButton.Text = "Lunch";
-            this.LunchNavButton.UseVisualStyleBackColor = false;
             // 
             // pnlOrderHome
             // 
@@ -115,6 +112,19 @@
             this.DinnerNavButton.Text = "Dinner";
             this.DinnerNavButton.UseVisualStyleBackColor = false;
             // 
+            // LunchNavButton
+            // 
+            this.LunchNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.LunchNavButton.FlatAppearance.BorderSize = 0;
+            this.LunchNavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LunchNavButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchNavButton.Location = new System.Drawing.Point(11, 7);
+            this.LunchNavButton.Name = "LunchNavButton";
+            this.LunchNavButton.Size = new System.Drawing.Size(98, 56);
+            this.LunchNavButton.TabIndex = 0;
+            this.LunchNavButton.Text = "Lunch";
+            this.LunchNavButton.UseVisualStyleBackColor = false;
+            // 
             // labelStyle1
             // 
             this.labelStyle1.AutoSize = true;
@@ -151,18 +161,70 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Table #";
             // 
-            // listView1
+            // label4
             // 
-            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.label4.AutoSize = true;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(203, 582);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 32);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "VAT:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Verdana", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(273, 531);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 38);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "_ _ _,-";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Verdana", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(174, 531);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 38);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Total:";
+            // 
+            // buttonStyle1
+            // 
+            this.buttonStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonStyle1.FlatAppearance.BorderSize = 0;
+            this.buttonStyle1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStyle1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonStyle1.Location = new System.Drawing.Point(235, 628);
+            this.buttonStyle1.Name = "buttonStyle1";
+            this.buttonStyle1.Size = new System.Drawing.Size(151, 56);
+            this.buttonStyle1.TabIndex = 3;
+            this.buttonStyle1.Text = "Pay";
+            this.buttonStyle1.UseVisualStyleBackColor = false;
+            // 
+            // LVOrderOverview
+            // 
+            this.LVOrderOverview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LVOrderOverview.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ColumnHeader1,
             this.columnHeader2,
             this.columnHeader3});
-            this.listView1.Location = new System.Drawing.Point(14, 166);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(372, 362);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.LVOrderOverview.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LVOrderOverview.Location = new System.Drawing.Point(14, 166);
+            this.LVOrderOverview.MultiSelect = false;
+            this.LVOrderOverview.Name = "LVOrderOverview";
+            this.LVOrderOverview.Size = new System.Drawing.Size(372, 362);
+            this.LVOrderOverview.TabIndex = 0;
+            this.LVOrderOverview.UseCompatibleStateImageBehavior = false;
+            this.LVOrderOverview.View = System.Windows.Forms.View.Details;
             // 
             // ColumnHeader1
             // 
@@ -183,11 +245,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(398, 697);
-            this.Controls.Add(this.pnlOrderHome);
             this.Controls.Add(this.pnlOrderOverview);
             this.Name = "Form1";
             this.Text = "Form1";
             this.pnlOrderOverview.ResumeLayout(false);
+            this.pnlOrderOverview.PerformLayout();
             this.pnlOrderHome.ResumeLayout(false);
             this.pnlOrderHome.PerformLayout();
             this.pnlOrderNav.ResumeLayout(false);
@@ -207,9 +269,13 @@
         private ButtonStyle DrinksNavButton;
         private ButtonStyle DinnerNavButton;
         private LabelStyle labelStyle1;
-        private ListView listView1;
+        private ListView LVOrderOverview;
         private ColumnHeader ColumnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private ButtonStyle buttonStyle1;
     }
 }

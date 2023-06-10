@@ -15,6 +15,19 @@ namespace ChapeauUI
         public Form1()
         {
             InitializeComponent();
+            DisplayOrderOverview();
+        }
+
+        private void DisplayOrderOverview()
+        {
+            //Clearing the LV before displaying
+            LVOrderOverview.Clear();
+
+            //Filling the LV Column headers
+            LVOrderOverview.View = View.Details; //Displays each item on a seperate line
+            LVOrderOverview.Columns.Add("no.", 50);
+            LVOrderOverview.Columns.Add("name", 200);
+            LVOrderOverview.Columns.Add("price",LVOrderOverview.Width - 250);
         }
     }
 }
