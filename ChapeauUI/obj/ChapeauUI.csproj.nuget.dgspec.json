@@ -128,6 +128,68 @@
         }
       }
     },
+    "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj",
+        "projectName": "ChapeauService",
+        "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj",
+        "packagesPath": "C:\\Users\\kerst\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kerst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauDAL\\ChapeauDAL.csproj"
+              },
+              "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauUI\\ChapeauUI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -157,6 +219,9 @@
               },
               "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
                 "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj"
+              },
+              "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj": {
+                "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj"
               }
             }
           }

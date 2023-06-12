@@ -301,6 +301,20 @@
         "runtime": {
           "bin/placeholder/ChapeauModel.dll": {}
         }
+      },
+      "ChapeauService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "ChapeauDAL": "1.0.0",
+          "ChapeauModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ChapeauService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ChapeauService.dll": {}
+        }
       }
     }
   },
@@ -809,12 +823,18 @@
       "type": "project",
       "path": "../ChapeauModel/ChapeauModel.csproj",
       "msbuildProject": "../ChapeauModel/ChapeauModel.csproj"
+    },
+    "ChapeauService/1.0.0": {
+      "type": "project",
+      "path": "../ChapeauService/ChapeauService.csproj",
+      "msbuildProject": "../ChapeauService/ChapeauService.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "ChapeauDAL >= 1.0.0",
-      "ChapeauModel >= 1.0.0"
+      "ChapeauModel >= 1.0.0",
+      "ChapeauService >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -849,6 +869,9 @@
             },
             "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj": {
               "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauModel\\ChapeauModel.csproj"
+            },
+            "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj": {
+              "projectPath": "C:\\Users\\kerst\\source\\repos\\ProjectChapeauTeam3\\ChapeauService\\ChapeauService.csproj"
             }
           }
         }

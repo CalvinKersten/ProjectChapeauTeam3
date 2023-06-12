@@ -38,3 +38,5 @@ C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windo
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauDAL.pdb
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauModel.pdb
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.csproj.CopyComplete
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauService.dll
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauService.pdb

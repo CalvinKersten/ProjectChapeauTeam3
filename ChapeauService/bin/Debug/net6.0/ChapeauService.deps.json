@@ -6,14 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "ChapeauUI/1.0.0": {
+      "ChapeauService/1.0.0": {
         "dependencies": {
           "ChapeauDAL": "1.0.0",
-          "ChapeauModel": "1.0.0",
-          "ChapeauService": "1.0.0"
+          "ChapeauModel": "1.0.0"
         },
         "runtime": {
-          "ChapeauUI.dll": {}
+          "ChapeauService.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/3.1.0": {},
@@ -198,20 +197,11 @@
         "runtime": {
           "ChapeauModel.dll": {}
         }
-      },
-      "ChapeauService/1.0.0": {
-        "dependencies": {
-          "ChapeauDAL": "1.0.0",
-          "ChapeauModel": "1.0.0"
-        },
-        "runtime": {
-          "ChapeauService.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "ChapeauUI/1.0.0": {
+    "ChapeauService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -327,11 +317,6 @@
       "sha512": ""
     },
     "ChapeauModel/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ChapeauService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -19,6 +19,12 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
+        public List<Table> GetAllTableNumbers()
+        {
+            string query = "SELECT Table_Num FROM Table";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
         private List<Table> ReadTables(DataTable dataTable)
         {
             List<Table> tables = new List<Table>();
