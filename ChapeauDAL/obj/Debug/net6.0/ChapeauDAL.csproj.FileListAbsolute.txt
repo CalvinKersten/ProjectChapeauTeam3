@@ -1,0 +1,15 @@
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.csproj.AssemblyReference.cache
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.AssemblyInfoInputs.cache
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.AssemblyInfo.cs
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.csproj.CoreCompileInputs.cache
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\bin\Debug\net6.0\ChapeauDAL.deps.json
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\bin\Debug\net6.0\ChapeauDAL.dll
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\bin\Debug\net6.0\ChapeauDAL.pdb
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\bin\Debug\net6.0\ChapeauModel.dll
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\bin\Debug\net6.0\ChapeauModel.pdb
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.csproj.CopyComplete
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.dll
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\refint\ChapeauDAL.dll
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ChapeauDAL.pdb
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauDAL\obj\Debug\net6.0\ref\ChapeauDAL.dll

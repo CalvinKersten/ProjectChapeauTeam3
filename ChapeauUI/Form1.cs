@@ -8,6 +8,9 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
+using ChapeauModel;
+using ChapeauDAL;
 
 namespace ChapeauUI
 {
@@ -43,7 +46,7 @@ namespace ChapeauUI
             LVOrderOverview.View = View.Details; //Displays each item on a seperate line
             LVOrderOverview.Columns.Add("no.", 50);
             LVOrderOverview.Columns.Add("name", 200);
-            LVOrderOverview.Columns.Add("price",LVOrderOverview.Width - 250);
+            LVOrderOverview.Columns.Add("price",LVOrderOverview.Width - 250);  
         }
 
         private void LunchNavButton_Click(object sender, EventArgs e)
