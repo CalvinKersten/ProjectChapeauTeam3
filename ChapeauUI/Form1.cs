@@ -20,6 +20,7 @@ namespace ChapeauUI
         }
         private void Start()
         {
+            DisplayOrderOverview();
             OpenPanel(pnlTableOverview);
         }
         private void OpenPanel(Control panelToOpen) // closes all panels except for the panel in the argument and the default Menu panel

@@ -1212,9 +1212,9 @@
             this.Controls.Add(this.pnlOrderViewDinner);
             this.Controls.Add(this.pnlOrderViewLunch);
             this.Controls.Add(this.pnlTableOverview);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Form1";
-            this.Text = "Chapeau";
             this.pnlTableOverview.ResumeLayout(false);
             this.pnlTableOverview.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
