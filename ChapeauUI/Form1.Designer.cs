@@ -46,20 +46,26 @@
             this.DinnerNavButton = new ChapeauUI.ButtonStyle();
             this.LunchNavButton = new ChapeauUI.ButtonStyle();
             this.pnlOrderViewLunch = new System.Windows.Forms.Panel();
+            this.PriceLunchM3 = new System.Windows.Forms.Label();
+            this.PriceLunchM2 = new System.Windows.Forms.Label();
+            this.PriceLunchM1 = new System.Windows.Forms.Label();
+            this.PriceLunchS3 = new System.Windows.Forms.Label();
+            this.PriceLunchS2 = new System.Windows.Forms.Label();
+            this.PriceLunchS1 = new System.Windows.Forms.Label();
             this.buttonStyle11 = new ChapeauUI.ButtonStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.buttonStyle8 = new ChapeauUI.ButtonStyle();
-            this.buttonStyle9 = new ChapeauUI.ButtonStyle();
-            this.buttonStyle10 = new ChapeauUI.ButtonStyle();
-            this.buttonStyle5 = new ChapeauUI.ButtonStyle();
-            this.buttonStyle6 = new ChapeauUI.ButtonStyle();
-            this.buttonStyle7 = new ChapeauUI.ButtonStyle();
-            this.buttonStyle4 = new ChapeauUI.ButtonStyle();
-            this.buttonStyle3 = new ChapeauUI.ButtonStyle();
-            this.buttonStyle2 = new ChapeauUI.ButtonStyle();
+            this.LunchItemD3Button = new ChapeauUI.ButtonStyle();
+            this.LunchItemD2Button = new ChapeauUI.ButtonStyle();
+            this.LunchItemD1Button = new ChapeauUI.ButtonStyle();
+            this.LunchItemM3Button = new ChapeauUI.ButtonStyle();
+            this.LunchItemM2Button = new ChapeauUI.ButtonStyle();
+            this.LunchItemM1Button = new ChapeauUI.ButtonStyle();
+            this.LunchItemS3Button = new ChapeauUI.ButtonStyle();
+            this.LunchItemS2Button = new ChapeauUI.ButtonStyle();
+            this.LunchItemS1Button = new ChapeauUI.ButtonStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -121,6 +127,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.listView3 = new System.Windows.Forms.ListView();
             this.label16 = new System.Windows.Forms.Label();
+            this.PriceLunchD1 = new System.Windows.Forms.Label();
+            this.PriceLunchD2 = new System.Windows.Forms.Label();
+            this.PriceLunchD3 = new System.Windows.Forms.Label();
             this.pnlTableOverview.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -324,27 +333,102 @@
             // pnlOrderViewLunch
             // 
             this.pnlOrderViewLunch.AutoScroll = true;
+            this.pnlOrderViewLunch.Controls.Add(this.PriceLunchD3);
+            this.pnlOrderViewLunch.Controls.Add(this.PriceLunchD2);
+            this.pnlOrderViewLunch.Controls.Add(this.PriceLunchD1);
+            this.pnlOrderViewLunch.Controls.Add(this.PriceLunchM3);
+            this.pnlOrderViewLunch.Controls.Add(this.PriceLunchM2);
+            this.pnlOrderViewLunch.Controls.Add(this.PriceLunchM1);
+            this.pnlOrderViewLunch.Controls.Add(this.PriceLunchS3);
+            this.pnlOrderViewLunch.Controls.Add(this.PriceLunchS2);
+            this.pnlOrderViewLunch.Controls.Add(this.PriceLunchS1);
             this.pnlOrderViewLunch.Controls.Add(this.buttonStyle11);
             this.pnlOrderViewLunch.Controls.Add(this.panel2);
             this.pnlOrderViewLunch.Controls.Add(this.panel1);
             this.pnlOrderViewLunch.Controls.Add(this.label8);
             this.pnlOrderViewLunch.Controls.Add(this.listView1);
-            this.pnlOrderViewLunch.Controls.Add(this.buttonStyle8);
-            this.pnlOrderViewLunch.Controls.Add(this.buttonStyle9);
-            this.pnlOrderViewLunch.Controls.Add(this.buttonStyle10);
-            this.pnlOrderViewLunch.Controls.Add(this.buttonStyle5);
-            this.pnlOrderViewLunch.Controls.Add(this.buttonStyle6);
-            this.pnlOrderViewLunch.Controls.Add(this.buttonStyle7);
-            this.pnlOrderViewLunch.Controls.Add(this.buttonStyle4);
-            this.pnlOrderViewLunch.Controls.Add(this.buttonStyle3);
-            this.pnlOrderViewLunch.Controls.Add(this.buttonStyle2);
+            this.pnlOrderViewLunch.Controls.Add(this.LunchItemD3Button);
+            this.pnlOrderViewLunch.Controls.Add(this.LunchItemD2Button);
+            this.pnlOrderViewLunch.Controls.Add(this.LunchItemD1Button);
+            this.pnlOrderViewLunch.Controls.Add(this.LunchItemM3Button);
+            this.pnlOrderViewLunch.Controls.Add(this.LunchItemM2Button);
+            this.pnlOrderViewLunch.Controls.Add(this.LunchItemM1Button);
+            this.pnlOrderViewLunch.Controls.Add(this.LunchItemS3Button);
+            this.pnlOrderViewLunch.Controls.Add(this.LunchItemS2Button);
+            this.pnlOrderViewLunch.Controls.Add(this.LunchItemS1Button);
             this.pnlOrderViewLunch.Controls.Add(this.label7);
             this.pnlOrderViewLunch.Controls.Add(this.label6);
             this.pnlOrderViewLunch.Controls.Add(this.label5);
             this.pnlOrderViewLunch.Location = new System.Drawing.Point(0, 148);
             this.pnlOrderViewLunch.Name = "pnlOrderViewLunch";
-            this.pnlOrderViewLunch.Size = new System.Drawing.Size(445, 550);
+            this.pnlOrderViewLunch.Size = new System.Drawing.Size(435, 550);
             this.pnlOrderViewLunch.TabIndex = 1;
+            // 
+            // PriceLunchM3
+            // 
+            this.PriceLunchM3.AutoSize = true;
+            this.PriceLunchM3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceLunchM3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceLunchM3.Location = new System.Drawing.Point(339, 420);
+            this.PriceLunchM3.Name = "PriceLunchM3";
+            this.PriceLunchM3.Size = new System.Drawing.Size(49, 25);
+            this.PriceLunchM3.TabIndex = 22;
+            this.PriceLunchM3.Text = "Price";
+            // 
+            // PriceLunchM2
+            // 
+            this.PriceLunchM2.AutoSize = true;
+            this.PriceLunchM2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceLunchM2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceLunchM2.Location = new System.Drawing.Point(339, 359);
+            this.PriceLunchM2.Name = "PriceLunchM2";
+            this.PriceLunchM2.Size = new System.Drawing.Size(49, 25);
+            this.PriceLunchM2.TabIndex = 21;
+            this.PriceLunchM2.Text = "Price";
+            // 
+            // PriceLunchM1
+            // 
+            this.PriceLunchM1.AutoSize = true;
+            this.PriceLunchM1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceLunchM1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceLunchM1.Location = new System.Drawing.Point(339, 295);
+            this.PriceLunchM1.Name = "PriceLunchM1";
+            this.PriceLunchM1.Size = new System.Drawing.Size(49, 25);
+            this.PriceLunchM1.TabIndex = 20;
+            this.PriceLunchM1.Text = "Price";
+            // 
+            // PriceLunchS3
+            // 
+            this.PriceLunchS3.AutoSize = true;
+            this.PriceLunchS3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceLunchS3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceLunchS3.Location = new System.Drawing.Point(339, 192);
+            this.PriceLunchS3.Name = "PriceLunchS3";
+            this.PriceLunchS3.Size = new System.Drawing.Size(49, 25);
+            this.PriceLunchS3.TabIndex = 19;
+            this.PriceLunchS3.Text = "Price";
+            // 
+            // PriceLunchS2
+            // 
+            this.PriceLunchS2.AutoSize = true;
+            this.PriceLunchS2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceLunchS2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceLunchS2.Location = new System.Drawing.Point(339, 130);
+            this.PriceLunchS2.Name = "PriceLunchS2";
+            this.PriceLunchS2.Size = new System.Drawing.Size(49, 25);
+            this.PriceLunchS2.TabIndex = 18;
+            this.PriceLunchS2.Text = "Price";
+            // 
+            // PriceLunchS1
+            // 
+            this.PriceLunchS1.AutoSize = true;
+            this.PriceLunchS1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceLunchS1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceLunchS1.Location = new System.Drawing.Point(339, 66);
+            this.PriceLunchS1.Name = "PriceLunchS1";
+            this.PriceLunchS1.Size = new System.Drawing.Size(49, 25);
+            this.PriceLunchS1.TabIndex = 17;
+            this.PriceLunchS1.Text = "Price";
             // 
             // buttonStyle11
             // 
@@ -398,104 +482,104 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             // 
-            // buttonStyle8
+            // LunchItemD3Button
             // 
-            this.buttonStyle8.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStyle8.Location = new System.Drawing.Point(12, 634);
-            this.buttonStyle8.Name = "buttonStyle8";
-            this.buttonStyle8.Size = new System.Drawing.Size(406, 58);
-            this.buttonStyle8.TabIndex = 11;
-            this.buttonStyle8.Text = "3 types of farmer’s cheeses with rye\nraisin bread";
-            this.buttonStyle8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStyle8.UseVisualStyleBackColor = true;
+            this.LunchItemD3Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchItemD3Button.Location = new System.Drawing.Point(12, 634);
+            this.LunchItemD3Button.Name = "LunchItemD3Button";
+            this.LunchItemD3Button.Size = new System.Drawing.Size(406, 58);
+            this.LunchItemD3Button.TabIndex = 11;
+            this.LunchItemD3Button.Text = "3 types of farmer’s cheeses with rye\nraisin bread";
+            this.LunchItemD3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LunchItemD3Button.UseVisualStyleBackColor = true;
             // 
-            // buttonStyle9
+            // LunchItemD2Button
             // 
-            this.buttonStyle9.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStyle9.Location = new System.Drawing.Point(11, 570);
-            this.buttonStyle9.Name = "buttonStyle9";
-            this.buttonStyle9.Size = new System.Drawing.Size(406, 58);
-            this.buttonStyle9.TabIndex = 10;
-            this.buttonStyle9.Text = "Fresh madeleines with fig compote\nand creme pâtissier with Grand Marnier";
-            this.buttonStyle9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStyle9.UseVisualStyleBackColor = true;
+            this.LunchItemD2Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchItemD2Button.Location = new System.Drawing.Point(11, 570);
+            this.LunchItemD2Button.Name = "LunchItemD2Button";
+            this.LunchItemD2Button.Size = new System.Drawing.Size(406, 58);
+            this.LunchItemD2Button.TabIndex = 10;
+            this.LunchItemD2Button.Text = "Fresh madeleines with fig compote\nand creme pâtissier with Grand Marnier";
+            this.LunchItemD2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LunchItemD2Button.UseVisualStyleBackColor = true;
             // 
-            // buttonStyle10
+            // LunchItemD1Button
             // 
-            this.buttonStyle10.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStyle10.Location = new System.Drawing.Point(11, 506);
-            this.buttonStyle10.Name = "buttonStyle10";
-            this.buttonStyle10.Size = new System.Drawing.Size(406, 58);
-            this.buttonStyle10.TabIndex = 9;
-            this.buttonStyle10.Text = "White chocolate and speculoos\ncake with mandarin";
-            this.buttonStyle10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStyle10.UseVisualStyleBackColor = true;
+            this.LunchItemD1Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchItemD1Button.Location = new System.Drawing.Point(11, 506);
+            this.LunchItemD1Button.Name = "LunchItemD1Button";
+            this.LunchItemD1Button.Size = new System.Drawing.Size(406, 58);
+            this.LunchItemD1Button.TabIndex = 9;
+            this.LunchItemD1Button.Text = "White chocolate and speculoos\ncake with mandarin";
+            this.LunchItemD1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LunchItemD1Button.UseVisualStyleBackColor = true;
             // 
-            // buttonStyle5
+            // LunchItemM3Button
             // 
-            this.buttonStyle5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStyle5.Location = new System.Drawing.Point(12, 405);
-            this.buttonStyle5.Name = "buttonStyle5";
-            this.buttonStyle5.Size = new System.Drawing.Size(406, 58);
-            this.buttonStyle5.TabIndex = 8;
-            this.buttonStyle5.Text = "Linguini with mushroom\nsauce";
-            this.buttonStyle5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStyle5.UseVisualStyleBackColor = true;
+            this.LunchItemM3Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchItemM3Button.Location = new System.Drawing.Point(12, 405);
+            this.LunchItemM3Button.Name = "LunchItemM3Button";
+            this.LunchItemM3Button.Size = new System.Drawing.Size(406, 58);
+            this.LunchItemM3Button.TabIndex = 8;
+            this.LunchItemM3Button.Text = "Linguini with mushroom\nsauce";
+            this.LunchItemM3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LunchItemM3Button.UseVisualStyleBackColor = true;
             // 
-            // buttonStyle6
+            // LunchItemM2Button
             // 
-            this.buttonStyle6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStyle6.Location = new System.Drawing.Point(11, 341);
-            this.buttonStyle6.Name = "buttonStyle6";
-            this.buttonStyle6.Size = new System.Drawing.Size(406, 58);
-            this.buttonStyle6.TabIndex = 7;
-            this.buttonStyle6.Text = "Fried cod with curry\nsabayon";
-            this.buttonStyle6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStyle6.UseVisualStyleBackColor = true;
+            this.LunchItemM2Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchItemM2Button.Location = new System.Drawing.Point(11, 341);
+            this.LunchItemM2Button.Name = "LunchItemM2Button";
+            this.LunchItemM2Button.Size = new System.Drawing.Size(406, 58);
+            this.LunchItemM2Button.TabIndex = 7;
+            this.LunchItemM2Button.Text = "Fried cod with curry\nsabayon";
+            this.LunchItemM2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LunchItemM2Button.UseVisualStyleBackColor = true;
             // 
-            // buttonStyle7
+            // LunchItemM1Button
             // 
-            this.buttonStyle7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStyle7.Location = new System.Drawing.Point(11, 277);
-            this.buttonStyle7.Name = "buttonStyle7";
-            this.buttonStyle7.Size = new System.Drawing.Size(406, 58);
-            this.buttonStyle7.TabIndex = 6;
-            this.buttonStyle7.Text = "Deer stew with red\ncabbage";
-            this.buttonStyle7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStyle7.UseVisualStyleBackColor = true;
+            this.LunchItemM1Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchItemM1Button.Location = new System.Drawing.Point(11, 277);
+            this.LunchItemM1Button.Name = "LunchItemM1Button";
+            this.LunchItemM1Button.Size = new System.Drawing.Size(406, 58);
+            this.LunchItemM1Button.TabIndex = 6;
+            this.LunchItemM1Button.Text = "Deer stew with red\ncabbage";
+            this.LunchItemM1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LunchItemM1Button.UseVisualStyleBackColor = true;
             // 
-            // buttonStyle4
+            // LunchItemS3Button
             // 
-            this.buttonStyle4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStyle4.Location = new System.Drawing.Point(12, 176);
-            this.buttonStyle4.Name = "buttonStyle4";
-            this.buttonStyle4.Size = new System.Drawing.Size(406, 58);
-            this.buttonStyle4.TabIndex = 5;
-            this.buttonStyle4.Text = "Provencal fish soup with rouille,\naged cheese and croutons\n";
-            this.buttonStyle4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStyle4.UseVisualStyleBackColor = true;
+            this.LunchItemS3Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchItemS3Button.Location = new System.Drawing.Point(12, 176);
+            this.LunchItemS3Button.Name = "LunchItemS3Button";
+            this.LunchItemS3Button.Size = new System.Drawing.Size(406, 58);
+            this.LunchItemS3Button.TabIndex = 5;
+            this.LunchItemS3Button.Text = "Provencal fish soup with rouille,\naged cheese and croutons\n";
+            this.LunchItemS3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LunchItemS3Button.UseVisualStyleBackColor = true;
             // 
-            // buttonStyle3
+            // LunchItemS2Button
             // 
-            this.buttonStyle3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStyle3.Location = new System.Drawing.Point(11, 112);
-            this.buttonStyle3.Name = "buttonStyle3";
-            this.buttonStyle3.Size = new System.Drawing.Size(406, 58);
-            this.buttonStyle3.TabIndex = 4;
-            this.buttonStyle3.Text = "Pâté of pheasant with Monegasque\nonions ";
-            this.buttonStyle3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStyle3.UseVisualStyleBackColor = true;
+            this.LunchItemS2Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchItemS2Button.Location = new System.Drawing.Point(11, 112);
+            this.LunchItemS2Button.Name = "LunchItemS2Button";
+            this.LunchItemS2Button.Size = new System.Drawing.Size(406, 58);
+            this.LunchItemS2Button.TabIndex = 4;
+            this.LunchItemS2Button.Text = "Pâté of pheasant with Monegasque\nonions ";
+            this.LunchItemS2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LunchItemS2Button.UseVisualStyleBackColor = true;
             // 
-            // buttonStyle2
+            // LunchItemS1Button
             // 
-            this.buttonStyle2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonStyle2.Location = new System.Drawing.Point(11, 48);
-            this.buttonStyle2.Name = "buttonStyle2";
-            this.buttonStyle2.Size = new System.Drawing.Size(406, 58);
-            this.buttonStyle2.TabIndex = 3;
-            this.buttonStyle2.Text = "Steak tartar with truffle\r\nmayonnaise\r\n";
-            this.buttonStyle2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStyle2.UseVisualStyleBackColor = true;
+            this.LunchItemS1Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LunchItemS1Button.Location = new System.Drawing.Point(11, 48);
+            this.LunchItemS1Button.Name = "LunchItemS1Button";
+            this.LunchItemS1Button.Size = new System.Drawing.Size(406, 58);
+            this.LunchItemS1Button.TabIndex = 3;
+            this.LunchItemS1Button.Text = "Steak tartar with truffle\r\nmayonnaise\r\n";
+            this.LunchItemS1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LunchItemS1Button.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -1200,6 +1284,39 @@
             this.label16.TabIndex = 2;
             this.label16.Text = "Spirit";
             // 
+            // PriceLunchD1
+            // 
+            this.PriceLunchD1.AutoSize = true;
+            this.PriceLunchD1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceLunchD1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceLunchD1.Location = new System.Drawing.Point(339, 524);
+            this.PriceLunchD1.Name = "PriceLunchD1";
+            this.PriceLunchD1.Size = new System.Drawing.Size(49, 25);
+            this.PriceLunchD1.TabIndex = 23;
+            this.PriceLunchD1.Text = "Price";
+            // 
+            // PriceLunchD2
+            // 
+            this.PriceLunchD2.AutoSize = true;
+            this.PriceLunchD2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceLunchD2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceLunchD2.Location = new System.Drawing.Point(339, 588);
+            this.PriceLunchD2.Name = "PriceLunchD2";
+            this.PriceLunchD2.Size = new System.Drawing.Size(49, 25);
+            this.PriceLunchD2.TabIndex = 24;
+            this.PriceLunchD2.Text = "Price";
+            // 
+            // PriceLunchD3
+            // 
+            this.PriceLunchD3.AutoSize = true;
+            this.PriceLunchD3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceLunchD3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceLunchD3.Location = new System.Drawing.Point(339, 652);
+            this.PriceLunchD3.Name = "PriceLunchD3";
+            this.PriceLunchD3.Size = new System.Drawing.Size(49, 25);
+            this.PriceLunchD3.TabIndex = 25;
+            this.PriceLunchD3.Text = "Price";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1208,10 +1325,10 @@
             this.ClientSize = new System.Drawing.Size(426, 697);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlOrderViewLunch);
             this.Controls.Add(this.pnlTableOverview);
             this.Controls.Add(this.pnlOrderViewDrinks);
             this.Controls.Add(this.pnlOrderViewDinner);
-            this.Controls.Add(this.pnlOrderViewLunch);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Form1";
@@ -1254,15 +1371,15 @@
         private Label label5;
         private Label label7;
         private Label label6;
-        private ButtonStyle buttonStyle2;
-        private ButtonStyle buttonStyle3;
-        private ButtonStyle buttonStyle4;
-        private ButtonStyle buttonStyle8;
-        private ButtonStyle buttonStyle9;
-        private ButtonStyle buttonStyle10;
-        private ButtonStyle buttonStyle5;
-        private ButtonStyle buttonStyle6;
-        private ButtonStyle buttonStyle7;
+        private ButtonStyle LunchItemS1Button;
+        private ButtonStyle LunchItemS2Button;
+        private ButtonStyle LunchItemS3Button;
+        private ButtonStyle LunchItemD3Button;
+        private ButtonStyle LunchItemD2Button;
+        private ButtonStyle LunchItemD1Button;
+        private ButtonStyle LunchItemM3Button;
+        private ButtonStyle LunchItemM2Button;
+        private ButtonStyle LunchItemM1Button;
         private Panel panel1;
         private Label label8;
         private ListView listView1;
@@ -1326,5 +1443,14 @@
         private ButtonStyle SpaGreenButton;
         private ButtonStyle SpaRedButton;
         private Label label18;
+        private Label PriceLunchS1;
+        private Label PriceLunchS3;
+        private Label PriceLunchS2;
+        private Label PriceLunchM3;
+        private Label PriceLunchM2;
+        private Label PriceLunchM1;
+        private Label PriceLunchD3;
+        private Label PriceLunchD2;
+        private Label PriceLunchD1;
     }
 }

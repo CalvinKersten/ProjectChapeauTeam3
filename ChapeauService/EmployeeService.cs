@@ -22,11 +22,9 @@ namespace ChapeauService
             List<Employee> employees = employeedb.GetAllEmployees();
             return employees;
         }
-        public List<Employee> GetEmployeeNames()
-        {
-            List<Employee> employeeNames = employeedb.GetAllEmployeeNames();
-            return employeeNames;
-        }
+        
+            
+        
 
     }
 }

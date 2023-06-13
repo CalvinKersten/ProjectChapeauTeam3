@@ -19,26 +19,7 @@ namespace ChapeauDAL
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        public List<Table> GetAllTableNumbers()
-        {
-            string query = "SELECT Table_Num FROM [Table]";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTableNumber(ExecuteSelectQuery(query, sqlParameters));
-        }
-        private List<Table> ReadTableNumber(DataTable dataTable)
-        {
-            List<Table> tableNumber = new List<Table>();
 
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                Table table = new Table()
-                {
-                    Table_Num = (int)dr["Table_Num"]
-                };
-                tableNumber.Add(table);
-            }
-            return tableNumber;
-        }
         private List<Table> ReadTables(DataTable dataTable)
         {
             List<Table> tables = new List<Table>();
@@ -55,5 +36,9 @@ namespace ChapeauDAL
             }
             return tables;
         }
+        
+        
+
+        
     }
 }

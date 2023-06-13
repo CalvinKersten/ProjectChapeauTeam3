@@ -18,36 +18,6 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        public List<Employee> GetAllEmployeeIDs()
-        {
-            string query = "SELECT EmployeeID FROM Employee";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        public List<Employee> GetAllEmployeeNames()
-        {
-            int EmployeeID = GetAllEmployeeIDs();
-            string query = "SELECT Last_Name FROM Employee WHERE EmployeeID=@EmployeeID";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            sqlParameters.AddWithValue("@EmployeeID", EmployeeID);
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
-        private List<Employee> ReadEmployeeName(DataTable dataTable)
-        {
-            List<Employee> employeeName = new List<Employee>();
-
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                Employee employee = new Employee()
-                {
-                    LastName = dr["Last_Name"].ToString()
-                };
-                employeeName.Add(employee);
-            }
-            return employeeName;
-        }
-
         private List<Employee> ReadTables(DataTable dataTable)
         {
             List<Employee> employees = new List<Employee>();
@@ -67,7 +37,21 @@ namespace ChapeauDAL
             }
             return employees;
         }
-
-
+        public List<Employee> GetEmployeeNames()
+        {
+            string EmployeeID = "";
+            string query = "SELECT First_Name, Last_Name FROM Employee WHERE EmployeeID = @EmployeeID";
+            SqlCommand cmd = new SqlCommand(query);
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    EmployeeID = reader.GetString(0);
+                }
+            }
+            cmd.Parameters.AddWithValue("@EmployeeID", EmployeeID);
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
     }
 }
