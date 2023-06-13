@@ -73,6 +73,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlOrderViewDinner = new System.Windows.Forms.Panel();
+            this.PriceDinnerD3 = new System.Windows.Forms.Label();
+            this.PriceDinnerD2 = new System.Windows.Forms.Label();
+            this.PriceDinnerD1 = new System.Windows.Forms.Label();
+            this.PriceDinnerM3 = new System.Windows.Forms.Label();
+            this.PriceDinnerM2 = new System.Windows.Forms.Label();
+            this.PriceDinnerM1 = new System.Windows.Forms.Label();
+            this.PriceDinnerE2 = new System.Windows.Forms.Label();
+            this.PriceDinnerE1 = new System.Windows.Forms.Label();
+            this.PriceDinnerS3 = new System.Windows.Forms.Label();
+            this.PriceDinnerS2 = new System.Windows.Forms.Label();
+            this.PriceDinnerS1 = new System.Windows.Forms.Label();
             this.DinnerItemE2Button = new ChapeauUI.ButtonStyle();
             this.DinnerItemE1Button = new ChapeauUI.ButtonStyle();
             this.label13 = new System.Windows.Forms.Label();
@@ -94,6 +105,32 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlOrderViewDrinks = new System.Windows.Forms.Panel();
+            this.PriceDrinksSp5 = new System.Windows.Forms.Label();
+            this.PriceDrinksH4 = new System.Windows.Forms.Label();
+            this.PriceDrinksH3 = new System.Windows.Forms.Label();
+            this.PriceDrinksH2 = new System.Windows.Forms.Label();
+            this.PriceDrinksH1 = new System.Windows.Forms.Label();
+            this.PriceDrinksSp4 = new System.Windows.Forms.Label();
+            this.PriceDrinksSp3 = new System.Windows.Forms.Label();
+            this.PriceDrinksSp2 = new System.Windows.Forms.Label();
+            this.PriceDrinksSp1 = new System.Windows.Forms.Label();
+            this.PriceDrinksW5 = new System.Windows.Forms.Label();
+            this.PriceDrinksW4 = new System.Windows.Forms.Label();
+            this.PriceDrinksW3 = new System.Windows.Forms.Label();
+            this.PriceDrinksW2 = new System.Windows.Forms.Label();
+            this.PriceDrinksW1 = new System.Windows.Forms.Label();
+            this.PriceDrinksB4 = new System.Windows.Forms.Label();
+            this.PriceDrinksB3 = new System.Windows.Forms.Label();
+            this.PriceDrinksB2 = new System.Windows.Forms.Label();
+            this.PriceDrinksB1 = new System.Windows.Forms.Label();
+            this.PriceDrinksSo7 = new System.Windows.Forms.Label();
+            this.PriceDrinksSo6 = new System.Windows.Forms.Label();
+            this.PriceDrinksSo5 = new System.Windows.Forms.Label();
+            this.PriceDrinksSo4 = new System.Windows.Forms.Label();
+            this.PriceDrinksSo3 = new System.Windows.Forms.Label();
+            this.PriceDrinksSo2 = new System.Windows.Forms.Label();
+            this.PriceDrinksSo1 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.BitterLemonButton = new ChapeauUI.ButtonStyle();
             this.TonicButton = new ChapeauUI.ButtonStyle();
             this.SisiButton = new ChapeauUI.ButtonStyle();
@@ -130,43 +167,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.LVSelectedDrinks = new System.Windows.Forms.ListView();
             this.label16 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.PriceDinnerS1 = new System.Windows.Forms.Label();
-            this.PriceDinnerS2 = new System.Windows.Forms.Label();
-            this.PriceDinnerS3 = new System.Windows.Forms.Label();
-            this.PriceDinnerE2 = new System.Windows.Forms.Label();
-            this.PriceDinnerE1 = new System.Windows.Forms.Label();
-            this.PriceDinnerM3 = new System.Windows.Forms.Label();
-            this.PriceDinnerM2 = new System.Windows.Forms.Label();
-            this.PriceDinnerM1 = new System.Windows.Forms.Label();
-            this.PriceDinnerD3 = new System.Windows.Forms.Label();
-            this.PriceDinnerD2 = new System.Windows.Forms.Label();
-            this.PriceDinnerD1 = new System.Windows.Forms.Label();
-            this.PriceDrinksSo3 = new System.Windows.Forms.Label();
-            this.PriceDrinksSo2 = new System.Windows.Forms.Label();
-            this.PriceDrinksSo1 = new System.Windows.Forms.Label();
-            this.PriceDrinksSo6 = new System.Windows.Forms.Label();
-            this.PriceDrinksSo5 = new System.Windows.Forms.Label();
-            this.PriceDrinksSo4 = new System.Windows.Forms.Label();
-            this.PriceDrinksSo7 = new System.Windows.Forms.Label();
-            this.PriceDrinksW3 = new System.Windows.Forms.Label();
-            this.PriceDrinksW2 = new System.Windows.Forms.Label();
-            this.PriceDrinksW1 = new System.Windows.Forms.Label();
-            this.PriceDrinksB4 = new System.Windows.Forms.Label();
-            this.PriceDrinksB3 = new System.Windows.Forms.Label();
-            this.PriceDrinksB2 = new System.Windows.Forms.Label();
-            this.PriceDrinksB1 = new System.Windows.Forms.Label();
-            this.PriceDrinksW5 = new System.Windows.Forms.Label();
-            this.PriceDrinksW4 = new System.Windows.Forms.Label();
-            this.PriceDrinksSp4 = new System.Windows.Forms.Label();
-            this.PriceDrinksSp3 = new System.Windows.Forms.Label();
-            this.PriceDrinksSp2 = new System.Windows.Forms.Label();
-            this.PriceDrinksSp1 = new System.Windows.Forms.Label();
-            this.PriceDrinksH4 = new System.Windows.Forms.Label();
-            this.PriceDrinksH3 = new System.Windows.Forms.Label();
-            this.PriceDrinksH2 = new System.Windows.Forms.Label();
-            this.PriceDrinksH1 = new System.Windows.Forms.Label();
-            this.PriceDrinksSp5 = new System.Windows.Forms.Label();
             this.pnlTableOverview.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -327,7 +327,7 @@
             // 
             // DrinksNavButton
             // 
-            this.DrinksNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.DrinksNavButton.BackColor = System.Drawing.Color.LightGreen;
             this.DrinksNavButton.FlatAppearance.BorderSize = 0;
             this.DrinksNavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DrinksNavButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -341,7 +341,7 @@
             // 
             // DinnerNavButton
             // 
-            this.DinnerNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.DinnerNavButton.BackColor = System.Drawing.Color.LightGreen;
             this.DinnerNavButton.FlatAppearance.BorderSize = 0;
             this.DinnerNavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DinnerNavButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -355,7 +355,7 @@
             // 
             // LunchNavButton
             // 
-            this.LunchNavButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.LunchNavButton.BackColor = System.Drawing.Color.LightGreen;
             this.LunchNavButton.FlatAppearance.BorderSize = 0;
             this.LunchNavButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LunchNavButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -721,6 +721,127 @@
             this.pnlOrderViewDinner.Size = new System.Drawing.Size(434, 550);
             this.pnlOrderViewDinner.TabIndex = 17;
             // 
+            // PriceDinnerD3
+            // 
+            this.PriceDinnerD3.AutoSize = true;
+            this.PriceDinnerD3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerD3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerD3.Location = new System.Drawing.Point(335, 808);
+            this.PriceDinnerD3.Name = "PriceDinnerD3";
+            this.PriceDinnerD3.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerD3.TabIndex = 30;
+            this.PriceDinnerD3.Text = "Price";
+            // 
+            // PriceDinnerD2
+            // 
+            this.PriceDinnerD2.AutoSize = true;
+            this.PriceDinnerD2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerD2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerD2.Location = new System.Drawing.Point(335, 744);
+            this.PriceDinnerD2.Name = "PriceDinnerD2";
+            this.PriceDinnerD2.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerD2.TabIndex = 29;
+            this.PriceDinnerD2.Text = "Price";
+            // 
+            // PriceDinnerD1
+            // 
+            this.PriceDinnerD1.AutoSize = true;
+            this.PriceDinnerD1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerD1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerD1.Location = new System.Drawing.Point(335, 680);
+            this.PriceDinnerD1.Name = "PriceDinnerD1";
+            this.PriceDinnerD1.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerD1.TabIndex = 28;
+            this.PriceDinnerD1.Text = "Price";
+            // 
+            // PriceDinnerM3
+            // 
+            this.PriceDinnerM3.AutoSize = true;
+            this.PriceDinnerM3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerM3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerM3.Location = new System.Drawing.Point(335, 579);
+            this.PriceDinnerM3.Name = "PriceDinnerM3";
+            this.PriceDinnerM3.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerM3.TabIndex = 27;
+            this.PriceDinnerM3.Text = "Price";
+            // 
+            // PriceDinnerM2
+            // 
+            this.PriceDinnerM2.AutoSize = true;
+            this.PriceDinnerM2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerM2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerM2.Location = new System.Drawing.Point(335, 515);
+            this.PriceDinnerM2.Name = "PriceDinnerM2";
+            this.PriceDinnerM2.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerM2.TabIndex = 26;
+            this.PriceDinnerM2.Text = "Price";
+            // 
+            // PriceDinnerM1
+            // 
+            this.PriceDinnerM1.AutoSize = true;
+            this.PriceDinnerM1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerM1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerM1.Location = new System.Drawing.Point(335, 451);
+            this.PriceDinnerM1.Name = "PriceDinnerM1";
+            this.PriceDinnerM1.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerM1.TabIndex = 25;
+            this.PriceDinnerM1.Text = "Price";
+            // 
+            // PriceDinnerE2
+            // 
+            this.PriceDinnerE2.AutoSize = true;
+            this.PriceDinnerE2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerE2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerE2.Location = new System.Drawing.Point(335, 354);
+            this.PriceDinnerE2.Name = "PriceDinnerE2";
+            this.PriceDinnerE2.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerE2.TabIndex = 24;
+            this.PriceDinnerE2.Text = "Price";
+            // 
+            // PriceDinnerE1
+            // 
+            this.PriceDinnerE1.AutoSize = true;
+            this.PriceDinnerE1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerE1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerE1.Location = new System.Drawing.Point(335, 290);
+            this.PriceDinnerE1.Name = "PriceDinnerE1";
+            this.PriceDinnerE1.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerE1.TabIndex = 23;
+            this.PriceDinnerE1.Text = "Price";
+            // 
+            // PriceDinnerS3
+            // 
+            this.PriceDinnerS3.AutoSize = true;
+            this.PriceDinnerS3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerS3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerS3.Location = new System.Drawing.Point(335, 194);
+            this.PriceDinnerS3.Name = "PriceDinnerS3";
+            this.PriceDinnerS3.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerS3.TabIndex = 22;
+            this.PriceDinnerS3.Text = "Price";
+            // 
+            // PriceDinnerS2
+            // 
+            this.PriceDinnerS2.AutoSize = true;
+            this.PriceDinnerS2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerS2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerS2.Location = new System.Drawing.Point(335, 130);
+            this.PriceDinnerS2.Name = "PriceDinnerS2";
+            this.PriceDinnerS2.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerS2.TabIndex = 21;
+            this.PriceDinnerS2.Text = "Price";
+            // 
+            // PriceDinnerS1
+            // 
+            this.PriceDinnerS1.AutoSize = true;
+            this.PriceDinnerS1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDinnerS1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDinnerS1.Location = new System.Drawing.Point(335, 66);
+            this.PriceDinnerS1.Name = "PriceDinnerS1";
+            this.PriceDinnerS1.Size = new System.Drawing.Size(49, 25);
+            this.PriceDinnerS1.TabIndex = 20;
+            this.PriceDinnerS1.Text = "Price";
+            // 
             // DinnerItemE2Button
             // 
             this.DinnerItemE2Button.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1003,6 +1124,291 @@
             this.pnlOrderViewDrinks.Name = "pnlOrderViewDrinks";
             this.pnlOrderViewDrinks.Size = new System.Drawing.Size(445, 550);
             this.pnlOrderViewDrinks.TabIndex = 20;
+            // 
+            // PriceDrinksSp5
+            // 
+            this.PriceDrinksSp5.AutoSize = true;
+            this.PriceDrinksSp5.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSp5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSp5.Location = new System.Drawing.Point(339, 1148);
+            this.PriceDrinksSp5.Name = "PriceDrinksSp5";
+            this.PriceDrinksSp5.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSp5.TabIndex = 77;
+            this.PriceDrinksSp5.Text = "Price";
+            // 
+            // PriceDrinksH4
+            // 
+            this.PriceDrinksH4.AutoSize = true;
+            this.PriceDrinksH4.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksH4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksH4.Location = new System.Drawing.Point(339, 1357);
+            this.PriceDrinksH4.Name = "PriceDrinksH4";
+            this.PriceDrinksH4.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksH4.TabIndex = 76;
+            this.PriceDrinksH4.Text = "Price";
+            // 
+            // PriceDrinksH3
+            // 
+            this.PriceDrinksH3.AutoSize = true;
+            this.PriceDrinksH3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksH3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksH3.Location = new System.Drawing.Point(339, 1315);
+            this.PriceDrinksH3.Name = "PriceDrinksH3";
+            this.PriceDrinksH3.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksH3.TabIndex = 75;
+            this.PriceDrinksH3.Text = "Price";
+            // 
+            // PriceDrinksH2
+            // 
+            this.PriceDrinksH2.AutoSize = true;
+            this.PriceDrinksH2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksH2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksH2.Location = new System.Drawing.Point(339, 1271);
+            this.PriceDrinksH2.Name = "PriceDrinksH2";
+            this.PriceDrinksH2.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksH2.TabIndex = 74;
+            this.PriceDrinksH2.Text = "Price";
+            // 
+            // PriceDrinksH1
+            // 
+            this.PriceDrinksH1.AutoSize = true;
+            this.PriceDrinksH1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksH1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksH1.Location = new System.Drawing.Point(339, 1227);
+            this.PriceDrinksH1.Name = "PriceDrinksH1";
+            this.PriceDrinksH1.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksH1.TabIndex = 73;
+            this.PriceDrinksH1.Text = "Price";
+            // 
+            // PriceDrinksSp4
+            // 
+            this.PriceDrinksSp4.AutoSize = true;
+            this.PriceDrinksSp4.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSp4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSp4.Location = new System.Drawing.Point(339, 1102);
+            this.PriceDrinksSp4.Name = "PriceDrinksSp4";
+            this.PriceDrinksSp4.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSp4.TabIndex = 72;
+            this.PriceDrinksSp4.Text = "Price";
+            // 
+            // PriceDrinksSp3
+            // 
+            this.PriceDrinksSp3.AutoSize = true;
+            this.PriceDrinksSp3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSp3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSp3.Location = new System.Drawing.Point(339, 1060);
+            this.PriceDrinksSp3.Name = "PriceDrinksSp3";
+            this.PriceDrinksSp3.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSp3.TabIndex = 71;
+            this.PriceDrinksSp3.Text = "Price";
+            // 
+            // PriceDrinksSp2
+            // 
+            this.PriceDrinksSp2.AutoSize = true;
+            this.PriceDrinksSp2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSp2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSp2.Location = new System.Drawing.Point(339, 1016);
+            this.PriceDrinksSp2.Name = "PriceDrinksSp2";
+            this.PriceDrinksSp2.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSp2.TabIndex = 70;
+            this.PriceDrinksSp2.Text = "Price";
+            // 
+            // PriceDrinksSp1
+            // 
+            this.PriceDrinksSp1.AutoSize = true;
+            this.PriceDrinksSp1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSp1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSp1.Location = new System.Drawing.Point(339, 972);
+            this.PriceDrinksSp1.Name = "PriceDrinksSp1";
+            this.PriceDrinksSp1.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSp1.TabIndex = 69;
+            this.PriceDrinksSp1.Text = "Price";
+            // 
+            // PriceDrinksW5
+            // 
+            this.PriceDrinksW5.AutoSize = true;
+            this.PriceDrinksW5.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksW5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksW5.Location = new System.Drawing.Point(339, 899);
+            this.PriceDrinksW5.Name = "PriceDrinksW5";
+            this.PriceDrinksW5.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksW5.TabIndex = 68;
+            this.PriceDrinksW5.Text = "Price";
+            // 
+            // PriceDrinksW4
+            // 
+            this.PriceDrinksW4.AutoSize = true;
+            this.PriceDrinksW4.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksW4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksW4.Location = new System.Drawing.Point(339, 840);
+            this.PriceDrinksW4.Name = "PriceDrinksW4";
+            this.PriceDrinksW4.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksW4.TabIndex = 67;
+            this.PriceDrinksW4.Text = "Price";
+            // 
+            // PriceDrinksW3
+            // 
+            this.PriceDrinksW3.AutoSize = true;
+            this.PriceDrinksW3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksW3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksW3.Location = new System.Drawing.Point(339, 767);
+            this.PriceDrinksW3.Name = "PriceDrinksW3";
+            this.PriceDrinksW3.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksW3.TabIndex = 66;
+            this.PriceDrinksW3.Text = "Price";
+            // 
+            // PriceDrinksW2
+            // 
+            this.PriceDrinksW2.AutoSize = true;
+            this.PriceDrinksW2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksW2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksW2.Location = new System.Drawing.Point(339, 694);
+            this.PriceDrinksW2.Name = "PriceDrinksW2";
+            this.PriceDrinksW2.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksW2.TabIndex = 65;
+            this.PriceDrinksW2.Text = "Price";
+            // 
+            // PriceDrinksW1
+            // 
+            this.PriceDrinksW1.AutoSize = true;
+            this.PriceDrinksW1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksW1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksW1.Location = new System.Drawing.Point(339, 622);
+            this.PriceDrinksW1.Name = "PriceDrinksW1";
+            this.PriceDrinksW1.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksW1.TabIndex = 64;
+            this.PriceDrinksW1.Text = "Price";
+            // 
+            // PriceDrinksB4
+            // 
+            this.PriceDrinksB4.AutoSize = true;
+            this.PriceDrinksB4.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksB4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksB4.Location = new System.Drawing.Point(339, 529);
+            this.PriceDrinksB4.Name = "PriceDrinksB4";
+            this.PriceDrinksB4.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksB4.TabIndex = 63;
+            this.PriceDrinksB4.Text = "Price";
+            // 
+            // PriceDrinksB3
+            // 
+            this.PriceDrinksB3.AutoSize = true;
+            this.PriceDrinksB3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksB3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksB3.Location = new System.Drawing.Point(339, 487);
+            this.PriceDrinksB3.Name = "PriceDrinksB3";
+            this.PriceDrinksB3.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksB3.TabIndex = 62;
+            this.PriceDrinksB3.Text = "Price";
+            // 
+            // PriceDrinksB2
+            // 
+            this.PriceDrinksB2.AutoSize = true;
+            this.PriceDrinksB2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksB2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksB2.Location = new System.Drawing.Point(339, 443);
+            this.PriceDrinksB2.Name = "PriceDrinksB2";
+            this.PriceDrinksB2.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksB2.TabIndex = 61;
+            this.PriceDrinksB2.Text = "Price";
+            // 
+            // PriceDrinksB1
+            // 
+            this.PriceDrinksB1.AutoSize = true;
+            this.PriceDrinksB1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksB1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksB1.Location = new System.Drawing.Point(339, 399);
+            this.PriceDrinksB1.Name = "PriceDrinksB1";
+            this.PriceDrinksB1.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksB1.TabIndex = 60;
+            this.PriceDrinksB1.Text = "Price";
+            // 
+            // PriceDrinksSo7
+            // 
+            this.PriceDrinksSo7.AutoSize = true;
+            this.PriceDrinksSo7.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSo7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSo7.Location = new System.Drawing.Point(339, 319);
+            this.PriceDrinksSo7.Name = "PriceDrinksSo7";
+            this.PriceDrinksSo7.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSo7.TabIndex = 59;
+            this.PriceDrinksSo7.Text = "Price";
+            // 
+            // PriceDrinksSo6
+            // 
+            this.PriceDrinksSo6.AutoSize = true;
+            this.PriceDrinksSo6.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSo6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSo6.Location = new System.Drawing.Point(339, 273);
+            this.PriceDrinksSo6.Name = "PriceDrinksSo6";
+            this.PriceDrinksSo6.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSo6.TabIndex = 58;
+            this.PriceDrinksSo6.Text = "Price";
+            // 
+            // PriceDrinksSo5
+            // 
+            this.PriceDrinksSo5.AutoSize = true;
+            this.PriceDrinksSo5.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSo5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSo5.Location = new System.Drawing.Point(339, 229);
+            this.PriceDrinksSo5.Name = "PriceDrinksSo5";
+            this.PriceDrinksSo5.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSo5.TabIndex = 57;
+            this.PriceDrinksSo5.Text = "Price";
+            // 
+            // PriceDrinksSo4
+            // 
+            this.PriceDrinksSo4.AutoSize = true;
+            this.PriceDrinksSo4.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSo4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSo4.Location = new System.Drawing.Point(339, 185);
+            this.PriceDrinksSo4.Name = "PriceDrinksSo4";
+            this.PriceDrinksSo4.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSo4.TabIndex = 56;
+            this.PriceDrinksSo4.Text = "Price";
+            // 
+            // PriceDrinksSo3
+            // 
+            this.PriceDrinksSo3.AutoSize = true;
+            this.PriceDrinksSo3.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSo3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSo3.Location = new System.Drawing.Point(339, 143);
+            this.PriceDrinksSo3.Name = "PriceDrinksSo3";
+            this.PriceDrinksSo3.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSo3.TabIndex = 55;
+            this.PriceDrinksSo3.Text = "Price";
+            // 
+            // PriceDrinksSo2
+            // 
+            this.PriceDrinksSo2.AutoSize = true;
+            this.PriceDrinksSo2.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSo2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSo2.Location = new System.Drawing.Point(339, 99);
+            this.PriceDrinksSo2.Name = "PriceDrinksSo2";
+            this.PriceDrinksSo2.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSo2.TabIndex = 54;
+            this.PriceDrinksSo2.Text = "Price";
+            // 
+            // PriceDrinksSo1
+            // 
+            this.PriceDrinksSo1.AutoSize = true;
+            this.PriceDrinksSo1.BackColor = System.Drawing.Color.Gainsboro;
+            this.PriceDrinksSo1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PriceDrinksSo1.Location = new System.Drawing.Point(339, 55);
+            this.PriceDrinksSo1.Name = "PriceDrinksSo1";
+            this.PriceDrinksSo1.Size = new System.Drawing.Size(49, 25);
+            this.PriceDrinksSo1.TabIndex = 53;
+            this.PriceDrinksSo1.Text = "Price";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(12, 1411);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(64, 25);
+            this.label20.TabIndex = 52;
+            this.label20.Text = "Order";
             // 
             // BitterLemonButton
             // 
@@ -1392,412 +1798,6 @@
             this.label16.TabIndex = 2;
             this.label16.Text = "Spirit";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(12, 1411);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(64, 25);
-            this.label20.TabIndex = 52;
-            this.label20.Text = "Order";
-            // 
-            // PriceDinnerS1
-            // 
-            this.PriceDinnerS1.AutoSize = true;
-            this.PriceDinnerS1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerS1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerS1.Location = new System.Drawing.Point(335, 66);
-            this.PriceDinnerS1.Name = "PriceDinnerS1";
-            this.PriceDinnerS1.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerS1.TabIndex = 20;
-            this.PriceDinnerS1.Text = "Price";
-            // 
-            // PriceDinnerS2
-            // 
-            this.PriceDinnerS2.AutoSize = true;
-            this.PriceDinnerS2.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerS2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerS2.Location = new System.Drawing.Point(335, 130);
-            this.PriceDinnerS2.Name = "PriceDinnerS2";
-            this.PriceDinnerS2.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerS2.TabIndex = 21;
-            this.PriceDinnerS2.Text = "Price";
-            // 
-            // PriceDinnerS3
-            // 
-            this.PriceDinnerS3.AutoSize = true;
-            this.PriceDinnerS3.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerS3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerS3.Location = new System.Drawing.Point(335, 194);
-            this.PriceDinnerS3.Name = "PriceDinnerS3";
-            this.PriceDinnerS3.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerS3.TabIndex = 22;
-            this.PriceDinnerS3.Text = "Price";
-            // 
-            // PriceDinnerE2
-            // 
-            this.PriceDinnerE2.AutoSize = true;
-            this.PriceDinnerE2.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerE2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerE2.Location = new System.Drawing.Point(335, 354);
-            this.PriceDinnerE2.Name = "PriceDinnerE2";
-            this.PriceDinnerE2.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerE2.TabIndex = 24;
-            this.PriceDinnerE2.Text = "Price";
-            // 
-            // PriceDinnerE1
-            // 
-            this.PriceDinnerE1.AutoSize = true;
-            this.PriceDinnerE1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerE1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerE1.Location = new System.Drawing.Point(335, 290);
-            this.PriceDinnerE1.Name = "PriceDinnerE1";
-            this.PriceDinnerE1.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerE1.TabIndex = 23;
-            this.PriceDinnerE1.Text = "Price";
-            // 
-            // PriceDinnerM3
-            // 
-            this.PriceDinnerM3.AutoSize = true;
-            this.PriceDinnerM3.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerM3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerM3.Location = new System.Drawing.Point(335, 579);
-            this.PriceDinnerM3.Name = "PriceDinnerM3";
-            this.PriceDinnerM3.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerM3.TabIndex = 27;
-            this.PriceDinnerM3.Text = "Price";
-            // 
-            // PriceDinnerM2
-            // 
-            this.PriceDinnerM2.AutoSize = true;
-            this.PriceDinnerM2.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerM2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerM2.Location = new System.Drawing.Point(335, 515);
-            this.PriceDinnerM2.Name = "PriceDinnerM2";
-            this.PriceDinnerM2.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerM2.TabIndex = 26;
-            this.PriceDinnerM2.Text = "Price";
-            // 
-            // PriceDinnerM1
-            // 
-            this.PriceDinnerM1.AutoSize = true;
-            this.PriceDinnerM1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerM1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerM1.Location = new System.Drawing.Point(335, 451);
-            this.PriceDinnerM1.Name = "PriceDinnerM1";
-            this.PriceDinnerM1.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerM1.TabIndex = 25;
-            this.PriceDinnerM1.Text = "Price";
-            // 
-            // PriceDinnerD3
-            // 
-            this.PriceDinnerD3.AutoSize = true;
-            this.PriceDinnerD3.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerD3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerD3.Location = new System.Drawing.Point(335, 808);
-            this.PriceDinnerD3.Name = "PriceDinnerD3";
-            this.PriceDinnerD3.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerD3.TabIndex = 30;
-            this.PriceDinnerD3.Text = "Price";
-            // 
-            // PriceDinnerD2
-            // 
-            this.PriceDinnerD2.AutoSize = true;
-            this.PriceDinnerD2.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerD2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerD2.Location = new System.Drawing.Point(335, 744);
-            this.PriceDinnerD2.Name = "PriceDinnerD2";
-            this.PriceDinnerD2.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerD2.TabIndex = 29;
-            this.PriceDinnerD2.Text = "Price";
-            // 
-            // PriceDinnerD1
-            // 
-            this.PriceDinnerD1.AutoSize = true;
-            this.PriceDinnerD1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDinnerD1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDinnerD1.Location = new System.Drawing.Point(335, 680);
-            this.PriceDinnerD1.Name = "PriceDinnerD1";
-            this.PriceDinnerD1.Size = new System.Drawing.Size(49, 25);
-            this.PriceDinnerD1.TabIndex = 28;
-            this.PriceDinnerD1.Text = "Price";
-            // 
-            // PriceDrinksSo3
-            // 
-            this.PriceDrinksSo3.AutoSize = true;
-            this.PriceDrinksSo3.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSo3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSo3.Location = new System.Drawing.Point(339, 143);
-            this.PriceDrinksSo3.Name = "PriceDrinksSo3";
-            this.PriceDrinksSo3.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSo3.TabIndex = 55;
-            this.PriceDrinksSo3.Text = "Price";
-            // 
-            // PriceDrinksSo2
-            // 
-            this.PriceDrinksSo2.AutoSize = true;
-            this.PriceDrinksSo2.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSo2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSo2.Location = new System.Drawing.Point(339, 99);
-            this.PriceDrinksSo2.Name = "PriceDrinksSo2";
-            this.PriceDrinksSo2.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSo2.TabIndex = 54;
-            this.PriceDrinksSo2.Text = "Price";
-            // 
-            // PriceDrinksSo1
-            // 
-            this.PriceDrinksSo1.AutoSize = true;
-            this.PriceDrinksSo1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSo1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSo1.Location = new System.Drawing.Point(339, 55);
-            this.PriceDrinksSo1.Name = "PriceDrinksSo1";
-            this.PriceDrinksSo1.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSo1.TabIndex = 53;
-            this.PriceDrinksSo1.Text = "Price";
-            // 
-            // PriceDrinksSo6
-            // 
-            this.PriceDrinksSo6.AutoSize = true;
-            this.PriceDrinksSo6.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSo6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSo6.Location = new System.Drawing.Point(339, 273);
-            this.PriceDrinksSo6.Name = "PriceDrinksSo6";
-            this.PriceDrinksSo6.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSo6.TabIndex = 58;
-            this.PriceDrinksSo6.Text = "Price";
-            // 
-            // PriceDrinksSo5
-            // 
-            this.PriceDrinksSo5.AutoSize = true;
-            this.PriceDrinksSo5.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSo5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSo5.Location = new System.Drawing.Point(339, 229);
-            this.PriceDrinksSo5.Name = "PriceDrinksSo5";
-            this.PriceDrinksSo5.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSo5.TabIndex = 57;
-            this.PriceDrinksSo5.Text = "Price";
-            // 
-            // PriceDrinksSo4
-            // 
-            this.PriceDrinksSo4.AutoSize = true;
-            this.PriceDrinksSo4.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSo4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSo4.Location = new System.Drawing.Point(339, 185);
-            this.PriceDrinksSo4.Name = "PriceDrinksSo4";
-            this.PriceDrinksSo4.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSo4.TabIndex = 56;
-            this.PriceDrinksSo4.Text = "Price";
-            // 
-            // PriceDrinksSo7
-            // 
-            this.PriceDrinksSo7.AutoSize = true;
-            this.PriceDrinksSo7.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSo7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSo7.Location = new System.Drawing.Point(339, 319);
-            this.PriceDrinksSo7.Name = "PriceDrinksSo7";
-            this.PriceDrinksSo7.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSo7.TabIndex = 59;
-            this.PriceDrinksSo7.Text = "Price";
-            // 
-            // PriceDrinksW3
-            // 
-            this.PriceDrinksW3.AutoSize = true;
-            this.PriceDrinksW3.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksW3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksW3.Location = new System.Drawing.Point(339, 767);
-            this.PriceDrinksW3.Name = "PriceDrinksW3";
-            this.PriceDrinksW3.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksW3.TabIndex = 66;
-            this.PriceDrinksW3.Text = "Price";
-            // 
-            // PriceDrinksW2
-            // 
-            this.PriceDrinksW2.AutoSize = true;
-            this.PriceDrinksW2.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksW2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksW2.Location = new System.Drawing.Point(339, 694);
-            this.PriceDrinksW2.Name = "PriceDrinksW2";
-            this.PriceDrinksW2.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksW2.TabIndex = 65;
-            this.PriceDrinksW2.Text = "Price";
-            // 
-            // PriceDrinksW1
-            // 
-            this.PriceDrinksW1.AutoSize = true;
-            this.PriceDrinksW1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksW1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksW1.Location = new System.Drawing.Point(339, 622);
-            this.PriceDrinksW1.Name = "PriceDrinksW1";
-            this.PriceDrinksW1.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksW1.TabIndex = 64;
-            this.PriceDrinksW1.Text = "Price";
-            // 
-            // PriceDrinksB4
-            // 
-            this.PriceDrinksB4.AutoSize = true;
-            this.PriceDrinksB4.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksB4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksB4.Location = new System.Drawing.Point(339, 529);
-            this.PriceDrinksB4.Name = "PriceDrinksB4";
-            this.PriceDrinksB4.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksB4.TabIndex = 63;
-            this.PriceDrinksB4.Text = "Price";
-            // 
-            // PriceDrinksB3
-            // 
-            this.PriceDrinksB3.AutoSize = true;
-            this.PriceDrinksB3.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksB3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksB3.Location = new System.Drawing.Point(339, 487);
-            this.PriceDrinksB3.Name = "PriceDrinksB3";
-            this.PriceDrinksB3.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksB3.TabIndex = 62;
-            this.PriceDrinksB3.Text = "Price";
-            // 
-            // PriceDrinksB2
-            // 
-            this.PriceDrinksB2.AutoSize = true;
-            this.PriceDrinksB2.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksB2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksB2.Location = new System.Drawing.Point(339, 443);
-            this.PriceDrinksB2.Name = "PriceDrinksB2";
-            this.PriceDrinksB2.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksB2.TabIndex = 61;
-            this.PriceDrinksB2.Text = "Price";
-            // 
-            // PriceDrinksB1
-            // 
-            this.PriceDrinksB1.AutoSize = true;
-            this.PriceDrinksB1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksB1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksB1.Location = new System.Drawing.Point(339, 399);
-            this.PriceDrinksB1.Name = "PriceDrinksB1";
-            this.PriceDrinksB1.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksB1.TabIndex = 60;
-            this.PriceDrinksB1.Text = "Price";
-            // 
-            // PriceDrinksW5
-            // 
-            this.PriceDrinksW5.AutoSize = true;
-            this.PriceDrinksW5.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksW5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksW5.Location = new System.Drawing.Point(339, 899);
-            this.PriceDrinksW5.Name = "PriceDrinksW5";
-            this.PriceDrinksW5.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksW5.TabIndex = 68;
-            this.PriceDrinksW5.Text = "Price";
-            // 
-            // PriceDrinksW4
-            // 
-            this.PriceDrinksW4.AutoSize = true;
-            this.PriceDrinksW4.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksW4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksW4.Location = new System.Drawing.Point(339, 840);
-            this.PriceDrinksW4.Name = "PriceDrinksW4";
-            this.PriceDrinksW4.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksW4.TabIndex = 67;
-            this.PriceDrinksW4.Text = "Price";
-            // 
-            // PriceDrinksSp4
-            // 
-            this.PriceDrinksSp4.AutoSize = true;
-            this.PriceDrinksSp4.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSp4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSp4.Location = new System.Drawing.Point(339, 1102);
-            this.PriceDrinksSp4.Name = "PriceDrinksSp4";
-            this.PriceDrinksSp4.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSp4.TabIndex = 72;
-            this.PriceDrinksSp4.Text = "Price";
-            // 
-            // PriceDrinksSp3
-            // 
-            this.PriceDrinksSp3.AutoSize = true;
-            this.PriceDrinksSp3.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSp3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSp3.Location = new System.Drawing.Point(339, 1060);
-            this.PriceDrinksSp3.Name = "PriceDrinksSp3";
-            this.PriceDrinksSp3.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSp3.TabIndex = 71;
-            this.PriceDrinksSp3.Text = "Price";
-            // 
-            // PriceDrinksSp2
-            // 
-            this.PriceDrinksSp2.AutoSize = true;
-            this.PriceDrinksSp2.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSp2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSp2.Location = new System.Drawing.Point(339, 1016);
-            this.PriceDrinksSp2.Name = "PriceDrinksSp2";
-            this.PriceDrinksSp2.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSp2.TabIndex = 70;
-            this.PriceDrinksSp2.Text = "Price";
-            // 
-            // PriceDrinksSp1
-            // 
-            this.PriceDrinksSp1.AutoSize = true;
-            this.PriceDrinksSp1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSp1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSp1.Location = new System.Drawing.Point(339, 972);
-            this.PriceDrinksSp1.Name = "PriceDrinksSp1";
-            this.PriceDrinksSp1.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSp1.TabIndex = 69;
-            this.PriceDrinksSp1.Text = "Price";
-            // 
-            // PriceDrinksH4
-            // 
-            this.PriceDrinksH4.AutoSize = true;
-            this.PriceDrinksH4.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksH4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksH4.Location = new System.Drawing.Point(339, 1357);
-            this.PriceDrinksH4.Name = "PriceDrinksH4";
-            this.PriceDrinksH4.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksH4.TabIndex = 76;
-            this.PriceDrinksH4.Text = "Price";
-            // 
-            // PriceDrinksH3
-            // 
-            this.PriceDrinksH3.AutoSize = true;
-            this.PriceDrinksH3.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksH3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksH3.Location = new System.Drawing.Point(339, 1315);
-            this.PriceDrinksH3.Name = "PriceDrinksH3";
-            this.PriceDrinksH3.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksH3.TabIndex = 75;
-            this.PriceDrinksH3.Text = "Price";
-            // 
-            // PriceDrinksH2
-            // 
-            this.PriceDrinksH2.AutoSize = true;
-            this.PriceDrinksH2.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksH2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksH2.Location = new System.Drawing.Point(339, 1271);
-            this.PriceDrinksH2.Name = "PriceDrinksH2";
-            this.PriceDrinksH2.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksH2.TabIndex = 74;
-            this.PriceDrinksH2.Text = "Price";
-            // 
-            // PriceDrinksH1
-            // 
-            this.PriceDrinksH1.AutoSize = true;
-            this.PriceDrinksH1.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksH1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksH1.Location = new System.Drawing.Point(339, 1227);
-            this.PriceDrinksH1.Name = "PriceDrinksH1";
-            this.PriceDrinksH1.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksH1.TabIndex = 73;
-            this.PriceDrinksH1.Text = "Price";
-            // 
-            // PriceDrinksSp5
-            // 
-            this.PriceDrinksSp5.AutoSize = true;
-            this.PriceDrinksSp5.BackColor = System.Drawing.Color.Gainsboro;
-            this.PriceDrinksSp5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PriceDrinksSp5.Location = new System.Drawing.Point(339, 1148);
-            this.PriceDrinksSp5.Name = "PriceDrinksSp5";
-            this.PriceDrinksSp5.Size = new System.Drawing.Size(49, 25);
-            this.PriceDrinksSp5.TabIndex = 77;
-            this.PriceDrinksSp5.Text = "Price";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1807,8 +1807,8 @@
             this.ControlBox = false;
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlOrderViewDrinks);
-            this.Controls.Add(this.pnlOrderViewDinner);
             this.Controls.Add(this.pnlOrderViewLunch);
+            this.Controls.Add(this.pnlOrderViewDinner);
             this.Controls.Add(this.pnlTableOverview);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;

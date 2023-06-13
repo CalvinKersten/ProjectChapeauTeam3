@@ -126,6 +126,11 @@ namespace ChapeauUI
             DrinksNavButton.Enabled = true;
             DinnerNavButton.Enabled = true;
             LunchNavButton.Enabled = false;
+
+            string Originalbackcolor = LunchNavButton.BackColor.ToString();
+            LunchNavButton.BackColor = Color.LightGray;
+            DinnerNavButton.BackColor = Color.LightGreen;
+            DrinksNavButton.BackColor = Color.LightGreen;
         }
 
         private void DinnerNavButton_Click(object sender, EventArgs e)
@@ -135,6 +140,10 @@ namespace ChapeauUI
             DrinksNavButton.Enabled = true;
             DinnerNavButton.Enabled = false;
             LunchNavButton.Enabled = true;
+
+            DinnerNavButton.BackColor = Color.LightGray;
+            LunchNavButton.BackColor = Color.LightGreen;
+            DrinksNavButton.BackColor = Color.LightGreen;
         }
 
         private void DrinksNavButton_Click(object sender, EventArgs e)
@@ -144,6 +153,10 @@ namespace ChapeauUI
             DrinksNavButton.Enabled = false;
             DinnerNavButton.Enabled = true;
             LunchNavButton.Enabled = true;
+
+            DrinksNavButton.BackColor = Color.LightGray;
+            LunchNavButton.BackColor = Color.LightGreen;
+            DinnerNavButton.BackColor = Color.LightGreen;
         }
     }
 }
