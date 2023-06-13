@@ -42,19 +42,20 @@ namespace ChapeauUI
         {
             OpenPanel(pnlTableOverview);
 
-          //  try
-          //  {
+            try
+            {
                 List<Table> tableNumber = GetTableNumbers();
-          //      List<Order> orders = GetOrders();
-                DisplayTableOrderOverview(tableNumber);
-         //   }
-         //   catch (Exception e)
-         //   {
-          //      MessageBox.Show("Something went wrong while loading the students or drinks: " + e.Message);
-          //  }
+                List<Employee> employeeName = GetEmployeeNames();
+                DisplayTableOrderOverview(tableNumber, employeeName);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Whoops, the order overview could not be loaded.\n" +
+                    "Please try to restart the application or contact your manager. " + e.Message);
+            }
 
         }
-        private void DisplayTableOrderOverview(List<Table> tables)
+        private void DisplayTableOrderOverview(List<Table> tables, List<Employee> employees)
         {
             //Clearing the LV before displaying
             LVOrderOverview.Clear();
@@ -68,8 +69,12 @@ namespace ChapeauUI
             foreach (Table table in tables)
             {
                 ListViewItem item = new ListViewItem(table.Table_Num.ToString());
-                item.Tag = table;   // link student object to listview item
+                item.Tag = table;   // link table object to listview item
 
+                foreach (Employee employee in employees)
+                {
+                    item.SubItems.Add(employee.LastName.ToString());
+                }
                 LVOrderOverview.Items.Add(item);
             }
         }
@@ -84,6 +89,12 @@ namespace ChapeauUI
             OrderService orderService = new OrderService();
             List<Order> orders = orderService.GetOrders();
             return orders;
+        }
+        private List<Employee> GetEmployeeNames()
+        {
+            EmployeeService employeeService = new EmployeeService();
+            List<Employee> employees = employeeService.GetEmployeeNames();
+            return employees;
         }
 
         private void LunchNavButton_Click(object sender, EventArgs e)

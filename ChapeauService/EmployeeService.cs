@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChapeauService
 {
-    internal class EmployeeService
+    public class EmployeeService
     {
         private EmployeeDao employeedb;
 
@@ -22,5 +22,11 @@ namespace ChapeauService
             List<Employee> employees = employeedb.GetAllEmployees();
             return employees;
         }
+        public List<Employee> GetEmployeeNames()
+        {
+            List<Employee> employeeNames = employeedb.GetAllEmployeeNames();
+            return employeeNames;
+        }
+
     }
 }
