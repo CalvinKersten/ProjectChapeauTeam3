@@ -122,16 +122,28 @@ namespace ChapeauUI
         private void LunchNavButton_Click(object sender, EventArgs e)
         {
             OpenPanel(pnlOrderViewLunch);
+
+            DrinksNavButton.Enabled = true;
+            DinnerNavButton.Enabled = true;
+            LunchNavButton.Enabled = false;
         }
 
         private void DinnerNavButton_Click(object sender, EventArgs e)
         {
             OpenPanel(pnlOrderViewDinner);
+
+            DrinksNavButton.Enabled = true;
+            DinnerNavButton.Enabled = false;
+            LunchNavButton.Enabled = true;
         }
 
         private void DrinksNavButton_Click(object sender, EventArgs e)
         {
             OpenPanel(pnlOrderViewDrinks);
+
+            DrinksNavButton.Enabled = false;
+            DinnerNavButton.Enabled = true;
+            LunchNavButton.Enabled = true;
         }
     }
 }
