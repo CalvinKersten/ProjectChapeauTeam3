@@ -37,21 +37,6 @@ namespace ChapeauDAL
             }
             return employees;
         }
-        public List<Employee> GetEmployeeNames()
-        {
-            string EmployeeID = "";
-            string query = "SELECT First_Name, Last_Name FROM Employee WHERE EmployeeID = @EmployeeID";
-            SqlCommand cmd = new SqlCommand(query);
-            using (SqlDataReader reader = cmd.ExecuteReader())
-            {
-                if (reader.Read())
-                {
-                    EmployeeID = reader.GetString(0);
-                }
-            }
-            cmd.Parameters.AddWithValue("@EmployeeID", EmployeeID);
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
+        
     }
 }

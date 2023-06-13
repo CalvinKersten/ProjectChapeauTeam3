@@ -45,41 +45,27 @@ namespace ChapeauUI
         {
             OpenPanel(pnlTableOverview); //Opens the OrderOverviewPNL
 
-            using (SqlConnection connection = new SqlConnection("Data Source=somerenit1bt2.database.windows.net; Initial Catalog=Project_SomerenIT1BT2; User=SomerenTeam2; Password=ProjectT3Team2"))
+            try
             {
-                connection.Open();
-
-                string query = "SELECT T.Table_Num, E.Last_Name, O.Total_Price " +
-                    "FROM[Table] AS T " +
-                    "JOIN[Order] AS O ON T.TableID = O.TableID " +
-                    "JOIN Employee AS E ON O.EmployeeID = E.EmployeeID";
-
-                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
-                adapter.Fill(dataTable);
-
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    ListViewItem item = new ListViewItem(row["Table_Num"].ToString());
-                    item.SubItems.Add(row["Last_Name"].ToString());
-                    item.SubItems.Add(row["Total_Price"].ToString());
-
-                    LVOrderOverview.Items.Add(item);
-                }
-            }
-
-           /* try
-            {
-                List<Table> tableNumber = GetTables();
-                List<Employee> employeeName = GetEmployeeNames();
-                DisplayTableOrderOverview(tableNumber, employeeName);
+                List<Order> orders = GetOrders();
+                List<OrderDetail> orderDetails = GetOrderDetails();
+                List<MenuItem> menuItems = GetMenuItems();
+               /* List<Table> tables = GetTables();
+                List<Employee> employees = GetEmployees();*/
+                DisplayTableOrderOverview(orders, orderDetails, menuItems);
             }
             catch (Exception e)
             {
                 MessageBox.Show("Whoops, the order overview could not be loaded.\n" +
                     "Please try to restart the application or contact your manager. " + e.Message);
-            } */
+            }
 
+        }
+        public List<MenuItem> GetMenuItems()
+        {
+            MenuItemService menuItemService = new MenuItemService();
+            List<MenuItem> menuItems = menuItemService.GetMenuItems();
+            return menuItems;
         }
         public List<Table> GetTables()
         {
@@ -87,31 +73,85 @@ namespace ChapeauUI
             List<Table> tables = tableService.GetTables();
             return tables;
         }
-        public List<Employee> GetEmployeeNames()
+        public List<Order> GetOrders()
+        {
+            OrderService orderService = new OrderService();
+            List<Order> orders = orderService.GetOrders();
+            return orders;
+        }
+        public List<Employee> GetEmployees()
         {
             EmployeeService employeeService = new EmployeeService();
             List<Employee> employee = employeeService.GetEmployees();
             return employee;
         }
-        private void DisplayTableOrderOverview(List<Table> tables, List<Employee> employees)
+        public List<OrderDetail> GetOrderDetails()
+        {
+            OrderDetailService orderDetailService = new OrderDetailService();
+            List<OrderDetail> orderDetail = orderDetailService.GetOrderDetails();
+            return orderDetail;
+        }
+        private void DisplayTableOrderOverview(List<Order> orders, List<OrderDetail> orderDetails, List<MenuItem> menuItems)
         {
             //Clearing the LV before displaying
             LVOrderOverview.Clear();
-
             //Filling the LV Column headers
             LVOrderOverview.View = View.Details; //Displays each item on a seperate line
             LVOrderOverview.Columns.Add("no.", 50);
             LVOrderOverview.Columns.Add("name", 200);
             LVOrderOverview.Columns.Add("price",LVOrderOverview.Width - 250);
 
-            foreach (Table table in tables)
+            foreach (Order order in orders)
             {
-                ListViewItem item = new ListViewItem(table.Table_Num.ToString());
-                item.Tag = table;   // link table object to listview item
+                ListViewItem item = new ListViewItem(GetItemAmount(order.OrderDetailID, orderDetails));
+                item.SubItems.Add(GetItemName(order.MenuItemID, menuItems));
+                item.SubItems.Add("€" + order.TotalPrice.ToString(".00"));
+                item.Tag = order;   // link table object to listview item
                 LVOrderOverview.Items.Add(item);
             }
         }
-        
+
+        private string GetItemAmount(int orderDetailID, List<OrderDetail> orderDetails)
+        {
+            //find the table with the corresponding TableID
+            OrderDetail orderDetail = orderDetails.Find(OrD => OrD.OrderDetailID == orderDetailID);
+            if (orderDetail != null)
+            {
+                return orderDetail.ItemQuantity.ToString();
+            }
+            return string.Empty;
+        }
+        private string GetItemName(int menuItemID, List<MenuItem> menuItems)
+        {
+            //find the table with the corresponding TableID
+            MenuItem menuItem = menuItems.Find(Men => Men.MenuItemID == menuItemID);
+            if (menuItem != null)
+            {
+                return menuItem.ItemName.ToString();
+            }
+            return string.Empty;
+        }
+        /* private string GetTableNumber(int tableID, List<Table> tables)
+         {
+             //find the table with the corresponding TableID
+             Table table = tables.Find(tb1 => tb1.TableID == tableID);
+             if (table != null)
+             {
+                 return table.Table_Num.ToString();
+             }
+             return string.Empty;
+         }
+         private string GetEmployeeName(int employeeID, List<Employee> employees)
+         {
+             //find the table with the corresponding TableID
+             Employee employee = employees.Find(emp => emp.EmployeeID == employeeID);
+             if (employee != null)
+             {
+                 return employee.LastName.ToString();
+             }
+             return string.Empty;
+         }*/
+
 
 
         //
@@ -120,14 +160,13 @@ namespace ChapeauUI
         //
         // NAV
         private void LunchNavButton_Click(object sender, EventArgs e)
-        {
+        { 
             OpenPanel(pnlOrderViewLunch);
 
             DrinksNavButton.Enabled = true;
             DinnerNavButton.Enabled = true;
             LunchNavButton.Enabled = false;
 
-            string Originalbackcolor = LunchNavButton.BackColor.ToString();
             LunchNavButton.BackColor = Color.LightGray;
             DinnerNavButton.BackColor = Color.LightGreen;
             DrinksNavButton.BackColor = Color.LightGreen;

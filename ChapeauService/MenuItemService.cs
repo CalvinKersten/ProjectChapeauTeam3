@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChapeauService
 {
-    internal class MenuItemService
+    public class MenuItemService
     {
         private MenuItemDao MenuItemdb;
 
