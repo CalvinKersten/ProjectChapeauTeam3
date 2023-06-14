@@ -101,25 +101,57 @@ namespace ChapeauUI
             LVOrderOverview.Columns.Add("name", 200);
             LVOrderOverview.Columns.Add("price",LVOrderOverview.Width - 250);
 
+            decimal totalOrderPrice = 0;
+            decimal totalOrderVAT = 0;
+            int itemCatagory = 0;
+            decimal VATPercentage = 0;
             foreach (Order order in orders)
             {
-                ListViewItem item = new ListViewItem(GetItemAmount(order.OrderDetailID, orderDetails));
+                itemCatagory = GetItemCatagory(order.MenuItemID, menuItems);
+                int itemAmount = GetItemAmount(order.OrderDetailID, orderDetails);
+                ListViewItem item = new ListViewItem(itemAmount.ToString());
                 item.SubItems.Add(GetItemName(order.MenuItemID, menuItems));
-                item.SubItems.Add("€" + order.TotalPrice.ToString(".00"));
+                decimal itemPrice = GetItemPrice(order.MenuItemID, menuItems);
+                item.SubItems.Add("€" + itemPrice);
                 item.Tag = order;   // link table object to listview item
                 LVOrderOverview.Items.Add(item);
+
+                totalOrderPrice += (itemPrice * itemAmount);
+                if (itemCatagory >= 0 && itemCatagory <= 8)
+                {
+                    VATPercentage = 0.06M;
+                }
+                else
+                {
+                    VATPercentage = 0.21M;
+                }
+
+                totalOrderVAT += ((itemPrice * VATPercentage)*itemAmount);
             }
+
+            TotalOrderPrice.Text = "€" + totalOrderPrice;
+            TotalOrderVAT.Text = "€" + totalOrderVAT.ToString(".00");
+
         }
 
-        private string GetItemAmount(int orderDetailID, List<OrderDetail> orderDetails)
+        private int GetItemCatagory(int menuItemID, List<MenuItem> menuItems)
+        {
+            MenuItem menuItem = menuItems.Find(Men => Men.ItemCatagory == menuItemID);
+            if (menuItem != null)
+            {
+                return menuItem.ItemCatagory;
+            }
+            return 0;
+        }
+        private int GetItemAmount(int orderDetailID, List<OrderDetail> orderDetails)
         {
             //find the table with the corresponding TableID
             OrderDetail orderDetail = orderDetails.Find(OrD => OrD.OrderDetailID == orderDetailID);
             if (orderDetail != null)
             {
-                return orderDetail.ItemQuantity.ToString();
+                return orderDetail.ItemQuantity;
             }
-            return string.Empty;
+            return 0;
         }
         private string GetItemName(int menuItemID, List<MenuItem> menuItems)
         {
@@ -131,6 +163,17 @@ namespace ChapeauUI
             }
             return string.Empty;
         }
+        private decimal GetItemPrice(int menuItemID, List<MenuItem> menuItems)
+        {
+            //find the table with the corresponding TableID
+            MenuItem menuItem = menuItems.Find(Men => Men.MenuItemID == menuItemID);
+            if (menuItem != null)
+            {
+                return decimal.Parse(menuItem.ItemPrice.ToString(".00"));
+            }
+            return decimal.Zero;
+        }
+
         /* private string GetTableNumber(int tableID, List<Table> tables)
          {
              //find the table with the corresponding TableID

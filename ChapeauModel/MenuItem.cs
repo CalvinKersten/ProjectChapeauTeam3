@@ -12,9 +12,9 @@ namespace ChapeauModel
 
         public string ItemName { get; set; }
 
-        public float ItemPrice { get; set; }
+        public decimal ItemPrice { get; set; }
 
-        public string ItemCatagory { get; set; }
+        public int ItemCatagory { get; set; }
 
         public int Stock { get; set; }
     }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlTableOverview = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.TotalOrderPrice = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonStyle1 = new ChapeauUI.ButtonStyle();
@@ -167,6 +167,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.LVSelectedDrinks = new System.Windows.Forms.ListView();
             this.label16 = new System.Windows.Forms.Label();
+            this.TotalOrderVAT = new System.Windows.Forms.Label();
             this.pnlTableOverview.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -179,7 +180,8 @@
             // pnlTableOverview
             // 
             this.pnlTableOverview.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlTableOverview.Controls.Add(this.label3);
+            this.pnlTableOverview.Controls.Add(this.TotalOrderVAT);
+            this.pnlTableOverview.Controls.Add(this.TotalOrderPrice);
             this.pnlTableOverview.Controls.Add(this.label4);
             this.pnlTableOverview.Controls.Add(this.label2);
             this.pnlTableOverview.Controls.Add(this.buttonStyle1);
@@ -189,17 +191,17 @@
             this.pnlTableOverview.Size = new System.Drawing.Size(426, 550);
             this.pnlTableOverview.TabIndex = 0;
             // 
-            // label3
+            // TotalOrderPrice
             // 
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Verdana", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(271, 362);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 38);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "_ _ _,-";
+            this.TotalOrderPrice.AutoSize = true;
+            this.TotalOrderPrice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TotalOrderPrice.Font = new System.Drawing.Font("Verdana", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TotalOrderPrice.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TotalOrderPrice.Location = new System.Drawing.Point(271, 362);
+            this.TotalOrderPrice.Name = "TotalOrderPrice";
+            this.TotalOrderPrice.Size = new System.Drawing.Size(124, 38);
+            this.TotalOrderPrice.TabIndex = 4;
+            this.TotalOrderPrice.Text = "_ _ _,-";
             // 
             // label4
             // 
@@ -1798,6 +1800,18 @@
             this.label16.TabIndex = 2;
             this.label16.Text = "Spirit";
             // 
+            // TotalOrderVAT
+            // 
+            this.TotalOrderVAT.AutoSize = true;
+            this.TotalOrderVAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TotalOrderVAT.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TotalOrderVAT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TotalOrderVAT.Location = new System.Drawing.Point(271, 411);
+            this.TotalOrderVAT.Name = "TotalOrderVAT";
+            this.TotalOrderVAT.Size = new System.Drawing.Size(107, 32);
+            this.TotalOrderVAT.TabIndex = 6;
+            this.TotalOrderVAT.Text = "_ _ _,-";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1845,7 +1859,7 @@
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private Label label4;
-        private Label label3;
+        private Label TotalOrderPrice;
         private Label label2;
         private ButtonStyle buttonStyle1;
         private Panel pnlOrderViewLunch;
@@ -1970,5 +1984,6 @@
         private Label PriceDrinksSo3;
         private Label PriceDrinksSo2;
         private Label PriceDrinksSo1;
+        private Label TotalOrderVAT;
     }
 }

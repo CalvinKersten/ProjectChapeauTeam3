@@ -11,9 +11,9 @@ namespace ChapeauModel
         public int InvoiceID { get; set; }
         public float Subtotal { get; set; }
         public int TaxRate { get; set; }
-        public float Tip { get; set; }
-        public float Total { get; set; }
-        public float PaymentAmount { get; set; }
+        public decimal Tip { get; set; }
+        public decimal Total { get; set; }
+        public decimal PaymentAmount { get; set; }
         public string PaymentMethod { get; set; }
         public string Feedback { get; set; }
         public int OrderID { get; set; }

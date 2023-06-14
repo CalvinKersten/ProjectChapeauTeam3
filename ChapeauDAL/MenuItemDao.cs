@@ -28,8 +28,8 @@ namespace ChapeauDAL
                 {
                     MenuItemID = (int)dr["Menu_ItemID"],
                     ItemName = dr["Item_Name"].ToString(),
-                    ItemPrice = (float)dr["Item_Price"],
-                    ItemCatagory = (string)dr["Item_Catagory"],
+                    ItemPrice = (decimal)dr["Item_Price"],
+                    ItemCatagory = (int)dr["Item_Catagory"],
                     Stock = (int)dr["Stock"],
                 };
                 menuItems.Add(menuItem);
