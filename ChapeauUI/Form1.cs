@@ -29,18 +29,11 @@ namespace ChapeauUI
         {
             ShowOrderOverviewPnl();
         }
-        private void OpenPanel(Control panelToOpen) // closes all panels except for the panel in the argument and the default Menu panel
-        {
-            foreach (Control control in Controls)
-            {
-                if (control is Panel panel && panel != panelToOpen && panel != pnlMenu)
-                {
-                    panel.Hide();
-                    panelToOpen.Show();
-                }
-            }
-            
-        }
+        //
+        //
+        //
+        //
+        // Show Panels
         private void ShowOrderOverviewPnl()
         {
             OpenPanel(pnlTableOverview); //Opens the OrderOverviewPNL
@@ -50,17 +43,51 @@ namespace ChapeauUI
                 List<Order> orders = GetOrders();
                 List<OrderDetail> orderDetails = GetOrderDetails();
                 List<MenuItem> menuItems = GetMenuItems();
-               /* List<Table> tables = GetTables();
-                List<Employee> employees = GetEmployees();*/
+              
                 DisplayTableOrderOverview(orders, orderDetails, menuItems);
             }
             catch (Exception e)
             {
                 MessageBox.Show("Whoops, the order overview could not be loaded.\n" +
-                    "Please try to restart the application or contact your manager. " + e.Message);
+                    "Please try to restart the application or contact your manager\n\n. " + e.Message);
             }
 
         }
+        private void ShowOrderLunchPnl()
+        {
+            OpenPanel(pnlOrderViewLunch);
+
+            try
+            {
+                List<Order> orders = GetOrders();
+                List<MenuItem> menuItems = GetMenuItems();
+
+                FillLunchPriceTags(menuItems);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Whoops, the Lunch order page could not be loaded.\n" +
+                    "Please try to restart the application or contact your manager\n\n. " + e.Message);
+            }
+
+            
+
+
+
+        }
+        private void ShowOrderDinnerPnl()
+        {
+            OpenPanel(pnlOrderViewDinner);
+        }
+        private void ShowOrderDrinksPnl()
+        {
+            OpenPanel(pnlOrderViewDrinks);
+        }
+        //
+        //
+        //
+        //
+        // Retreive lists from Database
         public List<MenuItem> GetMenuItems()
         {
             MenuItemService menuItemService = new MenuItemService();
@@ -91,6 +118,11 @@ namespace ChapeauUI
             List<OrderDetail> orderDetail = orderDetailService.GetOrderDetails();
             return orderDetail;
         }
+        //
+        //
+        //
+        //
+        // Fill + Display ListViews and corresponding items
         private void DisplayTableOrderOverview(List<Order> orders, List<OrderDetail> orderDetails, List<MenuItem> menuItems)
         {
             //Clearing the LV before displaying
@@ -133,7 +165,11 @@ namespace ChapeauUI
             TotalOrderVAT.Text = "€" + totalOrderVAT.ToString(".00");
 
         }
-
+        //
+        //
+        //
+        //
+        // Retreive data from database by ID
         private int GetItemCatagory(int menuItemID, List<MenuItem> menuItems)
         {
             MenuItem menuItem = menuItems.Find(Men => Men.ItemCatagory == menuItemID);
@@ -173,38 +209,14 @@ namespace ChapeauUI
             }
             return decimal.Zero;
         }
-
-        /* private string GetTableNumber(int tableID, List<Table> tables)
-         {
-             //find the table with the corresponding TableID
-             Table table = tables.Find(tb1 => tb1.TableID == tableID);
-             if (table != null)
-             {
-                 return table.Table_Num.ToString();
-             }
-             return string.Empty;
-         }
-         private string GetEmployeeName(int employeeID, List<Employee> employees)
-         {
-             //find the table with the corresponding TableID
-             Employee employee = employees.Find(emp => emp.EmployeeID == employeeID);
-             if (employee != null)
-             {
-                 return employee.LastName.ToString();
-             }
-             return string.Empty;
-         }*/
-
-
-
         //
         //
         //
         //
-        // NAV
+        // NAVButtons
         private void LunchNavButton_Click(object sender, EventArgs e)
         { 
-            OpenPanel(pnlOrderViewLunch);
+            ShowOrderLunchPnl();
 
             DrinksNavButton.Enabled = true;
             DinnerNavButton.Enabled = true;
@@ -214,10 +226,9 @@ namespace ChapeauUI
             DinnerNavButton.BackColor = Color.LightGreen;
             DrinksNavButton.BackColor = Color.LightGreen;
         }
-
         private void DinnerNavButton_Click(object sender, EventArgs e)
         {
-            OpenPanel(pnlOrderViewDinner);
+            ShowOrderDinnerPnl();
 
             DrinksNavButton.Enabled = true;
             DinnerNavButton.Enabled = false;
@@ -227,10 +238,9 @@ namespace ChapeauUI
             LunchNavButton.BackColor = Color.LightGreen;
             DrinksNavButton.BackColor = Color.LightGreen;
         }
-
         private void DrinksNavButton_Click(object sender, EventArgs e)
         {
-            OpenPanel(pnlOrderViewDrinks);
+            ShowOrderDrinksPnl();
 
             DrinksNavButton.Enabled = false;
             DinnerNavButton.Enabled = true;
@@ -239,6 +249,44 @@ namespace ChapeauUI
             DrinksNavButton.BackColor = Color.LightGray;
             LunchNavButton.BackColor = Color.LightGreen;
             DinnerNavButton.BackColor = Color.LightGreen;
+        }
+        //
+        //
+        //
+        //
+        // Additional methods for ease of use
+        private void OpenPanel(Control panelToOpen)
+        {
+            foreach (Control control in Controls)
+            {
+                if (control is Panel panel && panel != panelToOpen && panel != pnlMenu)
+                {
+                    panel.Hide();
+                    panelToOpen.Show();
+                }
+            }
+
+        } // closes all panels except for the panel in the argument and the default Menu panel
+        private void FillLunchPriceTags(List<MenuItem> menuItems)
+        {
+            foreach (Control control in pnlOrderViewLunch.Controls)
+            {
+                if (control is Label label && label.Text == "Price")
+                {
+                    if (int.Parse(label.Tag.ToString()) is int tagMenuItemId)
+                    {
+                        foreach (MenuItem menuItem in menuItems)
+                        {
+                            if (tagMenuItemId == menuItem.MenuItemID)
+                            {
+                                label.Text = "€" + menuItem.ItemPrice.ToString(".00"); // Assuming the price is stored in the MenuItem object
+                                break; // Exit the inner loop once the price is updated for the current MenuItem
+                            }
+                        }
+                            
+                    }
+                }
+            }
         }
     }
 }

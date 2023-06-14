@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlTableOverview = new System.Windows.Forms.Panel();
+            this.TotalOrderVAT = new System.Windows.Forms.Label();
             this.TotalOrderPrice = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -167,7 +168,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.LVSelectedDrinks = new System.Windows.Forms.ListView();
             this.label16 = new System.Windows.Forms.Label();
-            this.TotalOrderVAT = new System.Windows.Forms.Label();
             this.pnlTableOverview.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -190,6 +190,18 @@
             this.pnlTableOverview.Name = "pnlTableOverview";
             this.pnlTableOverview.Size = new System.Drawing.Size(426, 550);
             this.pnlTableOverview.TabIndex = 0;
+            // 
+            // TotalOrderVAT
+            // 
+            this.TotalOrderVAT.AutoSize = true;
+            this.TotalOrderVAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TotalOrderVAT.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TotalOrderVAT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.TotalOrderVAT.Location = new System.Drawing.Point(271, 411);
+            this.TotalOrderVAT.Name = "TotalOrderVAT";
+            this.TotalOrderVAT.Size = new System.Drawing.Size(107, 32);
+            this.TotalOrderVAT.TabIndex = 6;
+            this.TotalOrderVAT.Text = "_ _ _,-";
             // 
             // TotalOrderPrice
             // 
@@ -457,6 +469,7 @@
             this.PriceLunchD3.Name = "PriceLunchD3";
             this.PriceLunchD3.Size = new System.Drawing.Size(49, 25);
             this.PriceLunchD3.TabIndex = 25;
+            this.PriceLunchD3.Tag = "9";
             this.PriceLunchD3.Text = "Price";
             // 
             // PriceLunchD2
@@ -468,6 +481,7 @@
             this.PriceLunchD2.Name = "PriceLunchD2";
             this.PriceLunchD2.Size = new System.Drawing.Size(49, 25);
             this.PriceLunchD2.TabIndex = 24;
+            this.PriceLunchD2.Tag = "8";
             this.PriceLunchD2.Text = "Price";
             // 
             // PriceLunchD1
@@ -479,6 +493,7 @@
             this.PriceLunchD1.Name = "PriceLunchD1";
             this.PriceLunchD1.Size = new System.Drawing.Size(49, 25);
             this.PriceLunchD1.TabIndex = 23;
+            this.PriceLunchD1.Tag = "7";
             this.PriceLunchD1.Text = "Price";
             // 
             // PriceLunchM3
@@ -490,6 +505,7 @@
             this.PriceLunchM3.Name = "PriceLunchM3";
             this.PriceLunchM3.Size = new System.Drawing.Size(49, 25);
             this.PriceLunchM3.TabIndex = 22;
+            this.PriceLunchM3.Tag = "6";
             this.PriceLunchM3.Text = "Price";
             // 
             // PriceLunchM2
@@ -501,6 +517,7 @@
             this.PriceLunchM2.Name = "PriceLunchM2";
             this.PriceLunchM2.Size = new System.Drawing.Size(49, 25);
             this.PriceLunchM2.TabIndex = 21;
+            this.PriceLunchM2.Tag = "5";
             this.PriceLunchM2.Text = "Price";
             // 
             // PriceLunchM1
@@ -512,6 +529,7 @@
             this.PriceLunchM1.Name = "PriceLunchM1";
             this.PriceLunchM1.Size = new System.Drawing.Size(49, 25);
             this.PriceLunchM1.TabIndex = 20;
+            this.PriceLunchM1.Tag = "4";
             this.PriceLunchM1.Text = "Price";
             // 
             // PriceLunchS3
@@ -523,6 +541,7 @@
             this.PriceLunchS3.Name = "PriceLunchS3";
             this.PriceLunchS3.Size = new System.Drawing.Size(49, 25);
             this.PriceLunchS3.TabIndex = 19;
+            this.PriceLunchS3.Tag = "3";
             this.PriceLunchS3.Text = "Price";
             // 
             // PriceLunchS2
@@ -534,6 +553,7 @@
             this.PriceLunchS2.Name = "PriceLunchS2";
             this.PriceLunchS2.Size = new System.Drawing.Size(49, 25);
             this.PriceLunchS2.TabIndex = 18;
+            this.PriceLunchS2.Tag = "2";
             this.PriceLunchS2.Text = "Price";
             // 
             // PriceLunchS1
@@ -545,6 +565,7 @@
             this.PriceLunchS1.Name = "PriceLunchS1";
             this.PriceLunchS1.Size = new System.Drawing.Size(49, 25);
             this.PriceLunchS1.TabIndex = 17;
+            this.PriceLunchS1.Tag = "1";
             this.PriceLunchS1.Text = "Price";
             // 
             // panel2
@@ -1800,18 +1821,6 @@
             this.label16.TabIndex = 2;
             this.label16.Text = "Spirit";
             // 
-            // TotalOrderVAT
-            // 
-            this.TotalOrderVAT.AutoSize = true;
-            this.TotalOrderVAT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TotalOrderVAT.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TotalOrderVAT.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TotalOrderVAT.Location = new System.Drawing.Point(271, 411);
-            this.TotalOrderVAT.Name = "TotalOrderVAT";
-            this.TotalOrderVAT.Size = new System.Drawing.Size(107, 32);
-            this.TotalOrderVAT.TabIndex = 6;
-            this.TotalOrderVAT.Text = "_ _ _,-";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1820,9 +1829,9 @@
             this.ClientSize = new System.Drawing.Size(426, 697);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMenu);
+            this.Controls.Add(this.pnlOrderViewLunch);
             this.Controls.Add(this.pnlTableOverview);
             this.Controls.Add(this.pnlOrderViewDrinks);
-            this.Controls.Add(this.pnlOrderViewLunch);
             this.Controls.Add(this.pnlOrderViewDinner);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
