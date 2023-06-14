@@ -437,7 +437,7 @@ namespace ChapeauUI
             bool itemExists = false;
             foreach (ListViewItem existingItem in LVSelectedItemsLunch.Items)
             {
-                if (existingItem.SubItems[1].Text == labelText)
+                if (existingItem.SubItems[1].Text == itemText)
                 {
                     itemExists = true;
                     existingItem.SubItems[0].Text = (int.Parse(existingItem.SubItems[0].Text) + 1).ToString(); // Increment the item amount
@@ -449,7 +449,7 @@ namespace ChapeauUI
             if (!itemExists)
             {
                 ListViewItem item = new ListViewItem("1"); // Initial item amount is 1
-                item.SubItems.Add(labelText); // Add the item name
+                item.SubItems.Add(itemText); // Add the item name
                 item.SubItems.Add("€" + itemPrice); // Add the item price
                 LVSelectedItemsLunch.Items.Add(item);
             }
