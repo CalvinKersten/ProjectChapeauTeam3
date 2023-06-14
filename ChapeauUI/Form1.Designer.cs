@@ -48,7 +48,7 @@
             this.LunchNavButton = new ChapeauUI.ButtonStyle();
             this.pnlOrderViewLunch = new System.Windows.Forms.Panel();
             this.AddButton = new ChapeauUI.ButtonStyle();
-            this.LVSelectedItems = new System.Windows.Forms.ListView();
+            this.LVSelectedItemsLunch = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
             this.BlackLine = new System.Windows.Forms.Panel();
             this.PriceLunchD3 = new System.Windows.Forms.Label();
@@ -106,6 +106,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlOrderViewDrinks = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
             this.PriceDrinksSp5 = new System.Windows.Forms.Label();
             this.PriceDrinksH4 = new System.Windows.Forms.Label();
             this.PriceDrinksH3 = new System.Windows.Forms.Label();
@@ -139,7 +140,6 @@
             this.CocaColaLightButton = new ChapeauUI.ButtonStyle();
             this.SpaGreenButton = new ChapeauUI.ButtonStyle();
             this.SpaRedButton = new ChapeauUI.ButtonStyle();
-            this.label18 = new System.Windows.Forms.Label();
             this.LeffeTripleButton = new ChapeauUI.ButtonStyle();
             this.KriegButton = new ChapeauUI.ButtonStyle();
             this.DuvelButton = new ChapeauUI.ButtonStyle();
@@ -385,7 +385,7 @@
             // 
             this.pnlOrderViewLunch.AutoScroll = true;
             this.pnlOrderViewLunch.Controls.Add(this.AddButton);
-            this.pnlOrderViewLunch.Controls.Add(this.LVSelectedItems);
+            this.pnlOrderViewLunch.Controls.Add(this.LVSelectedItemsLunch);
             this.pnlOrderViewLunch.Controls.Add(this.label8);
             this.pnlOrderViewLunch.Controls.Add(this.BlackLine);
             this.pnlOrderViewLunch.Controls.Add(this.PriceLunchD3);
@@ -412,7 +412,7 @@
             this.pnlOrderViewLunch.Controls.Add(this.label5);
             this.pnlOrderViewLunch.Location = new System.Drawing.Point(0, 148);
             this.pnlOrderViewLunch.Name = "pnlOrderViewLunch";
-            this.pnlOrderViewLunch.Size = new System.Drawing.Size(445, 550);
+            this.pnlOrderViewLunch.Size = new System.Drawing.Size(450, 550);
             this.pnlOrderViewLunch.TabIndex = 1;
             // 
             // AddButton
@@ -428,17 +428,17 @@
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = false;
             // 
-            // LVSelectedItems
+            // LVSelectedItemsLunch
             // 
-            this.LVSelectedItems.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LVSelectedItems.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LVSelectedItems.Location = new System.Drawing.Point(12, 746);
-            this.LVSelectedItems.MultiSelect = false;
-            this.LVSelectedItems.Name = "LVSelectedItems";
-            this.LVSelectedItems.Size = new System.Drawing.Size(404, 172);
-            this.LVSelectedItems.TabIndex = 12;
-            this.LVSelectedItems.UseCompatibleStateImageBehavior = false;
-            this.LVSelectedItems.View = System.Windows.Forms.View.Details;
+            this.LVSelectedItemsLunch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LVSelectedItemsLunch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LVSelectedItemsLunch.Location = new System.Drawing.Point(12, 746);
+            this.LVSelectedItemsLunch.MultiSelect = false;
+            this.LVSelectedItemsLunch.Name = "LVSelectedItemsLunch";
+            this.LVSelectedItemsLunch.Size = new System.Drawing.Size(404, 172);
+            this.LVSelectedItemsLunch.TabIndex = 12;
+            this.LVSelectedItemsLunch.UseCompatibleStateImageBehavior = false;
+            this.LVSelectedItemsLunch.View = System.Windows.Forms.View.Details;
             // 
             // label8
             // 
@@ -583,6 +583,7 @@
             this.LunchItemD3Button.Name = "LunchItemD3Button";
             this.LunchItemD3Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemD3Button.TabIndex = 11;
+            this.LunchItemD3Button.Tag = "9";
             this.LunchItemD3Button.Text = "3 types of farmer’s cheeses with rye\nraisin bread";
             this.LunchItemD3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemD3Button.UseVisualStyleBackColor = true;
@@ -594,6 +595,7 @@
             this.LunchItemD2Button.Name = "LunchItemD2Button";
             this.LunchItemD2Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemD2Button.TabIndex = 10;
+            this.LunchItemD2Button.Tag = "8";
             this.LunchItemD2Button.Text = "Fresh madeleines with fig compote\nand creme pâtissier with Grand Marnier";
             this.LunchItemD2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemD2Button.UseVisualStyleBackColor = true;
@@ -605,6 +607,7 @@
             this.LunchItemD1Button.Name = "LunchItemD1Button";
             this.LunchItemD1Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemD1Button.TabIndex = 9;
+            this.LunchItemD1Button.Tag = "7";
             this.LunchItemD1Button.Text = "White chocolate and speculoos\ncake with mandarin";
             this.LunchItemD1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemD1Button.UseVisualStyleBackColor = true;
@@ -616,6 +619,7 @@
             this.LunchItemM3Button.Name = "LunchItemM3Button";
             this.LunchItemM3Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemM3Button.TabIndex = 8;
+            this.LunchItemM3Button.Tag = "6";
             this.LunchItemM3Button.Text = "Linguini with mushroom\nsauce";
             this.LunchItemM3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemM3Button.UseVisualStyleBackColor = true;
@@ -627,6 +631,7 @@
             this.LunchItemM2Button.Name = "LunchItemM2Button";
             this.LunchItemM2Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemM2Button.TabIndex = 7;
+            this.LunchItemM2Button.Tag = "5";
             this.LunchItemM2Button.Text = "Fried cod with curry\nsabayon";
             this.LunchItemM2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemM2Button.UseVisualStyleBackColor = true;
@@ -638,6 +643,7 @@
             this.LunchItemM1Button.Name = "LunchItemM1Button";
             this.LunchItemM1Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemM1Button.TabIndex = 6;
+            this.LunchItemM1Button.Tag = "4";
             this.LunchItemM1Button.Text = "Deer stew with red\ncabbage";
             this.LunchItemM1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemM1Button.UseVisualStyleBackColor = true;
@@ -649,6 +655,7 @@
             this.LunchItemS3Button.Name = "LunchItemS3Button";
             this.LunchItemS3Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemS3Button.TabIndex = 5;
+            this.LunchItemS3Button.Tag = "3";
             this.LunchItemS3Button.Text = "Provencal fish soup with rouille,\naged cheese and croutons\n";
             this.LunchItemS3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemS3Button.UseVisualStyleBackColor = true;
@@ -660,6 +667,7 @@
             this.LunchItemS2Button.Name = "LunchItemS2Button";
             this.LunchItemS2Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemS2Button.TabIndex = 4;
+            this.LunchItemS2Button.Tag = "2";
             this.LunchItemS2Button.Text = "Pâté of pheasant with Monegasque\nonions ";
             this.LunchItemS2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemS2Button.UseVisualStyleBackColor = true;
@@ -671,6 +679,7 @@
             this.LunchItemS1Button.Name = "LunchItemS1Button";
             this.LunchItemS1Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemS1Button.TabIndex = 3;
+            this.LunchItemS1Button.Tag = "1";
             this.LunchItemS1Button.Text = "Steak tartar with truffle\r\nmayonnaise\r\n";
             this.LunchItemS1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemS1Button.UseVisualStyleBackColor = true;
@@ -741,7 +750,7 @@
             this.pnlOrderViewDinner.Controls.Add(this.label12);
             this.pnlOrderViewDinner.Location = new System.Drawing.Point(0, 148);
             this.pnlOrderViewDinner.Name = "pnlOrderViewDinner";
-            this.pnlOrderViewDinner.Size = new System.Drawing.Size(434, 550);
+            this.pnlOrderViewDinner.Size = new System.Drawing.Size(445, 554);
             this.pnlOrderViewDinner.TabIndex = 17;
             // 
             // PriceDinnerD3
@@ -753,6 +762,7 @@
             this.PriceDinnerD3.Name = "PriceDinnerD3";
             this.PriceDinnerD3.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerD3.TabIndex = 30;
+            this.PriceDinnerD3.Tag = "20";
             this.PriceDinnerD3.Text = "Price";
             // 
             // PriceDinnerD2
@@ -764,6 +774,7 @@
             this.PriceDinnerD2.Name = "PriceDinnerD2";
             this.PriceDinnerD2.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerD2.TabIndex = 29;
+            this.PriceDinnerD2.Tag = "19";
             this.PriceDinnerD2.Text = "Price";
             // 
             // PriceDinnerD1
@@ -775,6 +786,7 @@
             this.PriceDinnerD1.Name = "PriceDinnerD1";
             this.PriceDinnerD1.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerD1.TabIndex = 28;
+            this.PriceDinnerD1.Tag = "18";
             this.PriceDinnerD1.Text = "Price";
             // 
             // PriceDinnerM3
@@ -786,6 +798,7 @@
             this.PriceDinnerM3.Name = "PriceDinnerM3";
             this.PriceDinnerM3.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerM3.TabIndex = 27;
+            this.PriceDinnerM3.Tag = "17";
             this.PriceDinnerM3.Text = "Price";
             // 
             // PriceDinnerM2
@@ -797,6 +810,7 @@
             this.PriceDinnerM2.Name = "PriceDinnerM2";
             this.PriceDinnerM2.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerM2.TabIndex = 26;
+            this.PriceDinnerM2.Tag = "16";
             this.PriceDinnerM2.Text = "Price";
             // 
             // PriceDinnerM1
@@ -808,6 +822,7 @@
             this.PriceDinnerM1.Name = "PriceDinnerM1";
             this.PriceDinnerM1.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerM1.TabIndex = 25;
+            this.PriceDinnerM1.Tag = "15";
             this.PriceDinnerM1.Text = "Price";
             // 
             // PriceDinnerE2
@@ -819,6 +834,7 @@
             this.PriceDinnerE2.Name = "PriceDinnerE2";
             this.PriceDinnerE2.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerE2.TabIndex = 24;
+            this.PriceDinnerE2.Tag = "14";
             this.PriceDinnerE2.Text = "Price";
             // 
             // PriceDinnerE1
@@ -830,6 +846,7 @@
             this.PriceDinnerE1.Name = "PriceDinnerE1";
             this.PriceDinnerE1.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerE1.TabIndex = 23;
+            this.PriceDinnerE1.Tag = "13";
             this.PriceDinnerE1.Text = "Price";
             // 
             // PriceDinnerS3
@@ -841,6 +858,7 @@
             this.PriceDinnerS3.Name = "PriceDinnerS3";
             this.PriceDinnerS3.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerS3.TabIndex = 22;
+            this.PriceDinnerS3.Tag = "12";
             this.PriceDinnerS3.Text = "Price";
             // 
             // PriceDinnerS2
@@ -852,6 +870,7 @@
             this.PriceDinnerS2.Name = "PriceDinnerS2";
             this.PriceDinnerS2.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerS2.TabIndex = 21;
+            this.PriceDinnerS2.Tag = "11";
             this.PriceDinnerS2.Text = "Price";
             // 
             // PriceDinnerS1
@@ -863,6 +882,7 @@
             this.PriceDinnerS1.Name = "PriceDinnerS1";
             this.PriceDinnerS1.Size = new System.Drawing.Size(49, 25);
             this.PriceDinnerS1.TabIndex = 20;
+            this.PriceDinnerS1.Tag = "10";
             this.PriceDinnerS1.Text = "Price";
             // 
             // DinnerItemE2Button
@@ -872,6 +892,7 @@
             this.DinnerItemE2Button.Name = "DinnerItemE2Button";
             this.DinnerItemE2Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemE2Button.TabIndex = 19;
+            this.DinnerItemE2Button.Tag = "14";
             this.DinnerItemE2Button.Text = "Pheasant consommé with spring\nonion and green herbs";
             this.DinnerItemE2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemE2Button.UseVisualStyleBackColor = true;
@@ -883,6 +904,7 @@
             this.DinnerItemE1Button.Name = "DinnerItemE1Button";
             this.DinnerItemE1Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemE1Button.TabIndex = 18;
+            this.DinnerItemE1Button.Tag = "13";
             this.DinnerItemE1Button.Text = "Provencal fish soup with rouille and\ncroutons";
             this.DinnerItemE1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemE1Button.UseVisualStyleBackColor = true;
@@ -956,6 +978,7 @@
             this.DinnerItemD3Button.Name = "DinnerItemD3Button";
             this.DinnerItemD3Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemD3Button.TabIndex = 11;
+            this.DinnerItemD3Button.Tag = "20";
             this.DinnerItemD3Button.Text = "Port e Fromage (different cheeses\nwith a glass of port) ";
             this.DinnerItemD3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemD3Button.UseVisualStyleBackColor = true;
@@ -967,6 +990,7 @@
             this.DinnerItemD2Button.Name = "DinnerItemD2Button";
             this.DinnerItemD2Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemD2Button.TabIndex = 10;
+            this.DinnerItemD2Button.Tag = "19";
             this.DinnerItemD2Button.Text = "Cherry Baby (Whipped ice cream\nwith warm cherries) ";
             this.DinnerItemD2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemD2Button.UseVisualStyleBackColor = true;
@@ -978,6 +1002,7 @@
             this.DinnerItemD1Button.Name = "DinnerItemD1Button";
             this.DinnerItemD1Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemD1Button.TabIndex = 9;
+            this.DinnerItemD1Button.Tag = "18";
             this.DinnerItemD1Button.Text = "Café surprise (Coffee with homemade\npralines)";
             this.DinnerItemD1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemD1Button.UseVisualStyleBackColor = true;
@@ -989,6 +1014,7 @@
             this.DinnerItemM3Button.Name = "DinnerItemM3Button";
             this.DinnerItemM3Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemM3Button.TabIndex = 8;
+            this.DinnerItemM3Button.Tag = "17";
             this.DinnerItemM3Button.Text = "Venison steak with own stew and red\ncabbage";
             this.DinnerItemM3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemM3Button.UseVisualStyleBackColor = true;
@@ -1000,6 +1026,7 @@
             this.DinnerItemM2Button.Name = "DinnerItemM2Button";
             this.DinnerItemM2Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemM2Button.TabIndex = 7;
+            this.DinnerItemM2Button.Tag = "16";
             this.DinnerItemM2Button.Text = "Fried tenderloin with veal gravy with\npink peppers";
             this.DinnerItemM2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemM2Button.UseVisualStyleBackColor = true;
@@ -1011,6 +1038,7 @@
             this.DinnerItemM1Button.Name = "DinnerItemM1Button";
             this.DinnerItemM1Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemM1Button.TabIndex = 6;
+            this.DinnerItemM1Button.Tag = "15";
             this.DinnerItemM1Button.Text = "On the skin fried cod fillet with\ncurry-sabayon";
             this.DinnerItemM1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemM1Button.UseVisualStyleBackColor = true;
@@ -1022,6 +1050,7 @@
             this.DinnerItemS3Button.Name = "DinnerItemS3Button";
             this.DinnerItemS3Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemS3Button.TabIndex = 5;
+            this.DinnerItemS3Button.Tag = "12";
             this.DinnerItemS3Button.Text = "Crab salmon cookies with sweet and\nsour chili sauce";
             this.DinnerItemS3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemS3Button.UseVisualStyleBackColor = true;
@@ -1033,6 +1062,7 @@
             this.DinnerItemS2Button.Name = "DinnerItemS2Button";
             this.DinnerItemS2Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemS2Button.TabIndex = 4;
+            this.DinnerItemS2Button.Tag = "11";
             this.DinnerItemS2Button.Text = "Pâté of pheasant with Monegasque\nonions ";
             this.DinnerItemS2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemS2Button.UseVisualStyleBackColor = true;
@@ -1044,6 +1074,7 @@
             this.DinnerItemS1Button.Name = "DinnerItemS1Button";
             this.DinnerItemS1Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemS1Button.TabIndex = 3;
+            this.DinnerItemS1Button.Tag = "10";
             this.DinnerItemS1Button.Text = "Veal tartar with tuna mayonnaise\nand fried mussels";
             this.DinnerItemS1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemS1Button.UseVisualStyleBackColor = true;
@@ -1081,6 +1112,7 @@
             // pnlOrderViewDrinks
             // 
             this.pnlOrderViewDrinks.AutoScroll = true;
+            this.pnlOrderViewDrinks.Controls.Add(this.label18);
             this.pnlOrderViewDrinks.Controls.Add(this.PriceDrinksSp5);
             this.pnlOrderViewDrinks.Controls.Add(this.PriceDrinksH4);
             this.pnlOrderViewDrinks.Controls.Add(this.PriceDrinksH3);
@@ -1114,7 +1146,6 @@
             this.pnlOrderViewDrinks.Controls.Add(this.CocaColaLightButton);
             this.pnlOrderViewDrinks.Controls.Add(this.SpaGreenButton);
             this.pnlOrderViewDrinks.Controls.Add(this.SpaRedButton);
-            this.pnlOrderViewDrinks.Controls.Add(this.label18);
             this.pnlOrderViewDrinks.Controls.Add(this.LeffeTripleButton);
             this.pnlOrderViewDrinks.Controls.Add(this.KriegButton);
             this.pnlOrderViewDrinks.Controls.Add(this.DuvelButton);
@@ -1145,8 +1176,18 @@
             this.pnlOrderViewDrinks.Controls.Add(this.label16);
             this.pnlOrderViewDrinks.Location = new System.Drawing.Point(0, 148);
             this.pnlOrderViewDrinks.Name = "pnlOrderViewDrinks";
-            this.pnlOrderViewDrinks.Size = new System.Drawing.Size(445, 550);
+            this.pnlOrderViewDrinks.Size = new System.Drawing.Size(445, 555);
             this.pnlOrderViewDrinks.TabIndex = 20;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(155, 13);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(138, 32);
+            this.label18.TabIndex = 44;
+            this.label18.Text = "Soft drinks";
             // 
             // PriceDrinksSp5
             // 
@@ -1157,6 +1198,7 @@
             this.PriceDrinksSp5.Name = "PriceDrinksSp5";
             this.PriceDrinksSp5.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSp5.TabIndex = 77;
+            this.PriceDrinksSp5.Tag = "41";
             this.PriceDrinksSp5.Text = "Price";
             // 
             // PriceDrinksH4
@@ -1168,6 +1210,7 @@
             this.PriceDrinksH4.Name = "PriceDrinksH4";
             this.PriceDrinksH4.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksH4.TabIndex = 76;
+            this.PriceDrinksH4.Tag = "45";
             this.PriceDrinksH4.Text = "Price";
             // 
             // PriceDrinksH3
@@ -1179,6 +1222,7 @@
             this.PriceDrinksH3.Name = "PriceDrinksH3";
             this.PriceDrinksH3.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksH3.TabIndex = 75;
+            this.PriceDrinksH3.Tag = "44";
             this.PriceDrinksH3.Text = "Price";
             // 
             // PriceDrinksH2
@@ -1190,6 +1234,7 @@
             this.PriceDrinksH2.Name = "PriceDrinksH2";
             this.PriceDrinksH2.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksH2.TabIndex = 74;
+            this.PriceDrinksH2.Tag = "43";
             this.PriceDrinksH2.Text = "Price";
             // 
             // PriceDrinksH1
@@ -1201,6 +1246,7 @@
             this.PriceDrinksH1.Name = "PriceDrinksH1";
             this.PriceDrinksH1.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksH1.TabIndex = 73;
+            this.PriceDrinksH1.Tag = "42";
             this.PriceDrinksH1.Text = "Price";
             // 
             // PriceDrinksSp4
@@ -1212,6 +1258,7 @@
             this.PriceDrinksSp4.Name = "PriceDrinksSp4";
             this.PriceDrinksSp4.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSp4.TabIndex = 72;
+            this.PriceDrinksSp4.Tag = "40";
             this.PriceDrinksSp4.Text = "Price";
             // 
             // PriceDrinksSp3
@@ -1223,6 +1270,7 @@
             this.PriceDrinksSp3.Name = "PriceDrinksSp3";
             this.PriceDrinksSp3.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSp3.TabIndex = 71;
+            this.PriceDrinksSp3.Tag = "39";
             this.PriceDrinksSp3.Text = "Price";
             // 
             // PriceDrinksSp2
@@ -1234,6 +1282,7 @@
             this.PriceDrinksSp2.Name = "PriceDrinksSp2";
             this.PriceDrinksSp2.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSp2.TabIndex = 70;
+            this.PriceDrinksSp2.Tag = "38";
             this.PriceDrinksSp2.Text = "Price";
             // 
             // PriceDrinksSp1
@@ -1245,6 +1294,7 @@
             this.PriceDrinksSp1.Name = "PriceDrinksSp1";
             this.PriceDrinksSp1.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSp1.TabIndex = 69;
+            this.PriceDrinksSp1.Tag = "37";
             this.PriceDrinksSp1.Text = "Price";
             // 
             // PriceDrinksW5
@@ -1256,6 +1306,7 @@
             this.PriceDrinksW5.Name = "PriceDrinksW5";
             this.PriceDrinksW5.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksW5.TabIndex = 68;
+            this.PriceDrinksW5.Tag = "36";
             this.PriceDrinksW5.Text = "Price";
             // 
             // PriceDrinksW4
@@ -1267,6 +1318,7 @@
             this.PriceDrinksW4.Name = "PriceDrinksW4";
             this.PriceDrinksW4.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksW4.TabIndex = 67;
+            this.PriceDrinksW4.Tag = "35";
             this.PriceDrinksW4.Text = "Price";
             // 
             // PriceDrinksW3
@@ -1278,6 +1330,7 @@
             this.PriceDrinksW3.Name = "PriceDrinksW3";
             this.PriceDrinksW3.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksW3.TabIndex = 66;
+            this.PriceDrinksW3.Tag = "34";
             this.PriceDrinksW3.Text = "Price";
             // 
             // PriceDrinksW2
@@ -1289,6 +1342,7 @@
             this.PriceDrinksW2.Name = "PriceDrinksW2";
             this.PriceDrinksW2.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksW2.TabIndex = 65;
+            this.PriceDrinksW2.Tag = "33";
             this.PriceDrinksW2.Text = "Price";
             // 
             // PriceDrinksW1
@@ -1300,6 +1354,7 @@
             this.PriceDrinksW1.Name = "PriceDrinksW1";
             this.PriceDrinksW1.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksW1.TabIndex = 64;
+            this.PriceDrinksW1.Tag = "32";
             this.PriceDrinksW1.Text = "Price";
             // 
             // PriceDrinksB4
@@ -1311,6 +1366,7 @@
             this.PriceDrinksB4.Name = "PriceDrinksB4";
             this.PriceDrinksB4.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksB4.TabIndex = 63;
+            this.PriceDrinksB4.Tag = "31";
             this.PriceDrinksB4.Text = "Price";
             // 
             // PriceDrinksB3
@@ -1322,6 +1378,7 @@
             this.PriceDrinksB3.Name = "PriceDrinksB3";
             this.PriceDrinksB3.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksB3.TabIndex = 62;
+            this.PriceDrinksB3.Tag = "30";
             this.PriceDrinksB3.Text = "Price";
             // 
             // PriceDrinksB2
@@ -1333,6 +1390,7 @@
             this.PriceDrinksB2.Name = "PriceDrinksB2";
             this.PriceDrinksB2.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksB2.TabIndex = 61;
+            this.PriceDrinksB2.Tag = "29";
             this.PriceDrinksB2.Text = "Price";
             // 
             // PriceDrinksB1
@@ -1344,6 +1402,7 @@
             this.PriceDrinksB1.Name = "PriceDrinksB1";
             this.PriceDrinksB1.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksB1.TabIndex = 60;
+            this.PriceDrinksB1.Tag = "28";
             this.PriceDrinksB1.Text = "Price";
             // 
             // PriceDrinksSo7
@@ -1355,6 +1414,7 @@
             this.PriceDrinksSo7.Name = "PriceDrinksSo7";
             this.PriceDrinksSo7.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSo7.TabIndex = 59;
+            this.PriceDrinksSo7.Tag = "27";
             this.PriceDrinksSo7.Text = "Price";
             // 
             // PriceDrinksSo6
@@ -1366,6 +1426,7 @@
             this.PriceDrinksSo6.Name = "PriceDrinksSo6";
             this.PriceDrinksSo6.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSo6.TabIndex = 58;
+            this.PriceDrinksSo6.Tag = "26";
             this.PriceDrinksSo6.Text = "Price";
             // 
             // PriceDrinksSo5
@@ -1377,6 +1438,7 @@
             this.PriceDrinksSo5.Name = "PriceDrinksSo5";
             this.PriceDrinksSo5.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSo5.TabIndex = 57;
+            this.PriceDrinksSo5.Tag = "25";
             this.PriceDrinksSo5.Text = "Price";
             // 
             // PriceDrinksSo4
@@ -1388,6 +1450,7 @@
             this.PriceDrinksSo4.Name = "PriceDrinksSo4";
             this.PriceDrinksSo4.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSo4.TabIndex = 56;
+            this.PriceDrinksSo4.Tag = "24";
             this.PriceDrinksSo4.Text = "Price";
             // 
             // PriceDrinksSo3
@@ -1399,6 +1462,7 @@
             this.PriceDrinksSo3.Name = "PriceDrinksSo3";
             this.PriceDrinksSo3.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSo3.TabIndex = 55;
+            this.PriceDrinksSo3.Tag = "23";
             this.PriceDrinksSo3.Text = "Price";
             // 
             // PriceDrinksSo2
@@ -1410,6 +1474,7 @@
             this.PriceDrinksSo2.Name = "PriceDrinksSo2";
             this.PriceDrinksSo2.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSo2.TabIndex = 54;
+            this.PriceDrinksSo2.Tag = "22";
             this.PriceDrinksSo2.Text = "Price";
             // 
             // PriceDrinksSo1
@@ -1421,6 +1486,7 @@
             this.PriceDrinksSo1.Name = "PriceDrinksSo1";
             this.PriceDrinksSo1.Size = new System.Drawing.Size(49, 25);
             this.PriceDrinksSo1.TabIndex = 53;
+            this.PriceDrinksSo1.Tag = "21";
             this.PriceDrinksSo1.Text = "Price";
             // 
             // label20
@@ -1440,6 +1506,7 @@
             this.BitterLemonButton.Name = "BitterLemonButton";
             this.BitterLemonButton.Size = new System.Drawing.Size(406, 38);
             this.BitterLemonButton.TabIndex = 51;
+            this.BitterLemonButton.Tag = "27";
             this.BitterLemonButton.Text = "Bitter Lemon";
             this.BitterLemonButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BitterLemonButton.UseVisualStyleBackColor = true;
@@ -1451,6 +1518,7 @@
             this.TonicButton.Name = "TonicButton";
             this.TonicButton.Size = new System.Drawing.Size(406, 38);
             this.TonicButton.TabIndex = 50;
+            this.TonicButton.Tag = "26";
             this.TonicButton.Text = "Tonic";
             this.TonicButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TonicButton.UseVisualStyleBackColor = true;
@@ -1462,6 +1530,7 @@
             this.SisiButton.Name = "SisiButton";
             this.SisiButton.Size = new System.Drawing.Size(406, 38);
             this.SisiButton.TabIndex = 49;
+            this.SisiButton.Tag = "25";
             this.SisiButton.Text = "Sisi";
             this.SisiButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SisiButton.UseVisualStyleBackColor = true;
@@ -1473,6 +1542,7 @@
             this.CocaColaButton.Name = "CocaColaButton";
             this.CocaColaButton.Size = new System.Drawing.Size(406, 38);
             this.CocaColaButton.TabIndex = 48;
+            this.CocaColaButton.Tag = "24";
             this.CocaColaButton.Text = "Coca Cola";
             this.CocaColaButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CocaColaButton.UseVisualStyleBackColor = true;
@@ -1484,6 +1554,7 @@
             this.CocaColaLightButton.Name = "CocaColaLightButton";
             this.CocaColaLightButton.Size = new System.Drawing.Size(406, 38);
             this.CocaColaLightButton.TabIndex = 47;
+            this.CocaColaLightButton.Tag = "23";
             this.CocaColaLightButton.Text = "Coca Cola Light";
             this.CocaColaLightButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CocaColaLightButton.UseVisualStyleBackColor = true;
@@ -1495,6 +1566,7 @@
             this.SpaGreenButton.Name = "SpaGreenButton";
             this.SpaGreenButton.Size = new System.Drawing.Size(406, 38);
             this.SpaGreenButton.TabIndex = 46;
+            this.SpaGreenButton.Tag = "22";
             this.SpaGreenButton.Text = "Spa Green";
             this.SpaGreenButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SpaGreenButton.UseVisualStyleBackColor = true;
@@ -1506,19 +1578,10 @@
             this.SpaRedButton.Name = "SpaRedButton";
             this.SpaRedButton.Size = new System.Drawing.Size(406, 38);
             this.SpaRedButton.TabIndex = 45;
+            this.SpaRedButton.Tag = "21";
             this.SpaRedButton.Text = "Spa Red";
             this.SpaRedButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SpaRedButton.UseVisualStyleBackColor = true;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(155, 19);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(138, 32);
-            this.label18.TabIndex = 44;
-            this.label18.Text = "Soft drinks";
             // 
             // LeffeTripleButton
             // 
@@ -1527,6 +1590,7 @@
             this.LeffeTripleButton.Name = "LeffeTripleButton";
             this.LeffeTripleButton.Size = new System.Drawing.Size(406, 38);
             this.LeffeTripleButton.TabIndex = 43;
+            this.LeffeTripleButton.Tag = "31";
             this.LeffeTripleButton.Text = "Leffe Triple";
             this.LeffeTripleButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LeffeTripleButton.UseVisualStyleBackColor = true;
@@ -1538,6 +1602,7 @@
             this.KriegButton.Name = "KriegButton";
             this.KriegButton.Size = new System.Drawing.Size(406, 38);
             this.KriegButton.TabIndex = 42;
+            this.KriegButton.Tag = "30";
             this.KriegButton.Text = "Krieg";
             this.KriegButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.KriegButton.UseVisualStyleBackColor = true;
@@ -1549,6 +1614,7 @@
             this.DuvelButton.Name = "DuvelButton";
             this.DuvelButton.Size = new System.Drawing.Size(406, 38);
             this.DuvelButton.TabIndex = 41;
+            this.DuvelButton.Tag = "29";
             this.DuvelButton.Text = "Duvel";
             this.DuvelButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DuvelButton.UseVisualStyleBackColor = true;
@@ -1560,6 +1626,7 @@
             this.HertogJanButton.Name = "HertogJanButton";
             this.HertogJanButton.Size = new System.Drawing.Size(406, 38);
             this.HertogJanButton.TabIndex = 40;
+            this.HertogJanButton.Tag = "28";
             this.HertogJanButton.Text = "Hertog Jan";
             this.HertogJanButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HertogJanButton.UseVisualStyleBackColor = true;
@@ -1581,6 +1648,7 @@
             this.WhiteWineGlassButton.Name = "WhiteWineGlassButton";
             this.WhiteWineGlassButton.Size = new System.Drawing.Size(406, 67);
             this.WhiteWineGlassButton.TabIndex = 38;
+            this.WhiteWineGlassButton.Tag = "32";
             this.WhiteWineGlassButton.Text = "White House Wine\r\n(glass)";
             this.WhiteWineGlassButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.WhiteWineGlassButton.UseVisualStyleBackColor = true;
@@ -1592,6 +1660,7 @@
             this.WhiteWineBottleButton.Name = "WhiteWineBottleButton";
             this.WhiteWineBottleButton.Size = new System.Drawing.Size(406, 67);
             this.WhiteWineBottleButton.TabIndex = 37;
+            this.WhiteWineBottleButton.Tag = "33";
             this.WhiteWineBottleButton.Text = "White House Wine\r\n(bottle)";
             this.WhiteWineBottleButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.WhiteWineBottleButton.UseVisualStyleBackColor = true;
@@ -1603,6 +1672,7 @@
             this.RedWineGlassButton.Name = "RedWineGlassButton";
             this.RedWineGlassButton.Size = new System.Drawing.Size(406, 67);
             this.RedWineGlassButton.TabIndex = 36;
+            this.RedWineGlassButton.Tag = "34";
             this.RedWineGlassButton.Text = "Red House Wine\r\n(glass)";
             this.RedWineGlassButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RedWineGlassButton.UseVisualStyleBackColor = true;
@@ -1614,6 +1684,7 @@
             this.ChampangeButton.Name = "ChampangeButton";
             this.ChampangeButton.Size = new System.Drawing.Size(406, 38);
             this.ChampangeButton.TabIndex = 35;
+            this.ChampangeButton.Tag = "36";
             this.ChampangeButton.Text = "Champagne (bottle)";
             this.ChampangeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ChampangeButton.UseVisualStyleBackColor = true;
@@ -1625,6 +1696,7 @@
             this.RedWineBottleButton.Name = "RedWineBottleButton";
             this.RedWineBottleButton.Size = new System.Drawing.Size(406, 67);
             this.RedWineBottleButton.TabIndex = 34;
+            this.RedWineBottleButton.Tag = "35";
             this.RedWineBottleButton.Text = "Red House Wine\r\n(bottle)";
             this.RedWineBottleButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RedWineBottleButton.UseVisualStyleBackColor = true;
@@ -1646,6 +1718,7 @@
             this.BerenburgButton.Name = "BerenburgButton";
             this.BerenburgButton.Size = new System.Drawing.Size(406, 38);
             this.BerenburgButton.TabIndex = 29;
+            this.BerenburgButton.Tag = "41";
             this.BerenburgButton.Text = "Berenburg";
             this.BerenburgButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BerenburgButton.UseVisualStyleBackColor = true;
@@ -1657,6 +1730,7 @@
             this.VieuxButton.Name = "VieuxButton";
             this.VieuxButton.Size = new System.Drawing.Size(406, 38);
             this.VieuxButton.TabIndex = 28;
+            this.VieuxButton.Tag = "40";
             this.VieuxButton.Text = "Vieux";
             this.VieuxButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.VieuxButton.UseVisualStyleBackColor = true;
@@ -1668,6 +1742,7 @@
             this.RumButton.Name = "RumButton";
             this.RumButton.Size = new System.Drawing.Size(406, 38);
             this.RumButton.TabIndex = 27;
+            this.RumButton.Tag = "39";
             this.RumButton.Text = "Rum";
             this.RumButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RumButton.UseVisualStyleBackColor = true;
@@ -1679,6 +1754,7 @@
             this.WhiskyButton.Name = "WhiskyButton";
             this.WhiskyButton.Size = new System.Drawing.Size(406, 38);
             this.WhiskyButton.TabIndex = 26;
+            this.WhiskyButton.Tag = "38";
             this.WhiskyButton.Text = "Whisky";
             this.WhiskyButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.WhiskyButton.UseVisualStyleBackColor = true;
@@ -1690,6 +1766,7 @@
             this.YoungJeneverButton.Name = "YoungJeneverButton";
             this.YoungJeneverButton.Size = new System.Drawing.Size(406, 38);
             this.YoungJeneverButton.TabIndex = 25;
+            this.YoungJeneverButton.Tag = "37";
             this.YoungJeneverButton.Text = "Young Jenever";
             this.YoungJeneverButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.YoungJeneverButton.UseVisualStyleBackColor = true;
@@ -1701,6 +1778,7 @@
             this.TeaButton.Name = "TeaButton";
             this.TeaButton.Size = new System.Drawing.Size(406, 38);
             this.TeaButton.TabIndex = 24;
+            this.TeaButton.Tag = "45";
             this.TeaButton.Text = "Tea";
             this.TeaButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TeaButton.UseVisualStyleBackColor = true;
@@ -1712,6 +1790,7 @@
             this.EspressoButton.Name = "EspressoButton";
             this.EspressoButton.Size = new System.Drawing.Size(406, 38);
             this.EspressoButton.TabIndex = 23;
+            this.EspressoButton.Tag = "44";
             this.EspressoButton.Text = "Espresso";
             this.EspressoButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EspressoButton.UseVisualStyleBackColor = true;
@@ -1723,6 +1802,7 @@
             this.CappuccinoButton.Name = "CappuccinoButton";
             this.CappuccinoButton.Size = new System.Drawing.Size(406, 38);
             this.CappuccinoButton.TabIndex = 22;
+            this.CappuccinoButton.Tag = "43";
             this.CappuccinoButton.Text = "Cappuccino";
             this.CappuccinoButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CappuccinoButton.UseVisualStyleBackColor = true;
@@ -1734,6 +1814,7 @@
             this.CoffeeButton.Name = "CoffeeButton";
             this.CoffeeButton.Size = new System.Drawing.Size(406, 38);
             this.CoffeeButton.TabIndex = 21;
+            this.CoffeeButton.Tag = "42";
             this.CoffeeButton.Text = "Coffee";
             this.CoffeeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CoffeeButton.UseVisualStyleBackColor = true;
@@ -1830,12 +1911,13 @@
             this.ControlBox = false;
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlOrderViewLunch);
-            this.Controls.Add(this.pnlTableOverview);
             this.Controls.Add(this.pnlOrderViewDrinks);
             this.Controls.Add(this.pnlOrderViewDinner);
+            this.Controls.Add(this.pnlTableOverview);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlTableOverview.ResumeLayout(false);
             this.pnlTableOverview.PerformLayout();
             this.pnlMenu.ResumeLayout(false);
@@ -1886,7 +1968,7 @@
         private ButtonStyle LunchItemM1Button;
         private Panel BlackLine;
         private Label label8;
-        private ListView LVSelectedItems;
+        private ListView LVSelectedItemsLunch;
         private Panel panel2;
         private ButtonStyle AddButton;
         private Panel pnlOrderViewDinner;

@@ -15,11 +15,18 @@ using ChapeauService;
 using System.Data.SqlClient;
 using Microsoft.VisualBasic.ApplicationServices;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace ChapeauUI
 {
     public partial class Form1 : Form
     {
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            SubscribeButtons();
+            LoadItems();
+        }
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +35,19 @@ namespace ChapeauUI
         private void Start()
         {
             ShowOrderOverviewPnl();
+        }
+        //
+        //
+        //
+        //
+        // Events before Loading
+        private void LoadItems()
+        {
+            List<MenuItem> menuItems = GetMenuItems();
+            FillLunchPriceTags(menuItems);
+            FillDinnerPriceTags(menuItems);
+            FillDrinksPriceTags(menuItems);
+            DisplayLVLunch();
         }
         //
         //
@@ -43,7 +63,7 @@ namespace ChapeauUI
                 List<Order> orders = GetOrders();
                 List<OrderDetail> orderDetails = GetOrderDetails();
                 List<MenuItem> menuItems = GetMenuItems();
-              
+
                 DisplayTableOrderOverview(orders, orderDetails, menuItems);
             }
             catch (Exception e)
@@ -60,9 +80,6 @@ namespace ChapeauUI
             try
             {
                 List<Order> orders = GetOrders();
-                List<MenuItem> menuItems = GetMenuItems();
-
-                FillLunchPriceTags(menuItems);
             }
             catch (Exception e)
             {
@@ -70,7 +87,7 @@ namespace ChapeauUI
                     "Please try to restart the application or contact your manager\n\n. " + e.Message);
             }
 
-            
+
 
 
 
@@ -131,7 +148,7 @@ namespace ChapeauUI
             LVOrderOverview.View = View.Details; //Displays each item on a seperate line
             LVOrderOverview.Columns.Add("no.", 50);
             LVOrderOverview.Columns.Add("name", 200);
-            LVOrderOverview.Columns.Add("price",LVOrderOverview.Width - 250);
+            LVOrderOverview.Columns.Add("price", LVOrderOverview.Width - 250);
 
             decimal totalOrderPrice = 0;
             decimal totalOrderVAT = 0;
@@ -141,10 +158,12 @@ namespace ChapeauUI
             {
                 itemCatagory = GetItemCatagory(order.MenuItemID, menuItems);
                 int itemAmount = GetItemAmount(order.OrderDetailID, orderDetails);
+                decimal itemPrice = GetItemPrice(order.MenuItemID, menuItems);
+
                 ListViewItem item = new ListViewItem(itemAmount.ToString());
                 item.SubItems.Add(GetItemName(order.MenuItemID, menuItems));
-                decimal itemPrice = GetItemPrice(order.MenuItemID, menuItems);
                 item.SubItems.Add("€" + itemPrice);
+
                 item.Tag = order;   // link table object to listview item
                 LVOrderOverview.Items.Add(item);
 
@@ -158,12 +177,22 @@ namespace ChapeauUI
                     VATPercentage = 0.21M;
                 }
 
-                totalOrderVAT += ((itemPrice * VATPercentage)*itemAmount);
+                totalOrderVAT += ((itemPrice * VATPercentage) * itemAmount);
             }
 
             TotalOrderPrice.Text = "€" + totalOrderPrice;
             TotalOrderVAT.Text = "€" + totalOrderVAT.ToString(".00");
 
+        }
+        private void DisplayLVLunch()
+        {
+            //Clearing the LV before displaying
+            LVSelectedItemsLunch.Items.Clear();
+            //Filling the LV Column headers
+            LVSelectedItemsLunch.View = View.Details; //Displays each item on a seperate line
+            LVSelectedItemsLunch.Columns.Add("no.", 50);
+            LVSelectedItemsLunch.Columns.Add("name", LVSelectedItemsLunch.Width - 120);
+            LVSelectedItemsLunch.Columns.Add("price", 70);
         }
         //
         //
@@ -215,7 +244,7 @@ namespace ChapeauUI
         //
         // NAVButtons
         private void LunchNavButton_Click(object sender, EventArgs e)
-        { 
+        {
             ShowOrderLunchPnl();
 
             DrinksNavButton.Enabled = true;
@@ -283,9 +312,145 @@ namespace ChapeauUI
                                 break;
                             }
                         }
-                            
+
                     }
                 }
+            }
+        }
+        private void FillDinnerPriceTags(List<MenuItem> menuItems)
+        {
+            foreach (Control control in pnlOrderViewDinner.Controls)
+            {
+                if (control is Label label && label.Text == "Price")
+                {
+                    if (int.Parse(label.Tag.ToString()) is int tagMenuItemId)
+                    {
+                        foreach (MenuItem menuItem in menuItems)
+                        {
+                            if (tagMenuItemId == menuItem.MenuItemID)
+                            {
+                                label.Text = "€" + menuItem.ItemPrice.ToString(".00");
+                                break;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        private void FillDrinksPriceTags(List<MenuItem> menuItems)
+        {
+            foreach (Control control in pnlOrderViewDrinks.Controls)
+            {
+                if (control is Label label && label.Text == "Price")
+                {
+                    if (int.Parse(label.Tag.ToString()) is int tagMenuItemId)
+                    {
+                        foreach (MenuItem menuItem in menuItems)
+                        {
+                            if (tagMenuItemId == menuItem.MenuItemID)
+                            {
+                                label.Text = "€" + menuItem.ItemPrice.ToString(".00");
+                                break;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+        private void SubscribeButtons()
+        {
+            LunchItemS1Button.Click += ButtonClickEventHandler;
+            LunchItemS2Button.Click += ButtonClickEventHandler;
+            LunchItemS3Button.Click += ButtonClickEventHandler;
+
+            LunchItemM1Button.Click += ButtonClickEventHandler;
+            LunchItemM2Button.Click += ButtonClickEventHandler;
+            LunchItemM3Button.Click += ButtonClickEventHandler;
+
+            LunchItemD1Button.Click += ButtonClickEventHandler;
+            LunchItemD2Button.Click += ButtonClickEventHandler;
+            LunchItemD3Button.Click += ButtonClickEventHandler;
+
+            DinnerItemS1Button.Click += ButtonClickEventHandler;
+            DinnerItemS2Button.Click += ButtonClickEventHandler;
+            DinnerItemS3Button.Click += ButtonClickEventHandler;
+
+            DinnerItemE1Button.Click += ButtonClickEventHandler;
+            DinnerItemE2Button.Click += ButtonClickEventHandler;
+
+            DinnerItemM1Button.Click += ButtonClickEventHandler;
+            DinnerItemM2Button.Click += ButtonClickEventHandler;
+            DinnerItemM3Button.Click += ButtonClickEventHandler;
+
+            DinnerItemD1Button.Click += ButtonClickEventHandler;
+            DinnerItemD2Button.Click += ButtonClickEventHandler;
+            DinnerItemD3Button.Click += ButtonClickEventHandler;
+
+            SpaRedButton.Click += ButtonClickEventHandler;
+            SpaGreenButton.Click += ButtonClickEventHandler;
+            CocaColaButton.Click += ButtonClickEventHandler;
+            CocaColaButton.Click += ButtonClickEventHandler;
+            SisiButton.Click += ButtonClickEventHandler;
+            TonicButton.Click += ButtonClickEventHandler;
+            BitterLemonButton.Click += ButtonClickEventHandler;
+
+            HertogJanButton.Click += ButtonClickEventHandler;
+            DuvelButton.Click += ButtonClickEventHandler;
+            KriegButton.Click += ButtonClickEventHandler;
+            LeffeTripleButton.Click += ButtonClickEventHandler;
+
+            WhiteWineBottleButton.Click += ButtonClickEventHandler;
+            WhiteWineGlassButton.Click += ButtonClickEventHandler;
+            RedWineBottleButton.Click += ButtonClickEventHandler;
+            RedWineBottleButton.Click += ButtonClickEventHandler;
+            ChampangeButton.Click += ButtonClickEventHandler;
+
+            YoungJeneverButton.Click += ButtonClickEventHandler;
+            WhiskyButton.Click += ButtonClickEventHandler;
+            RumButton.Click += ButtonClickEventHandler;
+            VieuxButton.Click += ButtonClickEventHandler;
+            BerenburgButton.Click += ButtonClickEventHandler;
+
+            CoffeeButton.Click += ButtonClickEventHandler;
+            CappuccinoButton.Click += ButtonClickEventHandler;
+            EspressoButton.Click += ButtonClickEventHandler;
+            TeaButton.Click += ButtonClickEventHandler;
+        }
+        private void ButtonClickEventHandler(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Button clickedButton = (System.Windows.Forms.Button)sender;
+            string itemText = clickedButton.Text;
+            string itemPrice = "";
+
+            foreach (Control control in pnlOrderViewLunch.Controls)
+            {
+                if (control is Label label && label.Tag != null && label.Tag.ToString() == clickedButton.Tag.ToString())
+                {
+                    itemPrice = label.Text;   
+                    break;
+                }
+            }
+
+            bool itemExists = false;
+            foreach (ListViewItem existingItem in LVSelectedItemsLunch.Items)
+            {
+                if (existingItem.SubItems[1].Text == itemText)
+                {
+                    itemExists = true;
+                    existingItem.SubItems[0].Text = (int.Parse(existingItem.SubItems[0].Text) + 1).ToString(); // Increment the item amount
+                    existingItem.SubItems[2].Text = (existingItem.SubItems[2].Text + itemPrice).ToString(); // Add the value of the item     MAKE IT INT INSTEAD OF STRING
+                    break;
+                }
+            }
+            // Add the item to the ListView
+            if (!itemExists)
+            {
+                ListViewItem item = new ListViewItem("1"); // Initial item amount is 1
+                item.SubItems.Add(itemText); // Add the item name
+                item.SubItems.Add(itemPrice); // Add the item price
+                LVSelectedItemsLunch.Items.Add(item);
             }
         }
     }
