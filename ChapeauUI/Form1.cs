@@ -279,8 +279,8 @@ namespace ChapeauUI
                         {
                             if (tagMenuItemId == menuItem.MenuItemID)
                             {
-                                label.Text = "€" + menuItem.ItemPrice.ToString(".00"); // Assuming the price is stored in the MenuItem object
-                                break; // Exit the inner loop once the price is updated for the current MenuItem
+                                label.Text = "€" + menuItem.ItemPrice.ToString(".00");
+                                break;
                             }
                         }
                             
