@@ -422,25 +422,26 @@ namespace ChapeauUI
         {
             System.Windows.Forms.Button clickedButton = (System.Windows.Forms.Button)sender;
             string itemText = clickedButton.Text;
-            string itemPrice = "";
+            string labelText = "".Replace("€", "");
 
             foreach (Control control in pnlOrderViewLunch.Controls)
             {
                 if (control is Label label && label.Tag != null && label.Tag.ToString() == clickedButton.Tag.ToString())
                 {
-                    itemPrice = label.Text;   
+                    labelText = label.Text;   
                     break;
                 }
             }
+            decimal itemPrice = decimal.Parse(labelText.Replace("€",""));
 
             bool itemExists = false;
             foreach (ListViewItem existingItem in LVSelectedItemsLunch.Items)
             {
-                if (existingItem.SubItems[1].Text == itemText)
+                if (existingItem.SubItems[1].Text == labelText)
                 {
                     itemExists = true;
                     existingItem.SubItems[0].Text = (int.Parse(existingItem.SubItems[0].Text) + 1).ToString(); // Increment the item amount
-                    existingItem.SubItems[2].Text = (existingItem.SubItems[2].Text + itemPrice).ToString(); // Add the value of the item     MAKE IT INT INSTEAD OF STRING
+                    existingItem.SubItems[2].Text = "€" + (int.Parse(existingItem.SubItems[0].Text) * itemPrice).ToString();
                     break;
                 }
             }
@@ -448,8 +449,8 @@ namespace ChapeauUI
             if (!itemExists)
             {
                 ListViewItem item = new ListViewItem("1"); // Initial item amount is 1
-                item.SubItems.Add(itemText); // Add the item name
-                item.SubItems.Add(itemPrice); // Add the item price
+                item.SubItems.Add(labelText); // Add the item name
+                item.SubItems.Add("€" + itemPrice); // Add the item price
                 LVSelectedItemsLunch.Items.Add(item);
             }
         }
