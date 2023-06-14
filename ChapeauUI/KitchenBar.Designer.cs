@@ -64,9 +64,9 @@
             label1.BackColor = Color.Orange;
             label1.BorderStyle = BorderStyle.FixedSingle;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(623, 335);
+            label1.Location = new Point(613, 335);
             label1.Name = "label1";
-            label1.Size = new Size(472, 34);
+            label1.Size = new Size(482, 34);
             label1.TabIndex = 16;
             label1.Text = "      Change Order Status";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -81,7 +81,7 @@
             listViewKitchen.Margin = new Padding(6);
             listViewKitchen.Name = "listViewKitchen";
             listViewKitchen.OwnerDraw = true;
-            listViewKitchen.Size = new Size(560, 316);
+            listViewKitchen.Size = new Size(551, 316);
             listViewKitchen.TabIndex = 15;
             listViewKitchen.TileSize = new Size(2, 2);
             listViewKitchen.UseCompatibleStateImageBehavior = false;
