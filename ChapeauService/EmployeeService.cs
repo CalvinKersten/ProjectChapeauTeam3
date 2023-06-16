@@ -17,9 +17,9 @@ namespace ChapeauService
             employeedb = new EmployeeDao();
         }
 
-        public List<Employee> GetEmployees()
+        public List<Employee> GetEmployees(int EmployeeID)
         {
-            List<Employee> employees = employeedb.GetAllEmployees();
+            List<Employee> employees = employeedb.SearchById(EmployeeID);
             return employees;
         }
     }

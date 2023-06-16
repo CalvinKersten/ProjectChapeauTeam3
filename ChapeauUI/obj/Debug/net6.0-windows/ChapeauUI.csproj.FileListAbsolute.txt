@@ -57,3 +57,4 @@ C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\bin\Debu
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauService.pdb
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.csproj.CopyComplete
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauUI.dll.config
+C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.Properties.Resources.resources

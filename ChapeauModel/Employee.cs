@@ -13,7 +13,7 @@ namespace ChapeauModel
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Password { get; set; }
-        public string Function { get; set; }
+        public string Role { get; set; }
 
         //public Employee(int employeeid, string firstName, string lastName, string function)
         //{
@@ -24,9 +24,9 @@ namespace ChapeauModel
         //}
     }
    
-    public enum Function
+    public enum Role
     { 
-        Chef=1, Waiter, Barman
+        Chef=1, Waiter, Barman, Manager
     }
 
 }

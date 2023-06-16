@@ -22,5 +22,28 @@ namespace ChapeauService
             List<OrderDetail> orderDetails = orderDetaildb.GetAllOrderDetails();
             return orderDetails;
         }
+
+        public List<OrderDetail> RunningOrders()
+        {
+            List<OrderDetail> orderDetails = orderDetaildb.GetRunningOrders();
+            return orderDetails;
+        }
+        public List<OrderDetail> CompletedOrders()
+        {
+            List<OrderDetail> orderDetails = orderDetaildb.GetCompletedOrders();
+            return orderDetails;
+        }
+
+        public List<OrderDetail> KitchenOrders()
+        {
+            List<OrderDetail> orderDetails = orderDetaildb.GetKitchenOrder();
+            return orderDetails;
+        }
+
+        public void ChangeOrderStatus(OrderStatus status, List<OrderDetail> orderDetails)
+        {
+            orderDetaildb.ChangeOrderStatus(status, orderDetails);
+        }
+       
     }
 }

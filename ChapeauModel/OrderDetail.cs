@@ -10,10 +10,10 @@ namespace ChapeauModel
     {
         public int Order_DetailID { get; set; }
         public int Item_Quantity { get; set; }
-       // public TimeOnly Order_Time { get; set; }
-        public string Order_Status { get; set; }
+        public TimeSpan Order_Time { get; set; }
+      //  public enum Order_Status { get; set; }//enum
         public string Comment { get; set; }
+        public MenuItem MenuItem { get; set; }
 
-        
     }
 }

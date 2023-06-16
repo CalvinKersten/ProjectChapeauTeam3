@@ -22,5 +22,9 @@ namespace ChapeauService
             List<MenuItem> menuItems = MenuItemdb.GetAllMenuItems();
             return menuItems;
         }
+
+        public MenuItem GetMenuItemByID(int id) {
+            return MenuItemdb.GetMenuItemByID(id);
+        }
     }
 }
