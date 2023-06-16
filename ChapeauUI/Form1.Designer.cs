@@ -47,7 +47,7 @@
             this.DinnerNavButton = new ChapeauUI.ButtonStyle();
             this.LunchNavButton = new ChapeauUI.ButtonStyle();
             this.pnlOrderViewLunch = new System.Windows.Forms.Panel();
-            this.AddButton = new ChapeauUI.ButtonStyle();
+            this.AddButtonLunch = new ChapeauUI.ButtonStyle();
             this.LVSelectedItemsLunch = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
             this.BlackLine = new System.Windows.Forms.Panel();
@@ -384,7 +384,7 @@
             // pnlOrderViewLunch
             // 
             this.pnlOrderViewLunch.AutoScroll = true;
-            this.pnlOrderViewLunch.Controls.Add(this.AddButton);
+            this.pnlOrderViewLunch.Controls.Add(this.AddButtonLunch);
             this.pnlOrderViewLunch.Controls.Add(this.LVSelectedItemsLunch);
             this.pnlOrderViewLunch.Controls.Add(this.label8);
             this.pnlOrderViewLunch.Controls.Add(this.BlackLine);
@@ -415,18 +415,18 @@
             this.pnlOrderViewLunch.Size = new System.Drawing.Size(450, 550);
             this.pnlOrderViewLunch.TabIndex = 1;
             // 
-            // AddButton
+            // AddButtonLunch
             // 
-            this.AddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.AddButton.FlatAppearance.BorderSize = 0;
-            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddButton.Location = new System.Drawing.Point(241, 931);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(176, 39);
-            this.AddButton.TabIndex = 16;
-            this.AddButton.Text = "Add";
-            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButtonLunch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AddButtonLunch.FlatAppearance.BorderSize = 0;
+            this.AddButtonLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButtonLunch.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddButtonLunch.Location = new System.Drawing.Point(241, 931);
+            this.AddButtonLunch.Name = "AddButtonLunch";
+            this.AddButtonLunch.Size = new System.Drawing.Size(176, 39);
+            this.AddButtonLunch.TabIndex = 16;
+            this.AddButtonLunch.Text = "Add";
+            this.AddButtonLunch.UseVisualStyleBackColor = false;
             // 
             // LVSelectedItemsLunch
             // 
@@ -962,7 +962,7 @@
             // LVSelectedItemsDinner
             // 
             this.LVSelectedItemsDinner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LVSelectedItemsDinner.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LVSelectedItemsDinner.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LVSelectedItemsDinner.Location = new System.Drawing.Point(12, 881);
             this.LVSelectedItemsDinner.MultiSelect = false;
             this.LVSelectedItemsDinner.Name = "LVSelectedItemsDinner";
@@ -1883,7 +1883,7 @@
             // LVSelectedDrinks
             // 
             this.LVSelectedDrinks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LVSelectedDrinks.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.LVSelectedDrinks.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.LVSelectedDrinks.Location = new System.Drawing.Point(12, 1441);
             this.LVSelectedDrinks.MultiSelect = false;
             this.LVSelectedDrinks.Name = "LVSelectedDrinks";
@@ -1970,7 +1970,7 @@
         private Label label8;
         private ListView LVSelectedItemsLunch;
         private Panel panel2;
-        private ButtonStyle AddButton;
+        private ButtonStyle AddButtonLunch;
         private Panel pnlOrderViewDinner;
         private ButtonStyle DinnerItemE2Button;
         private ButtonStyle DinnerItemE1Button;

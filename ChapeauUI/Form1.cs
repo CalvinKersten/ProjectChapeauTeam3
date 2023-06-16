@@ -17,6 +17,7 @@ using Microsoft.VisualBasic.ApplicationServices;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 
 namespace ChapeauUI
 {
@@ -24,7 +25,6 @@ namespace ChapeauUI
     {
         private void Form1_Load(object sender, EventArgs e)
         {
-            SubscribeButtons();
             LoadItems();
         }
         public Form1()
@@ -44,10 +44,11 @@ namespace ChapeauUI
         private void LoadItems()
         {
             List<MenuItem> menuItems = GetMenuItems();
+            ButtonFunctionalityAcrossAllPanels(LVSelectedItemsLunch, LVSelectedItemsDinner, LVSelectedDrinks, menuItems);
             FillLunchPriceTags(menuItems);
             FillDinnerPriceTags(menuItems);
             FillDrinksPriceTags(menuItems);
-            DisplayLVLunch();
+            LoadAllLVs();
         }
         //
         //
@@ -184,15 +185,27 @@ namespace ChapeauUI
             TotalOrderVAT.Text = "€" + totalOrderVAT.ToString(".00");
 
         }
-        private void DisplayLVLunch()
+        private void LoadAllLVs()
         {
-            //Clearing the LV before displaying
+            //Clearing the LVs before displaying
             LVSelectedItemsLunch.Items.Clear();
-            //Filling the LV Column headers
+            LVSelectedItemsDinner.Items.Clear();
+            LVSelectedDrinks.Items.Clear();
+            //Filling the LVs Column headers
             LVSelectedItemsLunch.View = View.Details; //Displays each item on a seperate line
             LVSelectedItemsLunch.Columns.Add("no.", 50);
             LVSelectedItemsLunch.Columns.Add("name", LVSelectedItemsLunch.Width - 120);
             LVSelectedItemsLunch.Columns.Add("price", 70);
+
+            LVSelectedItemsDinner.View = View.Details; //Displays each item on a seperate line
+            LVSelectedItemsDinner.Columns.Add("no.", 50);
+            LVSelectedItemsDinner.Columns.Add("name", LVSelectedItemsDinner.Width - 120);
+            LVSelectedItemsDinner.Columns.Add("price", 70);
+
+            LVSelectedDrinks.View = View.Details; //Displays each item on a seperate line
+            LVSelectedDrinks.Columns.Add("no.", 50);
+            LVSelectedDrinks.Columns.Add("name", LVSelectedDrinks.Width - 120);
+            LVSelectedDrinks.Columns.Add("price", 70);
         }
         //
         //
@@ -359,100 +372,131 @@ namespace ChapeauUI
                 }
             }
         }
-        private void SubscribeButtons()
+        private void ButtonFunctionalityAcrossAllPanels(System.Windows.Forms.ListView listViewLunch, System.Windows.Forms.ListView listViewDinner, System.Windows.Forms.ListView listViewDrinks, List<MenuItem> menuItems)
         {
-            LunchItemS1Button.Click += ButtonClickEventHandler;
-            LunchItemS2Button.Click += ButtonClickEventHandler;
-            LunchItemS3Button.Click += ButtonClickEventHandler;
-
-            LunchItemM1Button.Click += ButtonClickEventHandler;
-            LunchItemM2Button.Click += ButtonClickEventHandler;
-            LunchItemM3Button.Click += ButtonClickEventHandler;
-
-            LunchItemD1Button.Click += ButtonClickEventHandler;
-            LunchItemD2Button.Click += ButtonClickEventHandler;
-            LunchItemD3Button.Click += ButtonClickEventHandler;
-
-            DinnerItemS1Button.Click += ButtonClickEventHandler;
-            DinnerItemS2Button.Click += ButtonClickEventHandler;
-            DinnerItemS3Button.Click += ButtonClickEventHandler;
-
-            DinnerItemE1Button.Click += ButtonClickEventHandler;
-            DinnerItemE2Button.Click += ButtonClickEventHandler;
-
-            DinnerItemM1Button.Click += ButtonClickEventHandler;
-            DinnerItemM2Button.Click += ButtonClickEventHandler;
-            DinnerItemM3Button.Click += ButtonClickEventHandler;
-
-            DinnerItemD1Button.Click += ButtonClickEventHandler;
-            DinnerItemD2Button.Click += ButtonClickEventHandler;
-            DinnerItemD3Button.Click += ButtonClickEventHandler;
-
-            SpaRedButton.Click += ButtonClickEventHandler;
-            SpaGreenButton.Click += ButtonClickEventHandler;
-            CocaColaButton.Click += ButtonClickEventHandler;
-            CocaColaButton.Click += ButtonClickEventHandler;
-            SisiButton.Click += ButtonClickEventHandler;
-            TonicButton.Click += ButtonClickEventHandler;
-            BitterLemonButton.Click += ButtonClickEventHandler;
-
-            HertogJanButton.Click += ButtonClickEventHandler;
-            DuvelButton.Click += ButtonClickEventHandler;
-            KriegButton.Click += ButtonClickEventHandler;
-            LeffeTripleButton.Click += ButtonClickEventHandler;
-
-            WhiteWineBottleButton.Click += ButtonClickEventHandler;
-            WhiteWineGlassButton.Click += ButtonClickEventHandler;
-            RedWineBottleButton.Click += ButtonClickEventHandler;
-            RedWineBottleButton.Click += ButtonClickEventHandler;
-            ChampangeButton.Click += ButtonClickEventHandler;
-
-            YoungJeneverButton.Click += ButtonClickEventHandler;
-            WhiskyButton.Click += ButtonClickEventHandler;
-            RumButton.Click += ButtonClickEventHandler;
-            VieuxButton.Click += ButtonClickEventHandler;
-            BerenburgButton.Click += ButtonClickEventHandler;
-
-            CoffeeButton.Click += ButtonClickEventHandler;
-            CappuccinoButton.Click += ButtonClickEventHandler;
-            EspressoButton.Click += ButtonClickEventHandler;
-            TeaButton.Click += ButtonClickEventHandler;
-        }
-        private void ButtonClickEventHandler(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Button clickedButton = (System.Windows.Forms.Button)sender;
-            string itemText = clickedButton.Text;
-            string labelText = "".Replace("€", "");
-
-            foreach (Control control in pnlOrderViewLunch.Controls)
+            void SubscribeButtons()
             {
-                if (control is Label label && label.Tag != null && label.Tag.ToString() == clickedButton.Tag.ToString())
+                LunchItemS1Button.Click += ItemButtonClickEventHandler;
+                LunchItemS2Button.Click += ItemButtonClickEventHandler;
+                LunchItemS3Button.Click += ItemButtonClickEventHandler;
+
+                LunchItemM1Button.Click += ItemButtonClickEventHandler;
+                LunchItemM2Button.Click += ItemButtonClickEventHandler;
+                LunchItemM3Button.Click += ItemButtonClickEventHandler;
+
+                LunchItemD1Button.Click += ItemButtonClickEventHandler;
+                LunchItemD2Button.Click += ItemButtonClickEventHandler;
+                LunchItemD3Button.Click += ItemButtonClickEventHandler;
+
+                DinnerItemS1Button.Click += ItemButtonClickEventHandler;
+                DinnerItemS2Button.Click += ItemButtonClickEventHandler;
+                DinnerItemS3Button.Click += ItemButtonClickEventHandler;
+
+                DinnerItemE1Button.Click += ItemButtonClickEventHandler;
+                DinnerItemE2Button.Click += ItemButtonClickEventHandler;
+
+                DinnerItemM1Button.Click += ItemButtonClickEventHandler;
+                DinnerItemM2Button.Click += ItemButtonClickEventHandler;
+                DinnerItemM3Button.Click += ItemButtonClickEventHandler;
+
+                DinnerItemD1Button.Click += ItemButtonClickEventHandler;
+                DinnerItemD2Button.Click += ItemButtonClickEventHandler;
+                DinnerItemD3Button.Click += ItemButtonClickEventHandler;
+
+                SpaRedButton.Click += ItemButtonClickEventHandler;
+                SpaGreenButton.Click += ItemButtonClickEventHandler;
+                CocaColaButton.Click += ItemButtonClickEventHandler;
+                CocaColaButton.Click += ItemButtonClickEventHandler;
+                SisiButton.Click += ItemButtonClickEventHandler;
+                TonicButton.Click += ItemButtonClickEventHandler;
+                BitterLemonButton.Click += ItemButtonClickEventHandler;
+
+                HertogJanButton.Click += ItemButtonClickEventHandler;
+                DuvelButton.Click += ItemButtonClickEventHandler;
+                KriegButton.Click += ItemButtonClickEventHandler;
+                LeffeTripleButton.Click += ItemButtonClickEventHandler;
+
+                WhiteWineBottleButton.Click += ItemButtonClickEventHandler;
+                WhiteWineGlassButton.Click += ItemButtonClickEventHandler;
+                RedWineBottleButton.Click += ItemButtonClickEventHandler;
+                RedWineBottleButton.Click += ItemButtonClickEventHandler;
+                ChampangeButton.Click += ItemButtonClickEventHandler;
+
+                YoungJeneverButton.Click += ItemButtonClickEventHandler;
+                WhiskyButton.Click += ItemButtonClickEventHandler;
+                RumButton.Click += ItemButtonClickEventHandler;
+                VieuxButton.Click += ItemButtonClickEventHandler;
+                BerenburgButton.Click += ItemButtonClickEventHandler;
+
+                CoffeeButton.Click += ItemButtonClickEventHandler;
+                CappuccinoButton.Click += ItemButtonClickEventHandler;
+                EspressoButton.Click += ItemButtonClickEventHandler;
+                TeaButton.Click += ItemButtonClickEventHandler;
+
+                AddButtonLunch.Click += AddButtonClickEvenHandler;
+                AddButtonDinner.Click += AddButtonClickEvenHandler;
+                AddButtonDrinks.Click += AddButtonClickEvenHandler;
+            }
+            SubscribeButtons();
+
+            void ItemButtonClickEventHandler(object sender, EventArgs e)
+            {
+                System.Windows.Forms.Button clickedButton = (System.Windows.Forms.Button)sender;
+                string itemName = clickedButton.Text;
+                int itemID = int.Parse(clickedButton.Tag.ToString());
+                decimal itemPrice = GetItemPrice(itemID, menuItems);
+                int itemQuantity = 1;
+
+                List<System.Windows.Forms.ListView> listViewCollection = new List<System.Windows.Forms.ListView>
                 {
-                    labelText = label.Text;   
-                    break;
+                    listViewLunch,
+                    listViewDinner,
+                    listViewDrinks
+                };
+
+                bool itemExists = false;
+                foreach (System.Windows.Forms.ListView listView in listViewCollection)
+                {
+                    foreach (ListViewItem item in listView.Items)
+                    {
+                        if (item.SubItems[1].Text == itemName)
+                        {
+                            itemExists = true;
+                            itemQuantity = int.Parse(item.SubItems[0].Text); // Get current item quantity
+                            decimal currentPrice = decimal.Parse(item.SubItems[2].Text.Replace("€", "")); // Get current item price 
+
+                            item.SubItems[0].Text = (itemQuantity + 1).ToString();
+                            decimal totalPrice = currentPrice + itemPrice;
+                            item.SubItems[2].Text = "€" + totalPrice.ToString();
+
+                            break;
+                        }
+                    }
+                }
+                if (!itemExists)
+                {
+                    // Add the item to all ListView
+                    ListViewItem LVLunch = new ListViewItem(itemQuantity.ToString()); // Add the item quantity
+                    LVLunch.SubItems.Add(itemName); // Add the item name
+                    LVLunch.SubItems.Add("€" + itemPrice.ToString()); // Add the item price
+                    listViewLunch.Items.Add(LVLunch);
+
+                    ListViewItem LVDinner = new ListViewItem(itemQuantity.ToString()); // Add the item quantity
+                    LVDinner.SubItems.Add(itemName); // Add the item name
+                    LVDinner.SubItems.Add("€" + itemPrice.ToString()); // Add the item price
+                    listViewDinner.Items.Add(LVDinner);
+
+                    ListViewItem LVDrinks = new ListViewItem(itemQuantity.ToString()); // Add the item quantity
+                    LVDrinks.SubItems.Add(itemName); // Add the item name
+                    LVDrinks.SubItems.Add("€" + itemPrice.ToString()); // Add the item price
+                    listViewDrinks.Items.Add(LVDrinks);
                 }
             }
-            decimal itemPrice = decimal.Parse(labelText.Replace("€",""));
+            void AddButtonClickEvenHandler(object Sender, EventArgs e)
+            {
 
-            bool itemExists = false;
-            foreach (ListViewItem existingItem in LVSelectedItemsLunch.Items)
-            {
-                if (existingItem.SubItems[1].Text == itemText)
-                {
-                    itemExists = true;
-                    existingItem.SubItems[0].Text = (int.Parse(existingItem.SubItems[0].Text) + 1).ToString(); // Increment the item amount
-                    existingItem.SubItems[2].Text = "€" + (int.Parse(existingItem.SubItems[0].Text) * itemPrice).ToString();
-                    break;
-                }
-            }
-            // Add the item to the ListView
-            if (!itemExists)
-            {
-                ListViewItem item = new ListViewItem("1"); // Initial item amount is 1
-                item.SubItems.Add(itemText); // Add the item name
-                item.SubItems.Add("€" + itemPrice); // Add the item price
-                LVSelectedItemsLunch.Items.Add(item);
             }
         }
+       
     }
 }
