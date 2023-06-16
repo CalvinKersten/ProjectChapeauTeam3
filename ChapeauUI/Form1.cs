@@ -18,6 +18,7 @@ using static System.ComponentModel.Design.ObjectSelectorEditor;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace ChapeauUI
 {
@@ -196,16 +197,19 @@ namespace ChapeauUI
             LVSelectedItemsLunch.Columns.Add("no.", 50);
             LVSelectedItemsLunch.Columns.Add("name", LVSelectedItemsLunch.Width - 120);
             LVSelectedItemsLunch.Columns.Add("price", 70);
+            LVSelectedItemsLunch.FullRowSelect = true;
 
             LVSelectedItemsDinner.View = View.Details; //Displays each item on a seperate line
             LVSelectedItemsDinner.Columns.Add("no.", 50);
             LVSelectedItemsDinner.Columns.Add("name", LVSelectedItemsDinner.Width - 120);
             LVSelectedItemsDinner.Columns.Add("price", 70);
+            LVSelectedItemsDinner.FullRowSelect = true;
 
             LVSelectedDrinks.View = View.Details; //Displays each item on a seperate line
             LVSelectedDrinks.Columns.Add("no.", 50);
             LVSelectedDrinks.Columns.Add("name", LVSelectedDrinks.Width - 120);
             LVSelectedDrinks.Columns.Add("price", 70);
+            LVSelectedDrinks.FullRowSelect = true;
         }
         //
         //
@@ -436,6 +440,10 @@ namespace ChapeauUI
                 AddButtonLunch.Click += AddButtonClickEvenHandler;
                 AddButtonDinner.Click += AddButtonClickEvenHandler;
                 AddButtonDrinks.Click += AddButtonClickEvenHandler;
+
+                DeleteButtonLunch.Click += DeleteButtonClickEventHandler;
+                DeleteButtonDinner.Click += DeleteButtonClickEventHandler;
+                DeleteButtonDrinks.Click += DeleteButtonClickEventHandler;
             }
             SubscribeButtons();
 
@@ -494,8 +502,78 @@ namespace ChapeauUI
             }
             void AddButtonClickEvenHandler(object Sender, EventArgs e)
             {
+                string conString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2;User=SomerenTeam2;Password=ProjectT3Team2";
+                string query = "INSERT INTO Order_Detail (Item_Quantity, Order_Time, Order_Status, Comment) VALUES (@ItemQuantity, @Order_Time, @Order_Status, @Comment)";
+                SqlConnection con = new SqlConnection(conString);
+                DateTime time = new DateTime();
+
+                string OrderStatus = "";
+                string Comment = "";
+                string OrderTime = time.ToString("hh/mm/ss");
+                int ItemQuantity = 0;
+
+                foreach (ListViewItem item in LVSelectedItemsLunch.Items)
+                {
+                    OrderStatus = "Running";
+                    Comment = ""; 
+                    ItemQuantity = int.Parse(item.SubItems[0].Text);
+                }
+                try
+                {
+                    con.Open();
+
+                    
+                    SqlCommand command = new SqlCommand(query, con);
+                    command.Parameters.AddWithValue("@ItemQuantity", ItemQuantity);
+                    command.Parameters.AddWithValue("@Order_Time", OrderTime);
+                    command.Parameters.AddWithValue("@Order_Status", OrderStatus);
+                    command.Parameters.AddWithValue("@Comment", Comment);
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Data inserted successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+            void DeleteButtonClickEventHandler(object Sender, EventArgs e)
+            {
+                List<System.Windows.Forms.ListView> listViewCollection = new List<System.Windows.Forms.ListView>
+                {
+                    listViewLunch,
+                    listViewDinner,
+                    listViewDrinks
+                   };
+
+                List<ListViewItem> selectedItems = new List<ListViewItem>();
+
+                // Collect the selected items from all ListView controls
+                foreach (System.Windows.Forms.ListView listView in listViewCollection)
+                {
+                    foreach (ListViewItem selectedItem in listView.SelectedItems)
+                    {
+                        selectedItems.Add(selectedItem);
+                    }
+                }
+
+                // Remove the selected items from all ListView controls
+
+                foreach (ListViewItem selectedItem in selectedItems)
+                {
+                    foreach (System.Windows.Forms.ListView listView in listViewCollection)
+                    {
+                        listView.Items.Remove(selectedItem);
+                    }
+                }
+
 
             }
+               
         }
        
     }
