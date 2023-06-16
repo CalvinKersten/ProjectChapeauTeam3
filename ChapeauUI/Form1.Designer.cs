@@ -46,7 +46,10 @@
             this.DrinksNavButton = new ChapeauUI.ButtonStyle();
             this.DinnerNavButton = new ChapeauUI.ButtonStyle();
             this.LunchNavButton = new ChapeauUI.ButtonStyle();
+            this.CommentBox = new System.Windows.Forms.TextBox();
             this.pnlOrderViewLunch = new System.Windows.Forms.Panel();
+            this.CommentButtonLunch = new ChapeauUI.ButtonStyle();
+            this.DeleteButtonLunch = new ChapeauUI.ButtonStyle();
             this.AddButtonLunch = new ChapeauUI.ButtonStyle();
             this.LVSelectedItemsLunch = new System.Windows.Forms.ListView();
             this.label8 = new System.Windows.Forms.Label();
@@ -74,6 +77,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pnlOrderViewDinner = new System.Windows.Forms.Panel();
+            this.DeleteButtonDinner = new ChapeauUI.ButtonStyle();
+            this.CommentButtonDinner = new ChapeauUI.ButtonStyle();
             this.PriceDinnerD3 = new System.Windows.Forms.Label();
             this.PriceDinnerD2 = new System.Windows.Forms.Label();
             this.PriceDinnerD1 = new System.Windows.Forms.Label();
@@ -106,6 +111,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlOrderViewDrinks = new System.Windows.Forms.Panel();
+            this.CommentButtonDrinks = new ChapeauUI.ButtonStyle();
+            this.RemoveButtonDrinks = new ChapeauUI.ButtonStyle();
             this.label18 = new System.Windows.Forms.Label();
             this.PriceDrinksSp5 = new System.Windows.Forms.Label();
             this.PriceDrinksH4 = new System.Windows.Forms.Label();
@@ -168,12 +175,9 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.LVSelectedDrinks = new System.Windows.Forms.ListView();
             this.label16 = new System.Windows.Forms.Label();
-            this.CommentButtonLunch = new ChapeauUI.ButtonStyle();
-            this.DeleteButtonLunch = new ChapeauUI.ButtonStyle();
-            this.DeleteButtonDrinks = new ChapeauUI.ButtonStyle();
-            this.CommentButtonDrinks = new ChapeauUI.ButtonStyle();
-            this.DeleteButtonDinner = new ChapeauUI.ButtonStyle();
-            this.CommentButtonDinner = new ChapeauUI.ButtonStyle();
+            this.pnlAddComment = new System.Windows.Forms.Panel();
+            this.AddButtonComment = new ChapeauUI.ButtonStyle();
+            this.CommentBackButton = new ChapeauUI.ButtonStyle();
             this.pnlTableOverview.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -181,6 +185,7 @@
             this.pnlOrderViewLunch.SuspendLayout();
             this.pnlOrderViewDinner.SuspendLayout();
             this.pnlOrderViewDrinks.SuspendLayout();
+            this.pnlAddComment.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlTableOverview
@@ -387,11 +392,23 @@
             this.LunchNavButton.UseVisualStyleBackColor = false;
             this.LunchNavButton.Click += new System.EventHandler(this.LunchNavButton_Click);
             // 
+            // CommentBox
+            // 
+            this.CommentBox.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.CommentBox.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.CommentBox.Location = new System.Drawing.Point(83, 154);
+            this.CommentBox.Multiline = true;
+            this.CommentBox.Name = "CommentBox";
+            this.CommentBox.Size = new System.Drawing.Size(270, 123);
+            this.CommentBox.TabIndex = 5;
+            this.CommentBox.Text = "Message.";
+            this.CommentBox.Click += new System.EventHandler(this.CommentBox_Click);
+            // 
             // pnlOrderViewLunch
             // 
             this.pnlOrderViewLunch.AutoScroll = true;
-            this.pnlOrderViewLunch.Controls.Add(this.DeleteButtonLunch);
             this.pnlOrderViewLunch.Controls.Add(this.CommentButtonLunch);
+            this.pnlOrderViewLunch.Controls.Add(this.DeleteButtonLunch);
             this.pnlOrderViewLunch.Controls.Add(this.AddButtonLunch);
             this.pnlOrderViewLunch.Controls.Add(this.LVSelectedItemsLunch);
             this.pnlOrderViewLunch.Controls.Add(this.label8);
@@ -423,15 +440,42 @@
             this.pnlOrderViewLunch.Size = new System.Drawing.Size(450, 550);
             this.pnlOrderViewLunch.TabIndex = 1;
             // 
+            // CommentButtonLunch
+            // 
+            this.CommentButtonLunch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.CommentButtonLunch.FlatAppearance.BorderSize = 0;
+            this.CommentButtonLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CommentButtonLunch.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CommentButtonLunch.Location = new System.Drawing.Point(11, 931);
+            this.CommentButtonLunch.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.CommentButtonLunch.Name = "CommentButtonLunch";
+            this.CommentButtonLunch.Size = new System.Drawing.Size(128, 39);
+            this.CommentButtonLunch.TabIndex = 81;
+            this.CommentButtonLunch.Text = "Comment";
+            this.CommentButtonLunch.UseVisualStyleBackColor = false;
+            // 
+            // DeleteButtonLunch
+            // 
+            this.DeleteButtonLunch.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.DeleteButtonLunch.FlatAppearance.BorderSize = 0;
+            this.DeleteButtonLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButtonLunch.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DeleteButtonLunch.Location = new System.Drawing.Point(155, 930);
+            this.DeleteButtonLunch.Name = "DeleteButtonLunch";
+            this.DeleteButtonLunch.Size = new System.Drawing.Size(116, 40);
+            this.DeleteButtonLunch.TabIndex = 80;
+            this.DeleteButtonLunch.Text = "Remove";
+            this.DeleteButtonLunch.UseVisualStyleBackColor = false;
+            // 
             // AddButtonLunch
             // 
             this.AddButtonLunch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.AddButtonLunch.FlatAppearance.BorderSize = 0;
             this.AddButtonLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButtonLunch.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddButtonLunch.Location = new System.Drawing.Point(241, 931);
+            this.AddButtonLunch.Location = new System.Drawing.Point(293, 931);
             this.AddButtonLunch.Name = "AddButtonLunch";
-            this.AddButtonLunch.Size = new System.Drawing.Size(176, 39);
+            this.AddButtonLunch.Size = new System.Drawing.Size(124, 39);
             this.AddButtonLunch.TabIndex = 16;
             this.AddButtonLunch.Text = "Add";
             this.AddButtonLunch.UseVisualStyleBackColor = false;
@@ -763,6 +807,33 @@
             this.pnlOrderViewDinner.Size = new System.Drawing.Size(445, 554);
             this.pnlOrderViewDinner.TabIndex = 17;
             // 
+            // DeleteButtonDinner
+            // 
+            this.DeleteButtonDinner.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.DeleteButtonDinner.FlatAppearance.BorderSize = 0;
+            this.DeleteButtonDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteButtonDinner.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.DeleteButtonDinner.Location = new System.Drawing.Point(155, 1068);
+            this.DeleteButtonDinner.Name = "DeleteButtonDinner";
+            this.DeleteButtonDinner.Size = new System.Drawing.Size(116, 40);
+            this.DeleteButtonDinner.TabIndex = 32;
+            this.DeleteButtonDinner.Text = "Remove";
+            this.DeleteButtonDinner.UseVisualStyleBackColor = false;
+            // 
+            // CommentButtonDinner
+            // 
+            this.CommentButtonDinner.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.CommentButtonDinner.FlatAppearance.BorderSize = 0;
+            this.CommentButtonDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CommentButtonDinner.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CommentButtonDinner.Location = new System.Drawing.Point(11, 1068);
+            this.CommentButtonDinner.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.CommentButtonDinner.Name = "CommentButtonDinner";
+            this.CommentButtonDinner.Size = new System.Drawing.Size(128, 39);
+            this.CommentButtonDinner.TabIndex = 31;
+            this.CommentButtonDinner.Text = "Comment";
+            this.CommentButtonDinner.UseVisualStyleBackColor = false;
+            // 
             // PriceDinnerD3
             // 
             this.PriceDinnerD3.AutoSize = true;
@@ -935,9 +1006,9 @@
             this.AddButtonDinner.FlatAppearance.BorderSize = 0;
             this.AddButtonDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButtonDinner.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddButtonDinner.Location = new System.Drawing.Point(243, 1068);
+            this.AddButtonDinner.Location = new System.Drawing.Point(293, 1068);
             this.AddButtonDinner.Name = "AddButtonDinner";
-            this.AddButtonDinner.Size = new System.Drawing.Size(176, 39);
+            this.AddButtonDinner.Size = new System.Drawing.Size(126, 39);
             this.AddButtonDinner.TabIndex = 16;
             this.AddButtonDinner.Text = "Add";
             this.AddButtonDinner.UseVisualStyleBackColor = false;
@@ -1122,8 +1193,8 @@
             // pnlOrderViewDrinks
             // 
             this.pnlOrderViewDrinks.AutoScroll = true;
-            this.pnlOrderViewDrinks.Controls.Add(this.DeleteButtonDrinks);
             this.pnlOrderViewDrinks.Controls.Add(this.CommentButtonDrinks);
+            this.pnlOrderViewDrinks.Controls.Add(this.RemoveButtonDrinks);
             this.pnlOrderViewDrinks.Controls.Add(this.label18);
             this.pnlOrderViewDrinks.Controls.Add(this.PriceDrinksSp5);
             this.pnlOrderViewDrinks.Controls.Add(this.PriceDrinksH4);
@@ -1190,6 +1261,33 @@
             this.pnlOrderViewDrinks.Name = "pnlOrderViewDrinks";
             this.pnlOrderViewDrinks.Size = new System.Drawing.Size(445, 555);
             this.pnlOrderViewDrinks.TabIndex = 20;
+            // 
+            // CommentButtonDrinks
+            // 
+            this.CommentButtonDrinks.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.CommentButtonDrinks.FlatAppearance.BorderSize = 0;
+            this.CommentButtonDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CommentButtonDrinks.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CommentButtonDrinks.Location = new System.Drawing.Point(11, 1628);
+            this.CommentButtonDrinks.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.CommentButtonDrinks.Name = "CommentButtonDrinks";
+            this.CommentButtonDrinks.Size = new System.Drawing.Size(128, 39);
+            this.CommentButtonDrinks.TabIndex = 79;
+            this.CommentButtonDrinks.Text = "Comment";
+            this.CommentButtonDrinks.UseVisualStyleBackColor = false;
+            // 
+            // RemoveButtonDrinks
+            // 
+            this.RemoveButtonDrinks.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.RemoveButtonDrinks.FlatAppearance.BorderSize = 0;
+            this.RemoveButtonDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveButtonDrinks.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.RemoveButtonDrinks.Location = new System.Drawing.Point(155, 1627);
+            this.RemoveButtonDrinks.Name = "RemoveButtonDrinks";
+            this.RemoveButtonDrinks.Size = new System.Drawing.Size(116, 40);
+            this.RemoveButtonDrinks.TabIndex = 78;
+            this.RemoveButtonDrinks.Text = "Remove";
+            this.RemoveButtonDrinks.UseVisualStyleBackColor = false;
             // 
             // label18
             // 
@@ -1868,9 +1966,9 @@
             this.AddButtonDrinks.FlatAppearance.BorderSize = 0;
             this.AddButtonDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButtonDrinks.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddButtonDrinks.Location = new System.Drawing.Point(243, 1628);
+            this.AddButtonDrinks.Location = new System.Drawing.Point(293, 1628);
             this.AddButtonDrinks.Name = "AddButtonDrinks";
-            this.AddButtonDrinks.Size = new System.Drawing.Size(176, 39);
+            this.AddButtonDrinks.Size = new System.Drawing.Size(126, 39);
             this.AddButtonDrinks.TabIndex = 16;
             this.AddButtonDrinks.Text = "Add";
             this.AddButtonDrinks.UseVisualStyleBackColor = false;
@@ -1914,83 +2012,43 @@
             this.label16.TabIndex = 2;
             this.label16.Text = "Spirit";
             // 
-            // CommentButtonLunch
+            // pnlAddComment
             // 
-            this.CommentButtonLunch.BackColor = System.Drawing.Color.LightGreen;
-            this.CommentButtonLunch.FlatAppearance.BorderSize = 0;
-            this.CommentButtonLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CommentButtonLunch.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CommentButtonLunch.Location = new System.Drawing.Point(151, 931);
-            this.CommentButtonLunch.Name = "CommentButtonLunch";
-            this.CommentButtonLunch.Size = new System.Drawing.Size(75, 39);
-            this.CommentButtonLunch.TabIndex = 26;
-            this.CommentButtonLunch.Text = "+CO";
-            this.CommentButtonLunch.UseVisualStyleBackColor = false;
+            this.pnlAddComment.Controls.Add(this.CommentBox);
+            this.pnlAddComment.Controls.Add(this.AddButtonComment);
+            this.pnlAddComment.Controls.Add(this.CommentBackButton);
+            this.pnlAddComment.Location = new System.Drawing.Point(0, 0);
+            this.pnlAddComment.Name = "pnlAddComment";
+            this.pnlAddComment.Size = new System.Drawing.Size(426, 698);
+            this.pnlAddComment.TabIndex = 82;
             // 
-            // DeleteButtonLunch
+            // AddButtonComment
             // 
-            this.DeleteButtonLunch.BackColor = System.Drawing.Color.IndianRed;
-            this.DeleteButtonLunch.FlatAppearance.BorderSize = 0;
-            this.DeleteButtonLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteButtonLunch.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteButtonLunch.Location = new System.Drawing.Point(59, 931);
-            this.DeleteButtonLunch.Name = "DeleteButtonLunch";
-            this.DeleteButtonLunch.Size = new System.Drawing.Size(75, 39);
-            this.DeleteButtonLunch.TabIndex = 27;
-            this.DeleteButtonLunch.Text = "DEL";
-            this.DeleteButtonLunch.UseVisualStyleBackColor = false;
+            this.AddButtonComment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.AddButtonComment.FlatAppearance.BorderSize = 0;
+            this.AddButtonComment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButtonComment.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.AddButtonComment.Location = new System.Drawing.Point(83, 291);
+            this.AddButtonComment.Name = "AddButtonComment";
+            this.AddButtonComment.Size = new System.Drawing.Size(270, 56);
+            this.AddButtonComment.TabIndex = 4;
+            this.AddButtonComment.Text = "Add";
+            this.AddButtonComment.UseVisualStyleBackColor = false;
+            this.AddButtonComment.Click += new System.EventHandler(this.AddButtonComment_Click);
             // 
-            // DeleteButtonDrinks
+            // CommentBackButton
             // 
-            this.DeleteButtonDrinks.BackColor = System.Drawing.Color.IndianRed;
-            this.DeleteButtonDrinks.FlatAppearance.BorderSize = 0;
-            this.DeleteButtonDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteButtonDrinks.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteButtonDrinks.Location = new System.Drawing.Point(64, 1626);
-            this.DeleteButtonDrinks.Name = "DeleteButtonDrinks";
-            this.DeleteButtonDrinks.Size = new System.Drawing.Size(75, 39);
-            this.DeleteButtonDrinks.TabIndex = 79;
-            this.DeleteButtonDrinks.Text = "DEL";
-            this.DeleteButtonDrinks.UseVisualStyleBackColor = false;
-            // 
-            // CommentButtonDrinks
-            // 
-            this.CommentButtonDrinks.BackColor = System.Drawing.Color.LightGreen;
-            this.CommentButtonDrinks.FlatAppearance.BorderSize = 0;
-            this.CommentButtonDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CommentButtonDrinks.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CommentButtonDrinks.Location = new System.Drawing.Point(156, 1626);
-            this.CommentButtonDrinks.Name = "CommentButtonDrinks";
-            this.CommentButtonDrinks.Size = new System.Drawing.Size(75, 39);
-            this.CommentButtonDrinks.TabIndex = 78;
-            this.CommentButtonDrinks.Text = "+CO";
-            this.CommentButtonDrinks.UseVisualStyleBackColor = false;
-            // 
-            // DeleteButtonDinner
-            // 
-            this.DeleteButtonDinner.BackColor = System.Drawing.Color.IndianRed;
-            this.DeleteButtonDinner.FlatAppearance.BorderSize = 0;
-            this.DeleteButtonDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteButtonDinner.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteButtonDinner.Location = new System.Drawing.Point(60, 1068);
-            this.DeleteButtonDinner.Name = "DeleteButtonDinner";
-            this.DeleteButtonDinner.Size = new System.Drawing.Size(75, 39);
-            this.DeleteButtonDinner.TabIndex = 32;
-            this.DeleteButtonDinner.Text = "DEL";
-            this.DeleteButtonDinner.UseVisualStyleBackColor = false;
-            // 
-            // CommentButtonDinner
-            // 
-            this.CommentButtonDinner.BackColor = System.Drawing.Color.LightGreen;
-            this.CommentButtonDinner.FlatAppearance.BorderSize = 0;
-            this.CommentButtonDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CommentButtonDinner.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CommentButtonDinner.Location = new System.Drawing.Point(152, 1068);
-            this.CommentButtonDinner.Name = "CommentButtonDinner";
-            this.CommentButtonDinner.Size = new System.Drawing.Size(75, 39);
-            this.CommentButtonDinner.TabIndex = 31;
-            this.CommentButtonDinner.Text = "+CO";
-            this.CommentButtonDinner.UseVisualStyleBackColor = false;
+            this.CommentBackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.CommentBackButton.FlatAppearance.BorderSize = 0;
+            this.CommentBackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CommentBackButton.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CommentBackButton.Location = new System.Drawing.Point(-10, 0);
+            this.CommentBackButton.Name = "CommentBackButton";
+            this.CommentBackButton.Size = new System.Drawing.Size(94, 56);
+            this.CommentBackButton.TabIndex = 3;
+            this.CommentBackButton.Text = "Back";
+            this.CommentBackButton.UseVisualStyleBackColor = false;
+            this.CommentBackButton.Click += new System.EventHandler(this.CommentBackButton_Click);
             // 
             // Form1
             // 
@@ -2000,9 +2058,10 @@
             this.ClientSize = new System.Drawing.Size(426, 697);
             this.ControlBox = false;
             this.Controls.Add(this.pnlMenu);
-            this.Controls.Add(this.pnlOrderViewDinner);
-            this.Controls.Add(this.pnlOrderViewDrinks);
             this.Controls.Add(this.pnlOrderViewLunch);
+            this.Controls.Add(this.pnlAddComment);
+            this.Controls.Add(this.pnlOrderViewDrinks);
+            this.Controls.Add(this.pnlOrderViewDinner);
             this.Controls.Add(this.pnlTableOverview);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -2020,6 +2079,8 @@
             this.pnlOrderViewDinner.PerformLayout();
             this.pnlOrderViewDrinks.ResumeLayout(false);
             this.pnlOrderViewDrinks.PerformLayout();
+            this.pnlAddComment.ResumeLayout(false);
+            this.pnlAddComment.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2166,11 +2227,15 @@
         private Label PriceDrinksSo2;
         private Label PriceDrinksSo1;
         private Label TotalOrderVAT;
-        private ButtonStyle DeleteButtonLunch;
-        private ButtonStyle CommentButtonLunch;
         private ButtonStyle DeleteButtonDinner;
         private ButtonStyle CommentButtonDinner;
-        private ButtonStyle DeleteButtonDrinks;
         private ButtonStyle CommentButtonDrinks;
+        private ButtonStyle RemoveButtonDrinks;
+        private ButtonStyle CommentButtonLunch;
+        private ButtonStyle DeleteButtonLunch;
+        private Panel pnlAddComment;
+        private TextBox CommentBox;
+        private ButtonStyle AddButtonComment;
+        private ButtonStyle CommentBackButton;
     }
 }

@@ -102,6 +102,13 @@ namespace ChapeauUI
         {
             OpenPanel(pnlOrderViewDrinks);
         }
+        private void ShowCommentPnl()
+        {
+            OpenPanel(pnlAddComment);
+            pnlMenu.Hide();
+
+            
+        }
         //
         //
         //
@@ -151,6 +158,7 @@ namespace ChapeauUI
             LVOrderOverview.Columns.Add("no.", 50);
             LVOrderOverview.Columns.Add("name", 200);
             LVOrderOverview.Columns.Add("price", LVOrderOverview.Width - 250);
+            LVOrderOverview.Columns.Add("Comment");
 
             decimal totalOrderPrice = 0;
             decimal totalOrderVAT = 0;
@@ -170,16 +178,16 @@ namespace ChapeauUI
                 LVOrderOverview.Items.Add(item);
 
                 totalOrderPrice += (itemPrice * itemAmount);
-                if (itemCatagory >= 0 && itemCatagory <= 8)
+                if (itemCatagory == 1)
                 {
-                    VATPercentage = 0.06M;
+                    VATPercentage = 0.06m;
                 }
                 else
                 {
-                    VATPercentage = 0.21M;
+                    VATPercentage = 0.21m;
                 }
-
-                totalOrderVAT += ((itemPrice * VATPercentage) * itemAmount);
+               
+                totalOrderVAT += (itemPrice * VATPercentage) * itemAmount;
             }
 
             TotalOrderPrice.Text = "€" + totalOrderPrice;
@@ -195,20 +203,23 @@ namespace ChapeauUI
             //Filling the LVs Column headers
             LVSelectedItemsLunch.View = View.Details; //Displays each item on a seperate line
             LVSelectedItemsLunch.Columns.Add("no.", 50);
-            LVSelectedItemsLunch.Columns.Add("name", LVSelectedItemsLunch.Width - 120);
+            LVSelectedItemsLunch.Columns.Add("name", LVSelectedItemsLunch.Width - 220);
             LVSelectedItemsLunch.Columns.Add("price", 70);
+            LVSelectedItemsLunch.Columns.Add("Comment", 100);
             LVSelectedItemsLunch.FullRowSelect = true;
 
             LVSelectedItemsDinner.View = View.Details; //Displays each item on a seperate line
             LVSelectedItemsDinner.Columns.Add("no.", 50);
-            LVSelectedItemsDinner.Columns.Add("name", LVSelectedItemsDinner.Width - 120);
+            LVSelectedItemsDinner.Columns.Add("name", LVSelectedItemsDinner.Width - 220);
             LVSelectedItemsDinner.Columns.Add("price", 70);
+            LVSelectedItemsDinner.Columns.Add("Comment", 100);
             LVSelectedItemsDinner.FullRowSelect = true;
 
             LVSelectedDrinks.View = View.Details; //Displays each item on a seperate line
             LVSelectedDrinks.Columns.Add("no.", 50);
-            LVSelectedDrinks.Columns.Add("name", LVSelectedDrinks.Width - 120);
+            LVSelectedDrinks.Columns.Add("name", LVSelectedDrinks.Width - 220);
             LVSelectedDrinks.Columns.Add("price", 70);
+            LVSelectedDrinks.Columns.Add("Comment", 100);
             LVSelectedDrinks.FullRowSelect = true;
         }
         //
@@ -443,7 +454,11 @@ namespace ChapeauUI
 
                 DeleteButtonLunch.Click += DeleteButtonClickEventHandler;
                 DeleteButtonDinner.Click += DeleteButtonClickEventHandler;
-                DeleteButtonDrinks.Click += DeleteButtonClickEventHandler;
+                RemoveButtonDrinks.Click += DeleteButtonClickEventHandler;
+
+                CommentButtonLunch.Click += AddCommentButtonClickEventHandler;
+                CommentButtonDinner.Click += AddCommentButtonClickEventHandler;
+                CommentButtonDrinks.Click += AddCommentButtonClickEventHandler;
             }
             SubscribeButtons();
 
@@ -548,7 +563,7 @@ namespace ChapeauUI
                     listViewLunch,
                     listViewDinner,
                     listViewDrinks
-                   };
+                };
 
                 List<ListViewItem> selectedItems = new List<ListViewItem>();
 
@@ -573,8 +588,92 @@ namespace ChapeauUI
 
 
             }
-               
+            void AddCommentButtonClickEventHandler(object Sender, EventArgs e)
+            {
+               string comment = "";
+               List<System.Windows.Forms.ListView> listViewCollection = new List<System.Windows.Forms.ListView>
+               {
+                   listViewLunch,
+                   listViewDinner,
+                   listViewDrinks
+               };
+                ShowCommentPnl();
+
+            }
         }
-       
+        private void CommentBox_Click(object sender, EventArgs e)
+        {
+            CommentBox.Text = "";
+        }
+        private void CommentBackButton_Click(object sender, EventArgs e)
+        {
+            OpenPanel(pnlMenu);
+            ShowOrderLunchPnl();
+            /* if (previousPanel == pnlOrderViewLunch)
+             {
+
+             }
+             else if (previousPanel == pnlOrderViewDinner)
+             {
+
+             }
+             else if (previousPanel == pnlOrderViewDrinks)
+             {
+                 ShowOrderDrinksPnl();
+             }
+             */
+        }
+        private void AddButtonComment_Click(object sender, EventArgs e)
+        {
+            string conString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2;User=SomerenTeam2;Password=ProjectT3Team2";
+            string query = "INSERT INTO Order_Detail (Comment) VALUES (@Comment)";
+            SqlConnection con = new SqlConnection(conString);
+
+            string Comment = "";
+            foreach (ListViewItem item in LVSelectedItemsLunch.Items)
+            {
+                Comment = CommentBox.Text;
+            }
+            try
+            {
+                con.Open();
+
+
+                SqlCommand command = new SqlCommand(query, con);
+                command.Parameters.AddWithValue("@Comment", Comment);
+                command.ExecuteNonQuery();
+
+                MessageBox.Show("Data inserted successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+            List<System.Windows.Forms.ListView> listViewCollection = new List<System.Windows.Forms.ListView>
+            {
+                    LVSelectedItemsLunch,
+                    LVSelectedItemsDinner,
+                    LVSelectedDrinks
+            };
+            // Add the item to all ListView
+         /*   ListViewItem LVLunch = 
+            LVLunch.SubItems.Add(itemName); // Add the item name
+            LVLunch.SubItems.Add("€" + itemPrice.ToString()); // Add the item price
+            listViewLunch.Items.Add(LVLunch);
+
+            ListViewItem LVDinner = new ListViewItem(itemQuantity.ToString()); // Add the item quantity
+            LVDinner.SubItems.Add(itemName); // Add the item name
+            LVDinner.SubItems.Add("€" + itemPrice.ToString()); // Add the item price
+            listViewDinner.Items.Add(LVDinner);
+*/
+            ListViewItem LVDrinks = new ListViewItem(); // Add the item quantity
+            ListViewItem.ListViewSubItem commentSubitem = new ListViewItem.ListViewSubItem(LVDrinks, Comment);
+            LVDrinks.SubItems.Add(commentSubitem); // Add the comment subitem
+            LVSelectedDrinks.Items.Add(LVDrinks);
+        }
     }
 }
