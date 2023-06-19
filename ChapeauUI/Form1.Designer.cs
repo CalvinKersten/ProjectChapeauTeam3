@@ -636,7 +636,7 @@
             this.LunchItemD3Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemD3Button.TabIndex = 11;
             this.LunchItemD3Button.Tag = "9";
-            this.LunchItemD3Button.Text = "3 types of farmer’s cheeses with rye\nraisin bread";
+            this.LunchItemD3Button.Text = "Name";
             this.LunchItemD3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemD3Button.UseVisualStyleBackColor = true;
             // 
@@ -648,7 +648,7 @@
             this.LunchItemD2Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemD2Button.TabIndex = 10;
             this.LunchItemD2Button.Tag = "8";
-            this.LunchItemD2Button.Text = "Fresh madeleines with fig compote\nand creme pâtissier with Grand Marnier";
+            this.LunchItemD2Button.Text = "Name";
             this.LunchItemD2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemD2Button.UseVisualStyleBackColor = true;
             // 
@@ -660,7 +660,7 @@
             this.LunchItemD1Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemD1Button.TabIndex = 9;
             this.LunchItemD1Button.Tag = "7";
-            this.LunchItemD1Button.Text = "White chocolate and speculoos\ncake with mandarin";
+            this.LunchItemD1Button.Text = "Name";
             this.LunchItemD1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemD1Button.UseVisualStyleBackColor = true;
             // 
@@ -672,7 +672,7 @@
             this.LunchItemM3Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemM3Button.TabIndex = 8;
             this.LunchItemM3Button.Tag = "6";
-            this.LunchItemM3Button.Text = "Linguini with mushroom\nsauce";
+            this.LunchItemM3Button.Text = "Name";
             this.LunchItemM3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemM3Button.UseVisualStyleBackColor = true;
             // 
@@ -684,7 +684,7 @@
             this.LunchItemM2Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemM2Button.TabIndex = 7;
             this.LunchItemM2Button.Tag = "5";
-            this.LunchItemM2Button.Text = "Fried cod with curry\nsabayon";
+            this.LunchItemM2Button.Text = "Name";
             this.LunchItemM2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemM2Button.UseVisualStyleBackColor = true;
             // 
@@ -696,7 +696,7 @@
             this.LunchItemM1Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemM1Button.TabIndex = 6;
             this.LunchItemM1Button.Tag = "4";
-            this.LunchItemM1Button.Text = "Deer stew with red\ncabbage";
+            this.LunchItemM1Button.Text = "Name";
             this.LunchItemM1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemM1Button.UseVisualStyleBackColor = true;
             // 
@@ -708,7 +708,7 @@
             this.LunchItemS3Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemS3Button.TabIndex = 5;
             this.LunchItemS3Button.Tag = "3";
-            this.LunchItemS3Button.Text = "Provencal fish soup with rouille,\naged cheese and croutons\n";
+            this.LunchItemS3Button.Text = "Name";
             this.LunchItemS3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemS3Button.UseVisualStyleBackColor = true;
             // 
@@ -720,7 +720,7 @@
             this.LunchItemS2Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemS2Button.TabIndex = 4;
             this.LunchItemS2Button.Tag = "2";
-            this.LunchItemS2Button.Text = "Pâté of pheasant with Monegasque\nonions ";
+            this.LunchItemS2Button.Text = "Name";
             this.LunchItemS2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemS2Button.UseVisualStyleBackColor = true;
             // 
@@ -732,7 +732,7 @@
             this.LunchItemS1Button.Size = new System.Drawing.Size(406, 58);
             this.LunchItemS1Button.TabIndex = 3;
             this.LunchItemS1Button.Tag = "1";
-            this.LunchItemS1Button.Text = "Steak tartar with truffle\r\nmayonnaise\r\n";
+            this.LunchItemS1Button.Text = "Name";
             this.LunchItemS1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LunchItemS1Button.UseVisualStyleBackColor = true;
             // 
@@ -974,7 +974,7 @@
             this.DinnerItemE2Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemE2Button.TabIndex = 19;
             this.DinnerItemE2Button.Tag = "14";
-            this.DinnerItemE2Button.Text = "Pheasant consommé with spring\nonion and green herbs";
+            this.DinnerItemE2Button.Text = "Name";
             this.DinnerItemE2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemE2Button.UseVisualStyleBackColor = true;
             // 
@@ -986,7 +986,7 @@
             this.DinnerItemE1Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemE1Button.TabIndex = 18;
             this.DinnerItemE1Button.Tag = "13";
-            this.DinnerItemE1Button.Text = "Provencal fish soup with rouille and\ncroutons";
+            this.DinnerItemE1Button.Text = "Name";
             this.DinnerItemE1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemE1Button.UseVisualStyleBackColor = true;
             // 
@@ -1060,7 +1060,7 @@
             this.DinnerItemD3Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemD3Button.TabIndex = 11;
             this.DinnerItemD3Button.Tag = "20";
-            this.DinnerItemD3Button.Text = "Port e Fromage (different cheeses\nwith a glass of port) ";
+            this.DinnerItemD3Button.Text = "Name";
             this.DinnerItemD3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemD3Button.UseVisualStyleBackColor = true;
             // 
@@ -1072,7 +1072,7 @@
             this.DinnerItemD2Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemD2Button.TabIndex = 10;
             this.DinnerItemD2Button.Tag = "19";
-            this.DinnerItemD2Button.Text = "Cherry Baby (Whipped ice cream\nwith warm cherries) ";
+            this.DinnerItemD2Button.Text = "Name";
             this.DinnerItemD2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemD2Button.UseVisualStyleBackColor = true;
             // 
@@ -1084,7 +1084,7 @@
             this.DinnerItemD1Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemD1Button.TabIndex = 9;
             this.DinnerItemD1Button.Tag = "18";
-            this.DinnerItemD1Button.Text = "Café surprise (Coffee with homemade\npralines)";
+            this.DinnerItemD1Button.Text = "Name";
             this.DinnerItemD1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemD1Button.UseVisualStyleBackColor = true;
             // 
@@ -1096,7 +1096,7 @@
             this.DinnerItemM3Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemM3Button.TabIndex = 8;
             this.DinnerItemM3Button.Tag = "17";
-            this.DinnerItemM3Button.Text = "Venison steak with own stew and red\ncabbage";
+            this.DinnerItemM3Button.Text = "Name";
             this.DinnerItemM3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemM3Button.UseVisualStyleBackColor = true;
             // 
@@ -1108,7 +1108,7 @@
             this.DinnerItemM2Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemM2Button.TabIndex = 7;
             this.DinnerItemM2Button.Tag = "16";
-            this.DinnerItemM2Button.Text = "Fried tenderloin with veal gravy with\npink peppers";
+            this.DinnerItemM2Button.Text = "Name";
             this.DinnerItemM2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemM2Button.UseVisualStyleBackColor = true;
             // 
@@ -1120,7 +1120,7 @@
             this.DinnerItemM1Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemM1Button.TabIndex = 6;
             this.DinnerItemM1Button.Tag = "15";
-            this.DinnerItemM1Button.Text = "On the skin fried cod fillet with\ncurry-sabayon";
+            this.DinnerItemM1Button.Text = "Name";
             this.DinnerItemM1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemM1Button.UseVisualStyleBackColor = true;
             // 
@@ -1132,7 +1132,7 @@
             this.DinnerItemS3Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemS3Button.TabIndex = 5;
             this.DinnerItemS3Button.Tag = "12";
-            this.DinnerItemS3Button.Text = "Crab salmon cookies with sweet and\nsour chili sauce";
+            this.DinnerItemS3Button.Text = "Name";
             this.DinnerItemS3Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemS3Button.UseVisualStyleBackColor = true;
             // 
@@ -1144,7 +1144,7 @@
             this.DinnerItemS2Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemS2Button.TabIndex = 4;
             this.DinnerItemS2Button.Tag = "11";
-            this.DinnerItemS2Button.Text = "Pâté of pheasant with Monegasque\nonions ";
+            this.DinnerItemS2Button.Text = "Name";
             this.DinnerItemS2Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemS2Button.UseVisualStyleBackColor = true;
             // 
@@ -1156,7 +1156,7 @@
             this.DinnerItemS1Button.Size = new System.Drawing.Size(406, 58);
             this.DinnerItemS1Button.TabIndex = 3;
             this.DinnerItemS1Button.Tag = "10";
-            this.DinnerItemS1Button.Text = "Veal tartar with tuna mayonnaise\nand fried mussels";
+            this.DinnerItemS1Button.Text = "Name";
             this.DinnerItemS1Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DinnerItemS1Button.UseVisualStyleBackColor = true;
             // 
@@ -2059,9 +2059,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlOrderViewLunch);
+            this.Controls.Add(this.pnlOrderViewDinner);
             this.Controls.Add(this.pnlAddComment);
             this.Controls.Add(this.pnlOrderViewDrinks);
-            this.Controls.Add(this.pnlOrderViewDinner);
             this.Controls.Add(this.pnlTableOverview);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;

@@ -19,7 +19,7 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-
+        
         private List<OrderDetail> ReadTables(DataTable dataTable)
         {
             List<OrderDetail> orderDetails = new List<OrderDetail>();
@@ -30,7 +30,7 @@ namespace ChapeauDAL
                 {
                     OrderDetailID = (int)dr["Order_DetailID"],
                     ItemQuantity = (int)dr["Item_Quantity"],
-                    OrderTime = (TimeSpan)dr["Order_Time"],
+                    OrderTime = (DateTime)dr["Order_Time"],
                     OrderStatus = dr["Order_Status"].ToString(),
                     Comment = dr["Comment"].ToString(),
                 };
