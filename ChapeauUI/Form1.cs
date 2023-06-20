@@ -19,6 +19,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using Microsoft.VisualBasic;
 
 namespace ChapeauUI
 {
@@ -26,7 +27,7 @@ namespace ChapeauUI
     {
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadItems();   
+            LoadItems(); // enables the button functionality, fills item price and name tags and loads the listviews
         }
         public Form1()
         {
@@ -46,10 +47,10 @@ namespace ChapeauUI
         {
             List<MenuItem> menuItems = GetMenuItems(); //Retreives the MenuItems from database and stores it in menuItems
             ButtonFunctionalityAcrossAllPanels(LVSelectedItemsLunch, LVSelectedItemsDinner, LVSelectedDrinks, menuItems); // Calls the method responsible for enabeling the buttons and variables stored in the button.Text
-            FillItemPriceAndName(menuItems, pnlOrderViewLunch);
-            FillItemPriceAndName(menuItems, pnlOrderViewDinner);
-            FillItemPriceAndName(menuItems, pnlOrderViewDrinks);
-            LoadAllLVs();
+            FillItemPriceAndName(menuItems, pnlOrderViewLunch); // fills the price and name tags for pnlOrderViewLunch
+            FillItemPriceAndName(menuItems, pnlOrderViewDinner); // fills the price and name tags for pnlOrderViewDinner
+            FillItemPriceAndName(menuItems, pnlOrderViewDrinks); // fills the price and name tags for pnlOrderViewDrinks
+            LoadAllLVs(); // Sets all listView headers and enables full row select
         }
         //
         //
@@ -74,41 +75,26 @@ namespace ChapeauUI
                     "Please try to restart the application or contact your manager\n\n. " + e.Message);
             }
 
-        }
+        } // open the order overview panel
         private void ShowOrderLunchPnl()
         {
             OpenPanel(pnlOrderViewLunch);
-
-            try
-            {
-                List<Order> orders = GetOrders();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Whoops, the Lunch order page could not be loaded.\n" +
-                    "Please try to restart the application or contact your manager\n\n. " + e.Message);
-            }
-
-
-
-
-
-        }
+        } // opens the order lunch panel
         private void ShowOrderDinnerPnl()
         {
             OpenPanel(pnlOrderViewDinner);
-        }
+        } // opens the order dinner panel
         private void ShowOrderDrinksPnl()
         {
             OpenPanel(pnlOrderViewDrinks);
-        }
+        } // opens the Order drinks panel
         private void ShowCommentPnl()
         {
             OpenPanel(pnlAddComment);
             pnlMenu.Hide();
 
             
-        }
+        } // opens the comment panel
         //
         //
         //
@@ -215,13 +201,13 @@ namespace ChapeauUI
         // Retreive data from database by ID
         private int GetItemCatagory(int menuItemID, List<MenuItem> menuItems)
         {
-            MenuItem menuItem = menuItems.Find(Men => Men.ItemCatagory == menuItemID);
+            MenuItem menuItem = menuItems.Find(Men => Men.ItemCatagory == menuItemID); // searches the menuItems list to find the corresponding item catagory for the given menuitemID
             if (menuItem != null)
             {
-                return menuItem.ItemCatagory;
+                return menuItem.ItemCatagory; // return the Item catagory
             }
-            return 0;
-        }
+            return 0; // return 0 as default if no matching items are found
+        } // Takes 2 input parameters to find the item catagory
         private int GetItemAmount(int orderDetailID, List<OrderDetail> orderDetails)
         {
             //find the table with the corresponding TableID
@@ -231,7 +217,7 @@ namespace ChapeauUI
                 return orderDetail.ItemQuantity;
             }
             return 0;
-        }
+        } // Takes 2 input parameters to find the item amount
         private string GetItemName(int menuItemID, List<MenuItem> menuItems)
         {
             //find the table with the corresponding TableID
@@ -241,7 +227,7 @@ namespace ChapeauUI
                 return menuItem.ItemName.ToString();
             }
             return string.Empty;
-        }
+        } // Takes 2 input parameters to find the item name
         private decimal GetItemPrice(int menuItemID, List<MenuItem> menuItems)
         {
             //find the table with the corresponding TableID
@@ -251,47 +237,47 @@ namespace ChapeauUI
                 return decimal.Parse(menuItem.ItemPrice.ToString(".00"));
             }
             return decimal.Zero;
-        }
+        } // Takes 2 input parameters to find the item price
         //
         //
         //
         //
-        // NAVButtons
+        // NAVButtons controls
         private void LunchNavButton_Click(object sender, EventArgs e)
         {
-            ShowOrderLunchPnl();
+            ShowOrderLunchPnl(); // opens the Lunch panel
 
+            LunchNavButton.Enabled = false; // becomes non interactive
             DrinksNavButton.Enabled = true;
             DinnerNavButton.Enabled = true;
-            LunchNavButton.Enabled = false;
 
-            LunchNavButton.BackColor = Color.LightGray;
+            LunchNavButton.BackColor = Color.LightGray; // becomes grey to indicate it is a non interactive
             DinnerNavButton.BackColor = Color.LightGreen;
             DrinksNavButton.BackColor = Color.LightGreen;
         }
         private void DinnerNavButton_Click(object sender, EventArgs e)
         {
-            ShowOrderDinnerPnl();
+            ShowOrderDinnerPnl(); // opens the Dinner panel
 
             DrinksNavButton.Enabled = true;
-            DinnerNavButton.Enabled = false;
+            DinnerNavButton.Enabled = false; // becomes non interactive
             LunchNavButton.Enabled = true;
 
-            DinnerNavButton.BackColor = Color.LightGray;
             LunchNavButton.BackColor = Color.LightGreen;
+            DinnerNavButton.BackColor = Color.LightGray; // becomes grey to indicate it is non interactive
             DrinksNavButton.BackColor = Color.LightGreen;
         }
         private void DrinksNavButton_Click(object sender, EventArgs e)
         {
             ShowOrderDrinksPnl();
 
-            DrinksNavButton.Enabled = false;
-            DinnerNavButton.Enabled = true;
             LunchNavButton.Enabled = true;
+            DinnerNavButton.Enabled = true;
+            DrinksNavButton.Enabled = false; // becomes non interactive
 
-            DrinksNavButton.BackColor = Color.LightGray;
             LunchNavButton.BackColor = Color.LightGreen;
             DinnerNavButton.BackColor = Color.LightGreen;
+            DrinksNavButton.BackColor = Color.LightGray; // becomes grey to indicate it is non interactive
         }
         //
         //
