@@ -516,7 +516,7 @@ namespace ChapeauUI
                 {
                     VATPercentage = 0.21m;
                 }
-                totalOrderVAT += (itemPrice * VATPercentage) * itemAmount;
+                totalOrderVAT += (itemPrice * itemAmount) * VATPercentage;
             }
             return totalOrderVAT;
         } // Calculates the total order VAT price
@@ -529,7 +529,7 @@ namespace ChapeauUI
                 int itemAmount = GetItemAmount(order.OrderDetailID, orderDetails);
                 decimal itemPrice = GetItemPrice(order.MenuItemID, menuItems);
 
-                totalOrderPrice =+ (itemPrice * itemAmount);
+                totalOrderPrice += itemPrice * itemAmount;
             }
             return totalOrderPrice;
         } // Calculates the total order price
