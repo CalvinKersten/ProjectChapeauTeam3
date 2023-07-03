@@ -17,3 +17,4 @@ namespace ChapeauModel
         public int MenuItemID { get; set; }
     }
 }
+// table employee.

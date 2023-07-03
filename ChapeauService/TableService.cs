@@ -17,10 +17,10 @@ namespace ChapeauService
             tabledb = new TableDao();
         }
 
-        public List<Table> GetTables()
+        public int GetTableNumber(int tableID)
         {
-            List<Table> tables = tabledb.GetAllTables();
-            return tables;
+            int tableNumber = tabledb.GetTableNumber(tableID);
+            return tableNumber;
         }
     }
 }

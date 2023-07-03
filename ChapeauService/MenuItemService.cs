@@ -22,5 +22,22 @@ namespace ChapeauService
             List<MenuItem> menuItems = MenuItemdb.GetAllMenuItems();
             return menuItems;
         }
+        public decimal GetOrderedItemPrice(int menuItemID)
+        {
+            decimal itemPrice = MenuItemdb.GetItemPrice(menuItemID);
+            return itemPrice;
+        }
+        public string GetItemName(int menuItemID) 
+        {
+            string itemName = MenuItemdb.GetItemName(menuItemID);
+            return itemName;
+        }
+
+        public int GetItemCatagory(int menuItemID)
+        {
+            int itemCatagory = MenuItemdb.GetItemCatagory(menuItemID);
+            return itemCatagory;
+        }
     }
+    
 }

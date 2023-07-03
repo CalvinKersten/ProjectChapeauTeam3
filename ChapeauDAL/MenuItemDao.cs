@@ -36,5 +36,96 @@ namespace ChapeauDAL
             }
             return menuItems;
         }
+
+        public decimal GetItemPrice(int menuItemID)
+        {
+            string query = "SELECT Item_Price FROM Menu_Item WHERE Menu_ItemID =@MenuItemID";
+            string connectionString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2; User=SomerenTeam2; Password=ProjectT3Team2";
+            SqlConnection con = new SqlConnection(connectionString);
+            decimal itemPrice = 0.0m; // Default value
+
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                command.Parameters.AddWithValue("@MenuItemID", menuItemID);
+                try
+                {
+                    con.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            itemPrice = reader.GetDecimal(0);
+                        }
+                    }
+                }
+                catch
+                {
+                    //error message
+                }
+            }
+            return itemPrice;
+        } // Gets the MenuItem price from the database using the menuItemID
+
+        public string GetItemName(int menuItemID)
+        {
+            string query = "SELECT Item_Name FROM Menu_Item WHERE Menu_ItemID =@MenuItemID";
+            string connectionString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2; User=SomerenTeam2; Password=ProjectT3Team2";
+            SqlConnection con = new SqlConnection(connectionString);
+            string itemName = ""; // Default value
+
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                command.Parameters.AddWithValue("@MenuItemID", menuItemID);
+                try
+                {
+                    con.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            itemName = reader.GetString(0);
+                        }
+                    }
+                }
+                catch
+                {
+                    //error message
+                }
+            }
+            return itemName;
+        } // Gets the MenuItem price from the database using the menuItemID
+
+        public int GetItemCatagory(int menuItemID)
+        {
+            string query = "SELECT Item_Catagory FROM Menu_Item WHERE Menu_ItemID =@MenuItemID";
+            string connectionString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2; User=SomerenTeam2; Password=ProjectT3Team2";
+            SqlConnection con = new SqlConnection(connectionString);
+            int itemAmount = 0; // Default value
+
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                command.Parameters.AddWithValue("@MenuItemID", menuItemID);
+                try
+                {
+                    con.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            itemAmount = reader.GetInt32(0);
+                        }
+                    }
+                }
+                catch
+                {
+                    //error message
+                }
+            }
+            return itemAmount;
+        }
+
     }
 }

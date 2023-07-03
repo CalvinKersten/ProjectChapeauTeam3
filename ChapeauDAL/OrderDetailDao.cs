@@ -39,17 +39,66 @@ namespace ChapeauDAL
             return orderDetails;
         }
 
-        private void SetOrderStatus()
+        /*private void SetOrderStatus()
         {
             //Use this to change the status of the order
-        }
-        private void AddComment()
+        }*/
+        private void AddComment(int orderDetailID)
         {
-            //Used to add added comments to the database
-        }
-        private void SetOrderTime()
+            string connectionString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2; User=SomerenTeam2; Password=ProjectT3Team2";
+           
+            string updateQuery = "UPDATE Order_Detail SET Comment =@comment WHERE Order_DetailID = @OrderDetailID";
+            
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(updateQuery, con))
+                {
+                    try
+                    {
+                        con.Open();
+
+                        command.Parameters.AddWithValue("@OrderDetailID", orderDetailID);
+                        command.ExecuteNonQuery();
+                        con.Close();
+                    }
+                    catch
+                    {
+                        //error message
+                    }
+                }
+            }
+        } //Used to add added comments to the database
+
+        public int GetItemAmount(int menuItemID)
         {
-            //Used to determine the time of which an order was CONFIRMED
+            string query = "SELECT Item_Quantity FROM Order_Detail WHERE Menu_ItemID =@MenuItemID";
+            string connectionString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2; User=SomerenTeam2; Password=ProjectT3Team2";
+            int itemAmount = 0; // Default value
+
+            using(SqlConnection con = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    command.Parameters.AddWithValue("@MenuItemID", menuItemID);
+                    try
+                    {
+                        con.Open();
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                itemAmount = reader.GetInt32(0);
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        //error message
+                    }
+                }
+            }
+            return itemAmount;
         }
     }
 }

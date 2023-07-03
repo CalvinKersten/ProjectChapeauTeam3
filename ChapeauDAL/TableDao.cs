@@ -11,30 +11,35 @@ using System.Threading.Tasks;
 namespace ChapeauDAL
 {
     public class TableDao : BaseDao
-    {
-        public List<Table> GetAllTables()
+    { 
+        public int GetTableNumber(int tableID)
         {
-            string query = "SELECT TableID, Table_Num, Capacity FROM [Table]";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
+            string query = "SELECT Table_Num FROM [Table] WHERE TableID =@TableID";
+            string connectionString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2; User=SomerenTeam2; Password=ProjectT3Team2";
+            SqlConnection con = new SqlConnection(connectionString);
+            int tableNumber = 0; // Default value
 
-
-        private List<Table> ReadTables(DataTable dataTable)
-        {
-            List<Table> tables = new List<Table>();
-
-            foreach (DataRow dr in dataTable.Rows)
+            using (SqlCommand command = new SqlCommand(query, con))
             {
-                Table table = new Table()
+                command.Parameters.AddWithValue("@TableID", tableID);
+                try
                 {
-                    TableID = (int)dr["TableID"],
-                    Table_Num = (int)dr["Table_Num"],
-                    Capacity = (int)dr["Capacity"],
-                };
-                tables.Add(table);
+                    con.Open();
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            tableNumber = reader.GetInt32(0);
+                        }
+                    }
+                }
+                catch
+                {
+                    //error message
+                }
             }
-            return tables;
+            return tableNumber;
         }
         
         

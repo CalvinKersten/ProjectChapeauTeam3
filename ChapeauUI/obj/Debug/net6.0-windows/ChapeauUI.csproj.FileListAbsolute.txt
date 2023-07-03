@@ -16,7 +16,6 @@ C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windo
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.pdb
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.genruntimeconfig.cache
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ref\ChapeauUI.dll
-C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.Form1.resources
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\Microsoft.Win32.SystemEvents.dll
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\System.Configuration.ConfigurationManager.dll
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
@@ -40,3 +39,4 @@ C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windo
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.csproj.CopyComplete
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauService.dll
 C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauService.pdb
+C:\Users\kerst\source\repos\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.POSChapeau.resources

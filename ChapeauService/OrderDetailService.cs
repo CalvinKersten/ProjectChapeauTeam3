@@ -22,5 +22,12 @@ namespace ChapeauService
             List<OrderDetail> orderDetails = orderDetaildb.GetAllOrderDetails();
             return orderDetails;
         }
+
+        public int GetItemAmount(int menuItemID)
+        {
+            int itemAmount = orderDetaildb.GetItemAmount(menuItemID);
+            return itemAmount;
+        }
+
     }
 }
