@@ -559,6 +559,7 @@ namespace ChapeauUI
         }
         private void AddOrder()
         {
+            // Last resort..
             OrderDetailService orderDetailService = new OrderDetailService();
             OrderDetail orderDetail = new OrderDetail();
             OrderService orderService = new OrderService();
@@ -568,6 +569,9 @@ namespace ChapeauUI
             {
                 orderDetailService.AddOrderDetail(orderDetail);
                 orderService.AddOrder(order);
+                OpenPanel(pnlTableOverview);
+                LunchNavButton.Enabled = true;
+                LunchNavButton.BackColor= Color.LightGreen;
             }
             catch
             {

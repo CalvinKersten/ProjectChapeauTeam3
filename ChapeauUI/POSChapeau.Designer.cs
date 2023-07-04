@@ -336,9 +336,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(167, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 32);
+            this.label1.Size = new System.Drawing.Size(135, 32);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Table #";
+            this.label1.Text = "Table #6";
             // 
             // pnlOrderNav
             // 
