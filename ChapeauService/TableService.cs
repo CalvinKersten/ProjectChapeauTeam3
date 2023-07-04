@@ -22,5 +22,10 @@ namespace ChapeauService
             int tableNumber = tabledb.GetTableNumber(tableID);
             return tableNumber;
         }
+        public List<Table> GetTables()
+        {
+            List<Table> tables = tabledb.GetTableByStatus();
+            return tables;
+        }
     }
 }

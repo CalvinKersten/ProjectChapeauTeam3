@@ -4,6 +4,9 @@
     <Compile Update="ButtonStyle.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Update="KitchenBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="POSChapeau.cs">
       <SubType>Form</SubType>
     </Compile>

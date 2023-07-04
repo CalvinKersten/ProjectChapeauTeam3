@@ -13,9 +13,9 @@ namespace ChapeauModel
         public string ItemName { get; set; }
 
         public decimal ItemPrice { get; set; }
-
-        public int ItemCatagory { get; set; }
-
+        public List<OrderDetail> orderDetails { get; set; }
+        public Catagory ItemCatagory { get; set; }
         public int Stock { get; set; }
     }
+    public enum Catagory { Food = 1, NonAlcDrink, AlcDrink }
 }

@@ -47,14 +47,13 @@ namespace ChapeauDAL
                     }
                     catch (Exception ex)
                     {
-                        // Handle the exception or log the error message
+                        
                     }
                 }
             }
 
             return orders;
         }
-
         public int GetTableID(int orderID)
         {
             string query = "SELECT TableID FROM [Order] WHERE OrderID =@OrderID";
@@ -83,6 +82,57 @@ namespace ChapeauDAL
                 }
             }
             return tableID;
+        }
+        public List<Order> GetAllOrders()
+        {
+            string query = "SELECT OrderID FROM Order";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+        private List<Order> ReadTables(DataTable dataTable)
+        {
+            List<Order> orders = new List<Order>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Order order = new Order()
+                {
+                    OrderID = (int)dr["Order ID"],
+                    //TableID = (int)dr["Table Number"],
+                    //(Table)TotalPrice = (Table)dr["Total_Price"],
+                };
+                orders.Add(order);
+            }
+            return orders;
+        }
+        public void AddOrder(Order order)
+        {
+            string query = "INSERT INTO [Order] (TableID, Total_Price, EmployeeID, InvoiceID, Order_DetailID, Menu_ItemID) " +
+                  "VALUES (@TableID, @TotalPrice, @EmployeeID, @InvoiceID, @OrderDetailID, @MenuItemID)";
+            string connectionString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2;User=SomerenTeam2;Password=ProjectT3Team2";
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    command.Parameters.AddWithValue("@TableID", order.TableID);
+                    command.Parameters.AddWithValue("@TotalPrice", order.TotalPrice);
+                    command.Parameters.AddWithValue("@EmployeeID", order.EmployeeID);
+                    command.Parameters.AddWithValue("@InvoiceID", order.InvoiceID);
+                    command.Parameters.AddWithValue("@OrderDetailID", order.OrderDetailID);
+                    command.Parameters.AddWithValue("@MenuItemID", order.MenuItemID);
+
+                    try
+                    {
+                        con.Open();
+                        command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        
+                    }
+                }
+            }
         }
     }
 }

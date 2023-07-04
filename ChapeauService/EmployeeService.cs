@@ -16,15 +16,13 @@ namespace ChapeauService
         {
             employeedb = new EmployeeDao();
         }
-
-        public List<Employee> GetEmployees()
+        public Employee SearchByID(int EmployeeID)
         {
-            List<Employee> employees = employeedb.GetAllEmployees();
-            return employees;
+            return employeedb.SearchById(EmployeeID);
         }
-        
-            
-        
-
+        public Employee VerifyCredentials(string username, string password)
+        {
+            return employeedb.VerifyCredentials(username, password);
+        }
     }
 }

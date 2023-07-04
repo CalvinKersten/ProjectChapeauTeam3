@@ -41,9 +41,31 @@ namespace ChapeauDAL
             }
             return tableNumber;
         }
-        
-        
+        public List<Table> GetTableByStatus()
+        {
+            string query = "SELECT TableID, Table_Num, Capacity FROM Table";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+        private List<Table> ReadTables(DataTable dataTable)
+        {
+            List<Table> tables = new List<Table>();
 
-        
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Table table = new Table()
+                {
+                    TableID = (int)dr["TableID"],
+                    Table_Num = (int)dr["Table_Num"],
+                    // Capacity = (int)dr["Capacity"],
+                };
+                tables.Add(table);
+            }
+            return tables;
+        }
+
+
+
+
     }
 }

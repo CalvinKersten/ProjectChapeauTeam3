@@ -12,12 +12,11 @@ namespace ChapeauService
         {
             orderdb = new OrderDao();
         }
-
-        /*public List<Order> GetOrders()
+        public List<Order> GetOrders()
         {
             List<Order> orders = orderdb.GetAllOrders();
             return orders;
-        }*/
+        }
         public int GetTableID(int orderID)
         {
             int tableID = orderdb.GetTableID(orderID);
@@ -27,6 +26,10 @@ namespace ChapeauService
         {
             List<Order> orderForTable = orderdb.GetOrderForTable(tableID);
             return orderForTable;
+        }
+        public void AddOrder(Order order)
+        {
+            orderdb.AddOrder(order);
         }
     }
 

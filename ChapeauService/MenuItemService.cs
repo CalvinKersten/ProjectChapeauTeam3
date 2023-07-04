@@ -16,7 +16,6 @@ namespace ChapeauService
         {
             MenuItemdb = new MenuItemDao();
         }
-
         public List<MenuItem> GetMenuItems()
         {
             List<MenuItem> menuItems = MenuItemdb.GetAllMenuItems();
@@ -32,11 +31,14 @@ namespace ChapeauService
             string itemName = MenuItemdb.GetItemName(menuItemID);
             return itemName;
         }
-
         public int GetItemCatagory(int menuItemID)
         {
             int itemCatagory = MenuItemdb.GetItemCatagory(menuItemID);
             return itemCatagory;
+        }
+        public MenuItem GetMenuItemByID(int id)
+        {
+            return MenuItemdb.GetMenuItemByID(id);
         }
     }
     

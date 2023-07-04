@@ -17,7 +17,6 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0]; 
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-
         private List<MenuItem> ReadTables(DataTable dataTable)
         {
             List<MenuItem> menuItems = new List<MenuItem>();
@@ -29,14 +28,13 @@ namespace ChapeauDAL
                     MenuItemID = (int)dr["Menu_ItemID"],
                     ItemName = dr["Item_Name"].ToString(),
                     ItemPrice = (decimal)dr["Item_Price"],
-                    ItemCatagory = (int)dr["Item_Catagory"],
+                    ItemCatagory = (Catagory)dr["Item_Catagory"],
                     Stock = (int)dr["Stock"],
                 };
                 menuItems.Add(menuItem);
             }
             return menuItems;
         }
-
         public decimal GetItemPrice(int menuItemID)
         {
             string query = "SELECT Item_Price FROM Menu_Item WHERE Menu_ItemID =@MenuItemID";
@@ -66,7 +64,6 @@ namespace ChapeauDAL
             }
             return itemPrice;
         } // Gets the MenuItem price from the database using the menuItemID
-
         public string GetItemName(int menuItemID)
         {
             string query = "SELECT Item_Name FROM Menu_Item WHERE Menu_ItemID =@MenuItemID";
@@ -96,7 +93,6 @@ namespace ChapeauDAL
             }
             return itemName;
         } // Gets the MenuItem price from the database using the menuItemID
-
         public int GetItemCatagory(int menuItemID)
         {
             string query = "SELECT Item_Catagory FROM Menu_Item WHERE Menu_ItemID =@MenuItemID";
@@ -126,6 +122,30 @@ namespace ChapeauDAL
             }
             return itemAmount;
         }
+        public MenuItem GetMenuItemByID(int menuItemID)
+        {
+            string query = "SELECT Menu_ItemID, Item_Name, Item_Catagory, Stock FROM Menu_Item WHERE Menu_ItemID= @Menu_ItemID";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Menu_ItemID", menuItemID);
+            return ReadMenuTable(ExecuteSelectQuery(query, sqlParameters));
+        }
+        private MenuItem ReadMenuTable(DataTable dataTable)
+        {
+            MenuItem menuItem = null;
 
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                menuItem = new MenuItem()
+                {
+                    MenuItemID = (int)dr["Menu_ItemID"],
+                    ItemName = dr["Item_Name"].ToString(),
+                    // ItemPrice = (float)dr["Item_Price"],
+                    //  Item_Catagory = (string)dr["Item_Catagory"],
+                    Stock = (int)dr["Stock"],
+                };
+
+            }
+            return menuItem;
+        }
     }
 }

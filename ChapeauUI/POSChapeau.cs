@@ -117,24 +117,12 @@ namespace ChapeauUI
             int tableNumber = tableService.GetTableNumber(tableID);
             return tableNumber;
         } // retreives the table number for the particulair table (using the tableID)
-     /*   public List<Order> GetOrders()
-        {
-            OrderService orderService = new OrderService();
-            List<Order> orders = orderService.GetOrders();
-            return orders;
-        } // retreives a list of all orders (Should only be the orders of today)*/
         public List<Order> GetOrderForTable(int tableID)
         {
             OrderService orderService = new OrderService();
             List<Order> ordersForTable = orderService.GetOrderForTable(tableID);
             return ordersForTable;
         }
-        public List<Employee> GetEmployees()
-        {
-            EmployeeService employeeService = new EmployeeService();
-            List<Employee> employee = employeeService.GetEmployees();
-            return employee;
-        } // retreives a list of all employees
         public List<OrderDetail> GetOrderDetails()
         {
             OrderDetailService orderDetailService = new OrderDetailService();
@@ -194,8 +182,8 @@ namespace ChapeauUI
 
                 LVOrderOverview.Items.Add(item);   
             }
-            DisplayTotalPrice(CalculateTotalPrice(orders, orderDetails, menuItems));
-            DisplayTotalVAT(CalculateVAT(orders, orderDetails, menuItems));
+            DisplayTotalPrice(CalculateTotalPrice(orders));
+            DisplayTotalVAT(CalculateVAT(orders));
 
         } // Sets listview header for Table order overview
         private void LoadAllLVs()
@@ -340,19 +328,6 @@ namespace ChapeauUI
         {
             OpenPanel(pnlMenu);
             ShowOrderLunchPnl();
-            /* if (previousPanel == pnlOrderViewLunch)
-             {
-
-             }
-             else if (previousPanel == pnlOrderViewDinner)
-             {
-
-             }
-             else if (previousPanel == pnlOrderViewDrinks)
-             {
-                 ShowOrderDrinksPnl();
-             }
-             */
         } // exists the comment function
         private void AddButtonComment_Click(object sender, EventArgs e)
         {
@@ -429,6 +404,7 @@ namespace ChapeauUI
             int itemID = int.Parse(clickedButton.Tag.ToString());
             decimal itemPrice = GetItemPrice(itemID);
             int itemQuantity = 1;
+            string comment = "";
 
             List<System.Windows.Forms.ListView> listViewCollection = new List<System.Windows.Forms.ListView>
             {
@@ -462,20 +438,23 @@ namespace ChapeauUI
                 ListViewItem LVLunch = new ListViewItem(itemQuantity.ToString()); // Add the item quantity
                 LVLunch.SubItems.Add(itemName); // Add the item name
                 LVLunch.SubItems.Add("€" + itemPrice.ToString()); // Add the item price
+                LVLunch.SubItems.Add("");
                 LVSelectedItemsLunch.Items.Add(LVLunch);
 
                 ListViewItem LVDinner = new ListViewItem(itemQuantity.ToString()); // Add the item quantity
                 LVDinner.SubItems.Add(itemName); // Add the item name
                 LVDinner.SubItems.Add("€" + itemPrice.ToString()); // Add the item price
+                LVLunch.SubItems.Add("");
                 LVSelectedItemsDinner.Items.Add(LVDinner);
 
                 ListViewItem LVDrinks = new ListViewItem(itemQuantity.ToString()); // Add the item quantity
                 LVDrinks.SubItems.Add(itemName); // Add the item name
                 LVDrinks.SubItems.Add("€" + itemPrice.ToString()); // Add the item price
+                LVLunch.SubItems.Add("");
                 LVSelectedDrinks.Items.Add(LVDrinks);
             }
         } // adds the selected item to all listviews (lunch, dinner and drinks)
-        private decimal CalculateVAT(List<Order> orders, List<OrderDetail> orderDetails, List<MenuItem> menuItems)
+        private decimal CalculateVAT(List<Order> orders)
         {
             // VAT = (6% of ItemPrice) * ItemAmount
             // VAT = 21% of ItemPrice) * ItemAmount
@@ -502,7 +481,7 @@ namespace ChapeauUI
             }
             return totalOrderVAT;
         } // Calculates the total order VAT price
-        private decimal CalculateTotalPrice(List<Order> orders, List<OrderDetail> orderDetails, List<MenuItem> menuItems)
+        private decimal CalculateTotalPrice(List<Order> orders)
         {
             decimal totalOrderPrice = 0;
             foreach (Order orderForTable in orders) 
@@ -529,74 +508,71 @@ namespace ChapeauUI
         } // Opens the comment Panel
         private void DeleteButtonClickEventHandler(object Sender, EventArgs e)
         {
-            List<System.Windows.Forms.ListView> listViewCollection = new List<System.Windows.Forms.ListView>
-            {
-                LVSelectedItemsLunch,
-                LVSelectedItemsDinner,
-                LVSelectedDrinks
-            };
-
-            List<ListViewItem> selectedItems = new List<ListViewItem>();
-
-            // Collect the selected items from all ListView controls
-            foreach (System.Windows.Forms.ListView listView in listViewCollection)
-            {
-                foreach (ListViewItem selectedItem in listView.SelectedItems)
-                {
-                    selectedItems.Add(selectedItem);
-                }
-            }
-
-            // Remove the selected items from all ListView controls
-
-            foreach (ListViewItem selectedItem in selectedItems)
-            {
-                foreach (System.Windows.Forms.ListView listView in listViewCollection)
-                {
-                    listView.Items.Remove(selectedItem);
-                }
-            }
+            Delete();
         } // Deletes an Item from the Listview
         private void AddButtonClickEvenHandler(object Sender, EventArgs e)
         {
-            string conString = "Data Source=somerenit1bt2.database.windows.net;Initial Catalog=Project_SomerenIT1BT2;User=SomerenTeam2;Password=ProjectT3Team2";
-            string query = "INSERT INTO Order_Detail (Item_Quantity, Order_Status, Comment, Menu_ItemID) VALUES (@ItemQuantity, @Order_Status, @Comment, @MenuItemID)";
-            SqlConnection con = new SqlConnection(conString);
-            
-            string OrderStatus = "";
-            string Comment = "";
-            int ItemQuantity = 0;
-
-            foreach (ListViewItem item in LVSelectedItemsLunch.Items)
+            AddOrder();
+        } // Adds the order to the database
+        private void Delete()
+        {
+            List<System.Windows.Forms.ListView> listViewCollection = new List<System.Windows.Forms.ListView>
             {
-                OrderStatus = "Running";
-                Comment = "";
-                ItemQuantity = int.Parse(item.SubItems[0].Text);
+               LVSelectedItemsLunch,
+               LVSelectedItemsDinner,
+               LVSelectedDrinks
+            };
+
+            // Create a list to store the items to remove
+            List<ListViewItem> itemsToRemove = new List<ListViewItem>();
+
+            // Iterate through all ListView controls
+            foreach (System.Windows.Forms.ListView listView in listViewCollection)
+            {
+                // Iterate through selected items in the current ListView control
+                foreach (ListViewItem selectedItem in listView.SelectedItems)
+                {
+                    int amount = int.Parse(selectedItem.SubItems[0].Text);
+
+                    if (amount > 1)
+                    {
+                        // Decrement the amount by 1
+                        amount--;
+                        selectedItem.SubItems[0].Text = amount.ToString();
+                    }
+                    else
+                    {
+                        // Add the item to the list of items to remove
+                        itemsToRemove.Add(selectedItem);
+                    }
+                }
             }
+            // Remove the selected items from all ListView controls
+            foreach (System.Windows.Forms.ListView listView in listViewCollection)
+            {
+                foreach (ListViewItem itemToRemove in itemsToRemove)
+                {
+                    listView.Items.Remove(itemToRemove);
+                }
+            }
+
+        }
+        private void AddOrder()
+        {
+            OrderDetailService orderDetailService = new OrderDetailService();
+            OrderDetail orderDetail = new OrderDetail();
+            OrderService orderService = new OrderService();
+            Order order = new Order();
+
             try
             {
-                con.Open();
-
-                SqlCommand command = new SqlCommand(query, con);
-                command.Parameters.AddWithValue("@ItemQuantity", ItemQuantity);
-                command.Parameters.AddWithValue("@Order_Status", OrderStatus);
-                command.Parameters.AddWithValue("@Comment", Comment);
-                /*command.Parameters.AddWithValue("@MenuItemID", );*/
-                command.ExecuteNonQuery();
-
-                MessageBox.Show("Data inserted successfully!");
+                orderDetailService.AddOrderDetail(orderDetail);
+                orderService.AddOrder(order);
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error: " + ex.Message);
+
             }
-            finally
-            {
-                con.Close();
-            }
-            LoadAllLVs(); // Reload all LV's = remove all Items from the LV's
-            ShowOrderOverviewPnl(); // Show full order on OrderOVerviewpnl
-        } // Adds the order to the database
-        
+        }
     }
 }

@@ -13,5 +13,7 @@ namespace ChapeauModel
         public int Table_Num { get; set; }
 
         public int Capacity { get; set;}
+        public TableStatus Status { get; set; }
+        public int TableNumber { get; set; }
     }
 }
