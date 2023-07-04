@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace ChapeauService
 {
-    internal class OrderService
+    public class OrderService
     {
         private OrderDao orderdb;
 
@@ -18,6 +18,8 @@ namespace ChapeauService
             List<Order> orders = orderdb.GetAllOrders();
             return orders;
         }
+
+      //  public List<Order> GetAllOrderForKitchenAndBar(Catagory itemCatagory, OrderStatus orderItemState)
     }
 
 }

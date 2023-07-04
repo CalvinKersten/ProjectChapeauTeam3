@@ -11,11 +11,11 @@ namespace ChapeauModel
         public event EventHandler Event;
 
         public int TableID { get; set; }
+        public TableStatus Status { get; set; }
+        public int TableNumber { get; set; }
 
-        public int Table_Number { get; set; }
+        //public int Capacity { get; set;}
 
-        public int Capacity { get; set;}
-
-        public int EmployeeID { get; set; }
+        //public int EmployeeID { get; set; }
     }
 }

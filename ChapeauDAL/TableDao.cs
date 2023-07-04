@@ -12,7 +12,7 @@ namespace ChapeauDAL
 {
     public class TableDao : BaseDao
     {
-        public List<Table> GetAllTables()
+        public List<Table> GetTableByStatus()
         {
             string query = "SELECT TableID, Table_Num, Capacity FROM Table";
             SqlParameter[] sqlParameters = new SqlParameter[0];
@@ -28,8 +28,8 @@ namespace ChapeauDAL
                 Table table = new Table()
                 {
                     TableID = (int)dr["TableID"],
-                    Table_Number = (int)dr["Table_Num"],
-                    Capacity = (int)dr["Capacity"],
+                    TableNumber = (int)dr["Table_Num"],
+                   // Capacity = (int)dr["Capacity"],
                 };
                 tables.Add(table);
             }

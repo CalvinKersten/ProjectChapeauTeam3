@@ -7,36 +7,29 @@
       <FileName>EmployeeService.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ChapeauService.InvoiceService">
-    <Position X="8" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>InvoiceService.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ChapeauService.MenuItemService">
-    <Position X="10.25" Y="0.5" Width="1.5" />
+    <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>MenuItemService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauService.OrderDetailService">
-    <Position X="10.75" Y="3" Width="1.5" />
+    <Position X="6.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <HashCode>AACAAAAAABAAAQAAAAAAAAAAAAgAAARAAAAIAAAAAAA=</HashCode>
       <FileName>OrderDetailService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauService.OrderService">
-    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Position X="6.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>OrderService.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauService.TableService">
-    <Position X="5.5" Y="3.5" Width="1.5" />
+    <Position X="4.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TableService.cs</FileName>

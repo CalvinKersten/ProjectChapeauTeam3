@@ -18,13 +18,13 @@ namespace ChapeauDAL
             SqlParameter[] sqlParameters = new SqlParameter[0]; 
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        public List<MenuItem> GetKitchenOrders()
-        {
-            string query = "SELECT o.Order_DetailID, o.Item_Quantity, o., o.Order_Status,  FROM [Order_Detail] AS o " +
-                "JOIN dbo.Menu_Item m ON o.Menu_ItemID = m.Menu_ItemID";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
+        //public List<MenuItem> GetKitchenOrders()
+        //{
+        //    string query = "SELECT o.Order_DetailID, o.Item_Quantity, o.Order_Status,  FROM [Order_Detail] AS o " +
+        //        "JOIN dbo.Menu_Item m ON o.Menu_ItemID = m.Menu_ItemID";
+        //    SqlParameter[] sqlParameters = new SqlParameter[0];
+        //    return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        //}
         private List<MenuItem> ReadTables(DataTable dataTable)
         {
             List<MenuItem> menuItems = new List<MenuItem>();
@@ -33,10 +33,10 @@ namespace ChapeauDAL
             {
                 MenuItem menuItem = new MenuItem()
                 {
-                    Menu_ItemID = (int)dr["Menu_ItemID"],
-                    Item_Name = dr["Item_Name"].ToString(),
+                    ItemID = (int)dr["Menu_ItemID"],
+                    ItemName = dr["Item_Name"].ToString(),
                    // ItemPrice = (float)dr["Item_Price"],
-                    Item_Catagory = (string)dr["Item_Catagory"],
+                    ItemCatagory = (Catagory)dr["Item_Catagory"],
                     Stock = (int)dr["Stock"],
                 };
                 menuItems.Add(menuItem);
@@ -59,18 +59,13 @@ namespace ChapeauDAL
             {
                  menuItem = new MenuItem()
                 {
-                    Menu_ItemID = (int)dr["Menu_ItemID"],
-                    Item_Name = dr["Item_Name"].ToString(),
+                    ItemID = (int)dr["Menu_ItemID"],
+                    ItemName = dr["Item_Name"].ToString(),
                     // ItemPrice = (float)dr["Item_Price"],
                   //  Item_Catagory = (string)dr["Item_Catagory"],
                     Stock = (int)dr["Stock"],
                 };
-                //menuItem = new MenuItem();
-                //menuItem.Menu_ItemID= (int)dr["Menu_ItemID"],
-                //    menuItem.Item_Name= dr["Item_Name"].ToString(),
-                //    // ItemPrice = (float)dr["Item_Price"],
-                //    Item_Catagory = (string)dr["Item_Catagory"],
-                //    Stock = (int)dr["Stock"],;
+                
             }
             return menuItem;
         }

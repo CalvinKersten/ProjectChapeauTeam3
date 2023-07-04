@@ -12,63 +12,77 @@ namespace ChapeauDAL
 {
     public class EmployeeDao : BaseDao
     {
-        public List<Employee> SearchById(int EmployeeID)
+        public Employee SearchById(int EmployeeID)
         {
-            string query = "SELECT EmployeeID, First_Name, Last_Name,FROM Employee WHERE EmployeeID=@ID";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
+            string query = "SELECT EmployeeID, First_Name, Last_Name,Password, Role, EmployeeNr FROM Employee WHERE EmployeeID=@ID";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@ID", EmployeeID);
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
-        private List<Employee> ReadTables(DataTable dataTable)
+        private Employee ReadTables(DataTable dataTable)
         {
-            List<Employee> employees = new List<Employee>();
-
+            Employee employee = null;
             foreach (DataRow dr in dataTable.Rows)
             {
-                Employee employee = new Employee()
+                int id = (int)dr["EmployeeID"];
+                string firstName = dr["First_Name"].ToString();
+                string lastName = dr["Last_Name"].ToString();
+                int Password = int.Parse(dr["Password"].ToString());
+                string roleString = dr["Role"].ToString();
+                Role role;
+                if (Enum.TryParse(roleString, out role))
                 {
-                    EmployeeID = (int)dr["EmployeeID"],
-                    //EmployeeNum = (int)dr["EmployeeNr"],
-                    FirstName = dr["First_Name"].ToString(),
-                    LastName = dr["Last_Name"].ToString(),
-                   // Password = dr["Password"].ToString(),
-                    Role = dr["Role"].ToString(),
-                };
-                employees.Add(employee);
+                    int EmployeeNumber = int.Parse(dr["EmployeeNr"].ToString());
+                    employee = new Employee(id, firstName, lastName, role, Password, EmployeeNumber);
+                }
+                
+                ////  Employee employees = new Employee();
+                //Employee employee = null;
+                //foreach (DataRow dr in dataTable.Rows)
+                //{
+                //    //employee = new Employee();
+                //    int id = (int)dr["EmployeeID"];
+                //    string firstName = (string)(dr["First_Name"].ToString());
+                //    string lastName = (string)(dr["Last_Name"].ToString());
+                //    int Password = (int.Parse)(dr["Password"].ToString());
+                //    Role role = (Role)dr["Role"];
+                //    int EmployeeNumber = (int)dr["EmployeeNr"];
+
+                //    //creating a employee with alll read values from table 
+                //    employee = new Employee(id, firstName, lastName, role, Password, EmployeeNumber);
+                //}
+                //return employee;
+
             }
-            return employees;
+            return employee;
         }
 
-        //public Employee VerifyPassword(string employeeId, string Password)
-        //{
-        //    // first getting the stored salt from the database to compare with it 
-        //    String query = "SELECT Salt FROM Employee WHERE UserName=@ID";
-        //    SqlParameter[] sqlParameters = new SqlParameter[1];
-        //    // preventing from sql injections
-        //    sqlParameters[0] = new SqlParameter("@ID", employeeId);
-           // string storedSalt = ReadEmployeeSalt(ExecuteSelectQuery(query, sqlParameters));
-            //if (storedSalt == null)
-            //{
-            //    throw new Exception("No employee found with this employee Name");
-            //}
-            //// converting entered password by adding a stored salt from database 
-            //string hashedPassword = HashingEnteredPassword(enteredPassword, storedSalt);
+        public Employee VerifyCredentials(string username, string password)
+        {
+            string query = "SELECT EmployeeID, First_Name, Last_Name, Password, Role, EmployeeNr FROM Employee " +
+                "WHERE EmployeeNr=@Username AND Password=@Password";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@Username", username);
+            sqlParameters[1] = new SqlParameter("@Password", password);
 
-            ////now verifying the hashedpassword with salt to the user database
-          //  Employee loggedEmployee = ComparingEnteredPassword(employeeId, enteredPassword);
-            //if (loggedEmployee == null)
-            //{
-            //    throw new Exception("Something is  wrong with your password");
-            //}
-            //return loggedEmployee;
-        
-        //private List<Employee> ComparingEnteredPassword(string employeeId, string enteredPassword)
-        //{
-        //    string query = "SELECT EmployeeID, First_Name, Last_Name, Role, Password FROM Employee WHERE UserName=@EmployeeID AND [Password]=@password";
-        //    SqlParameter[] sqlParameters = new SqlParameter[2];
-           
-        //    sqlParameters[0] = new SqlParameter("@EmployeeID", employeeId);
-        //    sqlParameters[1] = new SqlParameter("@password", enteredPassword);
-        //    return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        //}
+            DataTable dataTable = ExecuteSelectQuery(query, sqlParameters);
+
+            if (dataTable.Rows.Count == 1)
+            {
+                DataRow dr = dataTable.Rows[0];
+
+                int id = (int)dr["EmployeeID"];
+                string firstName = dr["First_Name"].ToString();
+                string lastName = dr["Last_Name"].ToString();
+                int Password = int.Parse(dr["Password"].ToString());
+                Role role = (Role)Enum.Parse(typeof(Role), dr["Role"].ToString());
+                int EmployeeNumber = int.Parse(dr["EmployeeNr"].ToString());
+                return new Employee(id, firstName, lastName, role, Password, EmployeeNumber);
+            }
+
+            return null; // Invalid credentials
+        }
+
+
     }
 }

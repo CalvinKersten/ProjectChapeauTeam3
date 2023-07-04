@@ -10,40 +10,21 @@ namespace ChapeauService
 {
     public class OrderDetailService
     {
-        private OrderDetailDao orderDetaildb;
+        OrderDetailDao orderDetaildb;
 
         public OrderDetailService()
         {
             orderDetaildb = new OrderDetailDao();
         }
 
-        public List<OrderDetail> GetOrderDetails()
+        public void ChangingOrderStatus(OrderDetail order, OrderStatus OrderStatus)
         {
-            List<OrderDetail> orderDetails = orderDetaildb.GetAllOrderDetails();
-            return orderDetails;
+            orderDetaildb.ChangeOrderStatus(order, OrderStatus);
         }
 
-        public List<OrderDetail> RunningOrders()
+        public List<Order> ReadOrdersForKitchenBar(Catagory itemCatagory, OrderStatus orderItemState)
         {
-            List<OrderDetail> orderDetails = orderDetaildb.GetRunningOrders();
-            return orderDetails;
+            return orderDetaildb.GetAllOrderForKitchenAndBar(itemCatagory, orderItemState);
         }
-        public List<OrderDetail> CompletedOrders()
-        {
-            List<OrderDetail> orderDetails = orderDetaildb.GetCompletedOrders();
-            return orderDetails;
-        }
-
-        public List<OrderDetail> KitchenOrders()
-        {
-            List<OrderDetail> orderDetails = orderDetaildb.GetKitchenOrder();
-            return orderDetails;
-        }
-
-        public void ChangeOrderStatus(OrderStatus status, List<OrderDetail> orderDetails)
-        {
-            orderDetaildb.ChangeOrderStatus(status, orderDetails);
-        }
-       
     }
 }

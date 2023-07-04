@@ -8,14 +8,16 @@ namespace ChapeauModel
 {
     public class MenuItem
     {
-        public int Menu_ItemID { get; set; }
+        public int ItemID { get; set; }
 
-        public string Item_Name { get; set; }
+        public string ItemName { get; set; }
 
-        public float Item_Price { get; set; }
-
-        public string Item_Catagory { get; set; }
+        public float ItemPrice { get; set; }
+        public List<OrderDetail> orderDetails { get; set; }
+        public Catagory ItemCatagory { get; set; }
 
         public int Stock { get; set; }
     }
+
+    public enum Catagory { Food=1, NonAlcDrink, AlcDrink}
 }

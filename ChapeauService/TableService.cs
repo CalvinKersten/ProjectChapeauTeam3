@@ -19,7 +19,7 @@ namespace ChapeauService
 
         public List<Table> GetTables()
         {
-            List<Table> tables = tabledb.GetAllTables();
+            List<Table> tables = tabledb.GetTableByStatus();
             return tables;
         }
     }

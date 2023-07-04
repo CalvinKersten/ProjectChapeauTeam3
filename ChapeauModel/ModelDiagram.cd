@@ -1,63 +1,65 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ChapeauModel.Employee">
-    <Position X="2.25" Y="1.75" Width="1.5" />
+    <Position X="12.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAMAAAAAAAAAAAAAAAAIAAAAAAAACAAAAAAAAAAg=</HashCode>
+      <HashCode>AAIAAMAAAAAAAAAAEAAAAAAAAAAAAAACAAAAAAAAAAg=</HashCode>
       <FileName>Employee.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ChapeauModel.Invoice">
-    <Position X="4.5" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAABIBAAAAAEAACAACACAAAAAAAAQAAAAAAAAAEAAAA=</HashCode>
-      <FileName>Invoice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauModel.MenuItem">
     <Position X="7.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAABAAAAAAAAAABAAIAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAEAAAABAAAEAAAgAAAAAIAgAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MenuItem.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauModel.Order">
-    <Position X="8.25" Y="2.75" Width="1.5" />
+    <Position X="8.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <HashCode>AAAAABAAAAAAEAAAAAAAQAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Order.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauModel.OrderDetail">
-    <Position X="10.5" Y="1.75" Width="1.5" />
+    <Position X="13" Y="2.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEIAACAAAAAEAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAABAEIAACABAAAEAAQAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>OrderDetail.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderStatus" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="ChapeauModel.Table">
-    <Position X="6.25" Y="2.75" Width="1.5" />
+    <Position X="8.5" Y="5.5" Width="1.5" />
     <Members>
       <Event Name="Event" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAABAAAAAAAAAAAACAgAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAEAAAAAAAgAAAAAAAAAgAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Table.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="System.Object">
-    <Position X="13.25" Y="1.5" Width="1.5" />
+    <Position X="9.25" Y="0.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
   <Enum Name="ChapeauModel.OrderStatus">
-    <Position X="10.5" Y="4" Width="1.5" />
+    <Position X="13.25" Y="6" Width="1.5" />
+    <Members>
+      <Field Name="field" Hidden="true" />
+    </Members>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <HashCode>AACAAAAAAAAAAAIEAAAAAAAAAAAAAAAIAAAAAgAAAAA=</HashCode>
       <FileName>OrderStatus.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="ChapeauModel.TableStatus">
-    <Position X="6" Y="5" Width="1.25" />
+    <Position X="6.5" Y="5.25" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAEAAIAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>TableStatus.cs</FileName>

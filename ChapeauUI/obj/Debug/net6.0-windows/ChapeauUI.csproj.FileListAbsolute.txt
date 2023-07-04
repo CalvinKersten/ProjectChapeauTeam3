@@ -21,7 +21,6 @@ C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\bin\Debu
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauUI.dll
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\bin\Debug\net6.0-windows\ChapeauUI.pdb
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.csproj.AssemblyReference.cache
-C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.Form1.resources
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.KitchenBar.resources
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.csproj.GenerateResource.cache
 C:\Users\dipika\OneDrive\Documents\GitHub\ProjectChapeauTeam3\ChapeauUI\obj\Debug\net6.0-windows\ChapeauUI.GeneratedMSBuildEditorConfig.editorconfig

@@ -1,49 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ChapeauDAL.EmployeeDao">
-    <Position X="9.5" Y="2" Width="1.5" />
+    <Position X="5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EmployeeDao.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ChapeauDAL.InvoiceDao">
-    <Position X="9.25" Y="3.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>InvoiceDao.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ChapeauDAL.MenuItemDao">
-    <Position X="6.75" Y="2" Width="1.5" />
+    <Position X="0.5" Y="3.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAACAAAAACAAAAAAAAAABAAAA=</HashCode>
       <FileName>MenuItemDao.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauDAL.OrderDao">
-    <Position X="7" Y="5.5" Width="1.5" />
+    <Position X="2.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>OrderDao.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauDAL.OrderDetailDao">
-    <Position X="13" Y="1.75" Width="2.5" />
+    <Position X="9.25" Y="4" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAEQEAIAAAAAAAgAAIBAAAAAAAAAAAA=</HashCode>
       <FileName>OrderDetailDao.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauDAL.TableDao">
-    <Position X="11.5" Y="3.75" Width="1.5" />
+    <Position X="7" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>TableDao.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ChapeauDAL.BaseDao">
-    <Position X="3.5" Y="1.5" Width="1.5" />
+    <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAEAAAAAAACABAAAQQAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>BaseDao.cs</FileName>

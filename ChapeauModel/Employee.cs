@@ -9,25 +9,26 @@ namespace ChapeauModel
     public class Employee
     {
         public int EmployeeID { get; set; }
-        public int EmployeeNum { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public string Password { get; set; }
-        public string Role { get; set; }
+        public Role Role { get; set; }
 
-        //public Employee(int employeeid, string firstName, string lastName, string function)
-        //{
-        //    this.EmployeeID = employeeid;
-        //    this.FirstName = firstName;
-        //    this.LastName = lastName;
-        //   this.Function = function;
-        //}
+        public int EmployeeNumber;
+        public int Password { get; set; }
+
+        public Employee(int id, string firstName, string lastName, Role role, int Password, int EmployeeNumber) {
+            EmployeeID = id;
+            FirstName = firstName;
+            LastName = lastName;
+            Role = role;
+            Password = Password;
+            EmployeeNumber = EmployeeNumber;
+        }
+
+        
     }
    
-    public enum Role
-    { 
-        Chef=1, Waiter, Barman, Manager
-    }
+   
 
 }
 

@@ -20,94 +20,49 @@ namespace ChapeauDAL
             menuItemDao = new MenuItemDao();
         }
 
-        public List<OrderDetail> GetKitchenOrder()
+        public List<Order> GetAllOrderForKitchenAndBar(Catagory itemCatagory, OrderStatus orderItemState)
         {
-            // string query = "SELECT Order_DetailID, Item_Quantity, Comment, Order_Status FROM [Order_Detail] ";
-            string query = "SELECT o.Order_DetailID, o.Item_Quantity, o.Order_Status,  FROM [Order_Detail] AS o " +
-                 "JOIN dbo.Menu_Item m ON o.Menu_ItemID = m.Menu_ItemID" +
-                 "WHERE m.Item_Category = '1' OR m.Item_Category='2'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            string query = "SELECT od.Order_DetailID, o.TableID, m.Item_Name, od.Item_Quantity, od.Order_Status, od.Order_Time, od.Comment" +
+                       "FROM [Order_Detail] AS od " +
+                       "JOIN [Order] AS o ON o.Order_DetailID = od.Order_DetailID " +
+                       "JOIN [Menu_Item] AS m ON m.Menu_ItemID = o.Menu_ItemID " +
+                       "WHERE m.Item_Catagory = @itemCatagory AND od.Order_Status = @orderItemState";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@itemCatagory", (int)itemCatagory);
+            sqlParameters[1] = new SqlParameter("@orderItemState", (int)orderItemState);
+            return ReadOrdersForKitchenBar(ExecuteSelectQuery(query, sqlParameters));
         }
-        public List<OrderDetail> GetAllOrderDetails()
-        {
-            string query = "SELECT Order_DetailID, Item_Quantity, Comment,Menu_ItemID FROM Order_Detail";
-               
-                
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
-        private List<OrderDetail> ReadTables(DataTable dataTable)
-        {
-            List<OrderDetail> orderDetails = new List<OrderDetail>();
 
-            foreach (DataRow dr in dataTable.Rows)
+        private List<Order> ReadOrdersForKitchenBar(DataTable dataTable)
+        {
+            List<Order> orders = new List<Order>();
+            if (dataTable != null)
             {
-                OrderDetail orderDetail = new OrderDetail() 
-                {                    
-                    Order_DetailID = (int)dr["Order_DetailID"],
-                    Item_Quantity = (int)dr["Item_Quantity"],
-                    MenuItem = menuItemDao.GetMenuItemByID((int)dr["Menu_ItemID"]),
-                  //  Order_Time = (TimeOnly)dr["Order_Time"],
-                   // Order_Status = dr["Order_Status"].ToString(),
-                    Comment = dr["Comment"].ToString(),
-                };
-                orderDetails.Add(orderDetail);
+                foreach (DataRow dr in dataTable.Rows)
+                {
+                    Order order = new Order();
+
+                    order.OrderDetail.OrderDetailID = (int)dr["Order_DetailID"];
+                    order.Table.TableNumber = (int)dr["TableID"];
+                    order.OrderDetail.MenuItem.ItemName = dr["Item_Name"].ToString();
+                    order.OrderDetail.ItemQuantity = (int)dr["Item_Quantity"];
+                    order.OrderDetail.OrderStatus = (OrderStatus)Enum.Parse(typeof(OrderStatus), dr["Order_Status"].ToString());
+                   // order.OrderDetail.OrderStatus = (OrderStatus)dr["Order_Status"];
+                    order.OrderDetail.OrderTime = (DateTime)dr["Order_Time"];
+                    order.OrderDetail.Comment = (string)dr["Comment"].ToString();
+                    orders.Add(order);
+                }
             }
-            return orderDetails;
+            return orders;
         }
 
-        
-        public List<OrderDetail> GetRunningOrders()
+        public void ChangeOrderStatus(OrderDetail order, OrderStatus OrderStatus)
         {
-            string query = "SELECT Order_DetailID, Item_Quantity, Comment, Order_Status,Menu_ItemID FROM [Order_Detail] WHERE [Order_Detail].Order_Status LIKE '%Running%'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+            string query = "UPDATE [Order_Detail] SET Order_Status =@Order_Status WHERE Order_DetailID=@id";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@id", order.OrderDetailID);
+            sqlParameters[1] = new SqlParameter("@Order_Status", (int)OrderStatus);
+            ExecuteEditQuery(query, sqlParameters);
         }
-
-        public List<OrderDetail> GetCompletedOrders()
-        {
-            string query = "SELECT Order_DetailID, Item_Quantity, Comment, Order_Status, Menu_ItemID FROM [Order_Detail] WHERE [Order_Detail].Order_Status  LIKE '%Completed%'";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
-        }
-        
-        public void ChangeOrderStatus(OrderStatus status, List<OrderDetail> orderDetails)
-        {
-            string query = "INSERT INTO Order_Detail (Order_Time, Order_Status, Comment) VALUES (@Order_Time, @Order_Status, @Comment)";
-           
-            DateTime time = new DateTime();
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            ExecuteSelectQuery(query, sqlParameters);
-            string OrderStatus = "";
-            string Comment = "";
-            string OrderTime = time.ToString("hh/mm/ss");
-            //int ItemQuantity = 0;
-
-            foreach (OrderDetail orderDetail in orderDetails)
-            {
-                OrderStatus = "Completed";
-                Comment = "";
-              //  ItemQuantity = int.Parse(orderDetail.SubItems[0].Text);
-            }
-        }
-        //private void AddExistingOrder(List<OrderDetail> orderDetails, int orderDetailId)
-        //{
-        //    foreach (OrderDetail orderDetail in orderDetails)
-        //    {
-        //        string query = "If EXISTS (Select * From Order_Detail WHERE Order_DetailID = @Order_DetailID AND MenuItemID = @MenuItemID AND OrderStatus=1" +
-        //            "Update Order_Detail SET Item_Quantity = Item_Quantity + Item_Quantity WHERE Order_DetailID = @Order_DetailID AND MenuItemID @MenuItemID ";
-        //        SqlParameter[] sqlParameters = {
-        //            new SqlParameter("@Order_DetailID", orderDetailId),
-        //        //    new SqlParameter("MenuItemId", orderDetail.OrderDetail.ItemId),
-        //            new SqlParameter("@Item_Quantity", orderDetail.Item_Quantity),
-        //           // new SqlParameter("@datetime", DateTime.Now),
-        //          //  new SqlParameter("@feedback", orderDetail.Comment)
-        //        };
-        //        ExecuteEditQuery(query, sqlParameters);
-        //    }
-        //}
-
-
     }
 }
